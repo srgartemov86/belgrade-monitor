@@ -1,0 +1,6 @@
+.pizzeria-photos/
+__pycache__/
+*.pyc
+/tmp/
+.DS_Store
+data/state.json.lock

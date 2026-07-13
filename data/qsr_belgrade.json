@@ -1,0 +1,440 @@
+{
+  "fetched_at": "2026-05-13T07:26:38.332593Z",
+  "source": "OpenStreetMap via Overpass",
+  "brands": {
+    "mcdonalds": {
+      "name": "McDonald's",
+      "logo": "brands/mcdonalds.svg",
+      "source": "OSM/Overpass",
+      "count": 26,
+      "points": [
+        {
+          "lat": 44.8141442,
+          "lon": 20.4569695,
+          "name": "McDonald's",
+          "address": "Бранкова 1"
+        },
+        {
+          "lat": 44.802212,
+          "lon": 20.3855298,
+          "name": "McDonald's",
+          "address": "Јурија Гагарина 153a"
+        },
+        {
+          "lat": 44.7774735,
+          "lon": 20.4141745,
+          "name": "McDonald's",
+          "address": "Пожешка 98a"
+        },
+        {
+          "lat": 44.8072125,
+          "lon": 20.4709534,
+          "name": "McDonald's",
+          "address": "Булевар краља Александра 62"
+        },
+        {
+          "lat": 44.8173658,
+          "lon": 20.3839131,
+          "name": "McDonald's",
+          "address": "Партизанске авијације 28а"
+        },
+        {
+          "lat": 44.7756602,
+          "lon": 20.4892666,
+          "name": "McDonald's",
+          "address": ""
+        },
+        {
+          "lat": 44.8128886,
+          "lon": 20.4614711,
+          "name": "McDonald's",
+          "address": "Теразије 27"
+        },
+        {
+          "lat": 44.8050823,
+          "lon": 20.4043262,
+          "name": "McDonald's",
+          "address": ""
+        },
+        {
+          "lat": 44.7870624,
+          "lon": 20.4182542,
+          "name": "McDonald's",
+          "address": "Радничка 9"
+        },
+        {
+          "lat": 44.8171406,
+          "lon": 20.5089843,
+          "name": "McDonald's",
+          "address": ""
+        },
+        {
+          "lat": 44.8199128,
+          "lon": 20.4546062,
+          "name": "McDonald's",
+          "address": "Кнеза Михаила 54"
+        },
+        {
+          "lat": 44.7865202,
+          "lon": 20.5028208,
+          "name": "McDonald's",
+          "address": ""
+        },
+        {
+          "lat": 44.8154902,
+          "lon": 20.4365234,
+          "name": "McDonald's",
+          "address": ""
+        },
+        {
+          "lat": 44.803664,
+          "lon": 20.4452972,
+          "name": "McDonald's",
+          "address": ""
+        },
+        {
+          "lat": 44.7843252,
+          "lon": 20.4103588,
+          "name": "McDonald's",
+          "address": ""
+        },
+        {
+          "lat": 44.7397559,
+          "lon": 20.4387787,
+          "name": "McDonald's",
+          "address": ""
+        },
+        {
+          "lat": 44.7757183,
+          "lon": 20.4893565,
+          "name": "McDonald's",
+          "address": "Заплањска 32"
+        },
+        {
+          "lat": 44.8158589,
+          "lon": 20.4308954,
+          "name": "McDonald's",
+          "address": "Булевар Михајла Пупина 85a"
+        },
+        {
+          "lat": 44.8022672,
+          "lon": 20.4654249,
+          "name": "McDonald's",
+          "address": "Делиградска 2"
+        },
+        {
+          "lat": 44.7437364,
+          "lon": 20.4261306,
+          "name": "McDonald's",
+          "address": "Кнеза Вишеслава 45"
+        },
+        {
+          "lat": 44.8260454,
+          "lon": 20.4078618,
+          "name": "McDonald's",
+          "address": "Народних хероја 2"
+        },
+        {
+          "lat": 44.886901,
+          "lon": 20.4585791,
+          "name": "McDonald's",
+          "address": "Братства и јединства 2v"
+        },
+        {
+          "lat": 44.8319135,
+          "lon": 20.3692752,
+          "name": "McDonald's",
+          "address": "Аутопут за Загреб 18b"
+        },
+        {
+          "lat": 44.7584544,
+          "lon": 20.4149307,
+          "name": "McDonald's",
+          "address": ""
+        },
+        {
+          "lat": 44.713393,
+          "lon": 20.5601222,
+          "name": "McDonald's",
+          "address": "Астрид Линдгрен 17"
+        },
+        {
+          "lat": 44.7841841,
+          "lon": 20.410448,
+          "name": "McDonald's",
+          "address": ""
+        }
+      ]
+    },
+    "kfc": {
+      "name": "KFC",
+      "logo": "brands/kfc.png",
+      "source": "OSM/Overpass",
+      "count": 11,
+      "points": [
+        {
+          "lat": 44.815395,
+          "lon": 20.4367073,
+          "name": "KFC",
+          "address": "Булевар Михајла Пупина 4"
+        },
+        {
+          "lat": 44.8184841,
+          "lon": 20.4583735,
+          "name": "KFC",
+          "address": "Васе Чарапића 24"
+        },
+        {
+          "lat": 44.7756875,
+          "lon": 20.4897331,
+          "name": "KFC",
+          "address": "Заплањска 32"
+        },
+        {
+          "lat": 44.803413,
+          "lon": 20.3918779,
+          "name": "KFC",
+          "address": "Јурија Гагарина"
+        },
+        {
+          "lat": 44.7845557,
+          "lon": 20.4130951,
+          "name": "KFC",
+          "address": "Радничка"
+        },
+        {
+          "lat": 44.7865889,
+          "lon": 20.5029591,
+          "name": "KFC",
+          "address": "Војислава Илића 141"
+        },
+        {
+          "lat": 44.8054472,
+          "lon": 20.4045072,
+          "name": "KFC",
+          "address": "Јурија Гагарина 16"
+        },
+        {
+          "lat": 44.7872453,
+          "lon": 20.4181179,
+          "name": "KFC",
+          "address": ""
+        },
+        {
+          "lat": 44.8034056,
+          "lon": 20.4450142,
+          "name": "KFC",
+          "address": ""
+        },
+        {
+          "lat": 44.8168922,
+          "lon": 20.5089445,
+          "name": "KFC",
+          "address": "Вишњичка 84"
+        },
+        {
+          "lat": 44.712942,
+          "lon": 20.5607575,
+          "name": "KFC",
+          "address": "Астрид Линдгрен 15"
+        }
+      ]
+    },
+    "starbucks": {
+      "name": "Starbucks",
+      "logo": "brands/starbucks.png",
+      "source": "OSM/Overpass",
+      "count": 9,
+      "points": [
+        {
+          "lat": 44.7966165,
+          "lon": 20.4694139,
+          "name": "Старбакс",
+          "address": "Браничевска 1"
+        },
+        {
+          "lat": 44.8200635,
+          "lon": 20.4538236,
+          "name": "Старбакс",
+          "address": "Кнеза Михаила 54a"
+        },
+        {
+          "lat": 44.786767,
+          "lon": 20.4186857,
+          "name": "Старбакс",
+          "address": "Радничка 9"
+        },
+        {
+          "lat": 44.7862465,
+          "lon": 20.5009858,
+          "name": "Старбакс",
+          "address": ""
+        },
+        {
+          "lat": 44.8101861,
+          "lon": 20.4661525,
+          "name": "Старбакс",
+          "address": "Булевар краља Александра 18"
+        },
+        {
+          "lat": 44.8153389,
+          "lon": 20.4583931,
+          "name": "Старбакс",
+          "address": "Обилићев венац 24"
+        },
+        {
+          "lat": 44.8152572,
+          "lon": 20.4362368,
+          "name": "Старбакс",
+          "address": ""
+        },
+        {
+          "lat": 44.8146168,
+          "lon": 20.4566798,
+          "name": "Старбакс",
+          "address": "Зелени венац 18"
+        },
+        {
+          "lat": 44.7118871,
+          "lon": 20.5590706,
+          "name": "Старбакс",
+          "address": "Астрид Линдгрен 25"
+        }
+      ]
+    },
+    "caribic": {
+      "name": "Caribic Pizza",
+      "logo": "brands/caribic.png",
+      "source": "OSM/Overpass",
+      "count": 5,
+      "points": [
+        {
+          "lat": 44.8304497,
+          "lon": 20.4134141,
+          "name": "Caribic Pizza",
+          "address": ""
+        },
+        {
+          "lat": 44.8020926,
+          "lon": 20.4656644,
+          "name": "Caribic Pizza",
+          "address": ""
+        },
+        {
+          "lat": 44.8032651,
+          "lon": 20.4800904,
+          "name": "Caribic Pizza",
+          "address": ""
+        },
+        {
+          "lat": 44.7757501,
+          "lon": 20.4894288,
+          "name": "Caribic Pizza",
+          "address": "Заплањска 32"
+        },
+        {
+          "lat": 44.8168033,
+          "lon": 20.5089867,
+          "name": "Caribic Pizza",
+          "address": ""
+        }
+      ]
+    },
+    "saints": {
+      "name": "The Saint",
+      "logo": "brands/saints.png",
+      "source": "official site (manual)",
+      "count": 7,
+      "points": [
+        {
+          "lat": 44.7998,
+          "lon": 20.4908,
+          "name": "The Saint 1",
+          "address": "Tršćanska 4, Konjarnik"
+        },
+        {
+          "lat": 44.7765,
+          "lon": 20.4894,
+          "name": "The Saint 2",
+          "address": "Zaplanjska 43, Voždovac"
+        },
+        {
+          "lat": 44.8085,
+          "lon": 20.3847,
+          "name": "The Saint 3",
+          "address": "Gandijeva 19A, Novi Beograd"
+        },
+        {
+          "lat": 44.8178,
+          "lon": 20.5099,
+          "name": "The Saint 4",
+          "address": "Višnjička 49A, Karaburma"
+        },
+        {
+          "lat": 44.7421,
+          "lon": 20.4125,
+          "name": "The Saint 5",
+          "address": "Pilota Mihaila Petrovića 55, Cerak"
+        },
+        {
+          "lat": 44.825,
+          "lon": 20.409,
+          "name": "The Saint 6",
+          "address": "Fontana, Novi Beograd"
+        },
+        {
+          "lat": 44.8053,
+          "lon": 20.4502,
+          "name": "The Saint 7",
+          "address": "Beograd na vodi"
+        }
+      ],
+      "icon_type": "letter",
+      "letter": "S"
+    },
+    "bigpizza": {
+      "name": "Big Pizza",
+      "logo": "brands/bigpizza.svg",
+      "source": "official site (manual)",
+      "count": 6,
+      "points": [
+        {
+          "lat": 44.8068,
+          "lon": 20.4208,
+          "name": "Big Pizza NBG",
+          "address": "Novi Beograd"
+        },
+        {
+          "lat": 44.748,
+          "lon": 20.4307,
+          "name": "Big Pizza Vidikovac",
+          "address": "Knez Višeslavova, Vidikovac"
+        },
+        {
+          "lat": 44.7879,
+          "lon": 20.4647,
+          "name": "Big Pizza Banjica",
+          "address": "Banjica, Voždovac"
+        },
+        {
+          "lat": 44.772,
+          "lon": 20.4821,
+          "name": "Big Pizza Kumodraška",
+          "address": "Kumodraška, Voždovac"
+        },
+        {
+          "lat": 44.7906,
+          "lon": 20.4937,
+          "name": "Big Pizza Bačvanska",
+          "address": "Bačvanska, Voždovac"
+        },
+        {
+          "lat": 44.816,
+          "lon": 20.5006,
+          "name": "Big Pizza Karaburma",
+          "address": "Karaburma, Palilula"
+        }
+      ]
+    }
+  }
+}

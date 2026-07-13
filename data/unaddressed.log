@@ -1,0 +1,21 @@
+2026-05-08T17:44:50.982042	4zida.rs	https://www.4zida.rs/izdavanje-poslovnih-prostora/beograd-na-vodi-savski-venac-beograd/poslovni-prostor/69fde89959ac2221520ff3b2	Beograd na vodi
+2026-05-14T13:12:44.073709+00:00 · nekretnine_NkZMCFpX4ZB · Vračar 100m²/1500€ · только район, нет улицы · https://www.nekretnine.rs/poslovni-objekti/komercijalni-prostori/wwwagecijavilars-id-17471-1/NkZMCFpX4ZB/
+2026-05-14T14:14:26Z · 4zida_6a05d273b990aaddeb022508 · Stari Grad / Beograd centar · 160m² · 3000€ · no_specific_address
+2026-05-14T15:11:13Z | nekretnine_Nk2P_wjrVcX | 160m² | 3000€ | Centar (uži), Stari Grad | https://www.nekretnine.rs/poslovni-objekti/komercijalni-prostori/simpatican-lokal-u-centru-grada-sa-velikim-izlogom/Nk2P_wjrVcX/ | reason=no street address
+2026-05-14T16:10:30.346287+00:00 · 4zida_69de5c2cea4328019605392b · Savski Venac (Senjak) · 130m² · 2500€ · https://www.4zida.rs/izdavanje-poslovnih-prostora/senjak-savski-venac-beograd/poslovni-prostor/69de5c2cea4328019605392b
+2026-05-19T cycle: 3 passes без адреса, skip send
+  nekretnine_NkgOvJ2WnAK | 125m² 1500€ | https://www.nekretnine.rs/poslovni-objekti/komercijalni-prostori/moderan-poslovni-prostor--lokal-125m2-sa-galerijom/NkgOvJ2WnAK/
+  nekretnine_NkTvdI1-JdO | 160m² 2500€ | https://www.nekretnine.rs/poslovni-objekti/komercijalni-prostori/lokal-centar-67035/NkTvdI1-JdO/
+  nekretnine_NkoLdnmx9bD | 147m² 2300€ | https://www.nekretnine.rs/poslovni-objekti/komercijalni-prostori/lokal-djeram-67044/NkoLdnmx9bD/
+2026-05-29T14:11Z halooglasi_5425646661339 | NO_ADDRESS+OUT_OF_CITY (Smederevo, ~45km) | 138m2 1650eur | https://www.halooglasi.com/nekretnine/izdavanje-lokala/smederevo---centar---138m2-id24759/5425646661339?kid=1
+2026-06-01T19:50:26Z	halooglasi_5425647226620	no_address+no_photo district=Unknown url=https://www.halooglasi.com/nekretnine/izdavanje-kancelarijskog-prostora/nov-lokal-128m2-sa-parkingom-u-centru-id1761/5425647226620?kid=1
+2026-06-05 nekretnine_1136375 Vračar 139m² 2700€ https://www.nekretnine.rs/oglasi/1136375/ — no_address, not sent
+2026-06-08T18:10:36Z halooglasi_5425646237912 SKIP no_address+no_photo+office_slug(kancelarijskog) Zvezdara 147m2 2900EUR https://www.halooglasi.com/nekretnine/izdavanje-kancelarijskog-prostora/poslovni-prostor-na-zvezdari/5425646237912?kid=1
+2026-06-11T07:10:11Z nekretnine_1160253 no_address+no_geo skip
+2026-06-11T07:10:11Z nekretnine_1159491 batajnica(zemun)+no_address skip
+2026-06-11T07:10:11Z nekretnine_1159565 batajnica(zemun)+no_address skip
+2026-06-11T08:10:32Z	nekretnine_1160253	146m2 3500eur prizemlje raskrsnica, no address/geo, municipality unknown -> not sent
+2026-06-11T12:08:01.362760Z halooglasi_5425646885637 SKIP no_address+wrong_city(Novi Sad Grbavica) https://www.halooglasi.com/nekretnine/izdavanje-lokala/novi-sad-grbavica-lokal-3-130-00m2/5425646885637
+2026-06-18T13:08:17Z halooglasi_5425647299191 NO_SEND no_address+no_photo+poslovna_zgrada(office) url=https://www.halooglasi.com/nekretnine/izdavanje-kancelarijskog-prostora/kalemegdan-180m2-u-poslovnoj-zgradi/5425647299191
+2026-06-18T16:08:36Z	nekretnine_1196859	agent-reject: stan/kancelarija for office use, no address (cycle.py filter miss)
+2026-06-18T18:05Z halooglasi_5425646377468 no_address+kancelarija https://www.halooglasi.com/nekretnine/izdavanje-kancelarijskog-prostora/streliste-poslovni-prostor-od-130m2/5425646377468?kid=1

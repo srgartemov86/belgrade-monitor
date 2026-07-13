@@ -1,0 +1,100 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Плотность населения · Белград · Kontur vs OSM</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  html,body{margin:0;height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+  #map{position:absolute;inset:0}
+  .legend{position:absolute;right:12px;top:12px;z-index:1000;background:#fff;padding:10px 12px;
+    border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.2);font-size:13px;max-width:240px}
+  .legend h4{margin:0 0 6px;font-size:13px}
+  .legend .row{display:flex;align-items:center;margin:2px 0}
+  .legend i{width:16px;height:12px;margin-right:7px;border-radius:2px;display:inline-block}
+  .legend .sub{color:#6b7280;font-size:11px;margin-top:6px;line-height:1.4}
+  .legend a{color:#2563eb;text-decoration:none}
+  .title{position:absolute;left:12px;top:12px;z-index:1000;background:#fff;padding:8px 12px;
+    border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.2);font-size:14px;font-weight:600;max-width:48%}
+  .title small{display:block;font-weight:400;color:#6b7280;font-size:11px;margin-top:3px}
+  .switch{position:absolute;left:12px;top:66px;z-index:1000;background:#fff;border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);display:flex;overflow:hidden;font-size:13px}
+  .switch button{border:0;background:#fff;padding:8px 14px;cursor:pointer;font-weight:600;color:#374151}
+  .switch button.on{background:#ff6900;color:#fff}
+  .dodo-marker{width:30px;height:30px;border-radius:50%;background:#fff;
+    box-shadow:0 0 0 2px #ff6900,0 2px 6px rgba(0,0,0,.3);padding:2px;box-sizing:border-box}
+  .dodo-marker img{width:100%;height:100%;border-radius:50%}
+</style></head><body>
+<div id="map"></div>
+<div class="title" id="ttl"></div>
+<div class="switch">
+  <button id="bO" onclick="setMode('osm')">OSM · этажность</button>
+  <button id="bK" onclick="setMode('kontur')">Kontur</button>
+</div>
+<div class="legend">
+  <h4>Жителей на км²</h4>
+  <div id="buckets"></div>
+  <div class="row" style="margin-top:6px"><span style="width:16px;margin-right:7px;text-align:center">●</span>наш лот (цвет = скоринг)</div>
+  <div class="row"><img class="dodo" src="dodo-logo.png" style="width:16px;height:16px;margin-right:7px"> точка Dodo</div>
+  <div class="sub" id="src"></div>
+</div>
+<script>
+const DODO = [{"name": "Dodo · Земун / Новый Белград", "lat": 44.8456204, "lon": 20.4012657}, {"name": "Dodo · Стари Град", "lat": 44.814985, "lon": 20.4564471}];
+const LOTS = [{"lat": 44.78989, "lon": 20.51463, "score": 57, "district": "Bulevar Kralja Aleksandra (Zvezdara)", "area": 135, "price": 1900, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/bulevar-kralja-aleksandra-zvezdara-opstina-beograd/lokal/69ce40f44787ac639f0290a5", "r500": 10546}, {"lat": 44.7997, "lon": 20.4893, "score": 77, "district": "Zvezdara", "area": 85, "price": 2500, "url": "https://www.halooglasi.com/nekretnine/izdavanje-lokala/zvezdara---bulevar-kralja-aleksandra-id23831/5425645047597", "r500": 20388}, {"lat": 44.784088135653, "lon": 20.424691732374, "score": 24, "district": "Čukarica (Banovo brdo)", "area": 180, "price": 4100, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/centar-cukarica-opstina-beograd/poslovni-prostor/68bbe9268207c8662c0dcc83", "r500": 4241}, {"lat": 44.802309739936, "lon": 20.471186125745, "score": 79, "district": "Vračar (Slavija)", "area": 107, "price": 6000, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/slavija-vracar-beograd/lokal/68ee32405d75b9143e065646", "r500": 26645}, {"lat": 44.803743, "lon": 20.481278, "score": 82, "district": "Vračar", "area": null, "price": null, "url": "https://maps.app.goo.gl/Z2zpePmxbnzjvKGA6", "r500": 22246}, {"lat": 44.797981, "lon": 20.492638, "score": 80, "district": "Zvezdara", "area": 129, "price": null, "url": "https://share.google/POD2hy6xuT7wqrbdT", "r500": 20136}, {"lat": 44.784088135653, "lon": 20.424691732374, "score": 24, "district": "Unknown", "area": 180, "price": 4500, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/banovo-brdo-cukarica-opstina-beograd/lokal/68f9e7e6153635705c0d1ee6", "r500": 4241}, {"lat": 44.6890762, "lon": 20.5159203, "score": 3, "district": "Unknown", "area": 155, "price": 2790, "url": "https://www.nekretnine.rs/poslovni-objekti/poslovni-prostori/ruzveltova-14520m2-lokal-sa-izlogom/NkX2zYVvkDB/", "r500": 21}, {"lat": 44.7826591, "lon": 20.5144559, "score": 71, "district": "Zvezdara", "area": 130, "price": 1700, "url": "https://www.nekretnine.rs/poslovni-objekti/komercijalni-prostori/lokal-130m2-sa-dva-ulaza-parkingom/Nk1bOM5t6Wo/", "r500": 10537}, {"lat": 44.8039, "lon": 20.3906, "score": 85, "district": "Novi Beograd (Blok 70)", "area": 120, "price": 1400, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/blok-70-novi-beograd-beograd/lokal/6a1452dd5119a7324b0c579f", "r500": 9966}, {"lat": 44.82224, "lon": 20.46212, "score": 77, "district": "Unknown", "area": 159, "price": 3500, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/dorcol-stari-grad-opstina-beograd/lokal/6a15617b5efde60cd4075c13", "r500": 21556}, {"lat": 44.82224, "lon": 20.46212, "score": 77, "district": "Unknown", "area": 147, "price": 3000, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/dorcol-stari-grad-opstina-beograd/lokal/69c666c013f6a8f4c302f065", "r500": 21556}, {"lat": 44.80775411099636, "lon": 20.46570995260876, "score": 82, "district": "Vračar (Centar)", "area": 130, "price": 5500, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/centar-vracar-beograd/lokal/699c4f9dca01bc8183019bc9", "r500": 15549}, {"lat": 44.77655, "lon": 20.41418, "score": 66, "district": "Unknown", "area": 168, "price": 5000, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/banovo-brdo-cukarica-opstina-beograd/poslovni-prostor/686399df24d3993a91036a6a", "r500": 9585}, {"lat": 44.79555347522948, "lon": 20.438854638114318, "score": 48, "district": "Savski Venac (Senjak)", "area": 100, "price": 1800, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/senjak-savski-venac-beograd/poslovni-prostor/67a0cd30f5e7bc164d062926", "r500": 6479}, {"lat": 44.76383136591218, "lon": 20.460464715489675, "score": 26, "district": "Savski Venac (Dedinje)", "area": 189, "price": 3800, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/dedinje-savski-venac-beograd/lokal/6705164a6a5eaaedd6030bc4", "r500": 3791}, {"lat": 44.7848, "lon": 20.4244, "score": 27, "district": "Čukarica (Banovo brdo)", "area": 193, "price": 3500, "url": "https://www.halooglasi.com/nekretnine/izdavanje-lokala/banovo-brdo-odlicna-pozicija-150m-od-pozeske/5425645774825?kid=1", "r500": 4308}, {"lat": 44.81637, "lon": 20.469488, "score": 79, "district": "Stari grad (Centar)", "area": 146, "price": 3500, "url": "https://www.halooglasi.com/nekretnine/izdavanje-lokala/stari-grad-centar---dzordza-vasingtona/5425646881156?kid=1", "r500": 22514}, {"lat": 44.8033, "lon": 20.4884, "score": 68, "district": "Unknown", "area": 129, "price": 3000, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/bulbulder-zvezdara-opstina-beograd/lokal/6627be934d16f420c00fa9cc", "r500": 17795}, {"lat": 44.80098964661209, "lon": 20.485675997922947, "score": 80, "district": "Vračar (Bulevar Kralja Aleksandra)", "area": 140, "price": 4500, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/bulevar-kralja-aleksandra-vracar-beograd/poslovni-prostor/63600617c710b7c313071beb", "r500": 23014}, {"lat": 44.77655, "lon": 20.41418, "score": 66, "district": "Unknown", "area": 180, "price": 4500, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/banovo-brdo-cukarica-opstina-beograd/lokal/6a2ff43ab88a4dd8b2078ef0", "r500": 9585}, {"lat": 44.7820294, "lon": 20.416778, "score": 66, "district": "Unknown", "area": 133, "price": 2700, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/banovo-brdo-cukarica-opstina-beograd/lokal/675ae3a3a5d3f0e18b0e57fe", "r500": 9088}, {"lat": 44.7784, "lon": 20.4559, "score": 50, "district": "Savski venac (Dedinje)", "area": 141, "price": 5922, "url": "https://www.halooglasi.com/nekretnine/izdavanje-lokala/ekskluzivan-lokal-za-izdavanje-na-dedinju/5425647146301?kid=1", "r500": 4092}, {"lat": 44.779575, "lon": 20.416191, "score": 74, "district": "Čukarica (Banovo brdo)", "area": 180, "price": 4100, "url": "https://www.halooglasi.com/nekretnine/izdavanje-kancelarijskog-prostora/poslovni-prostor-pozeska/5425647027364?kid=1", "r500": 8620}, {"lat": 44.828086, "lon": 20.453019, "score": 54, "district": "Stari grad (K-District)", "area": 159, "price": 3500, "url": "https://www.halooglasi.com/nekretnine/izdavanje-lokala/k-district-lokal-159m2-dvostran-garaza/5425646905294?kid=1", "r500": 6151}, {"lat": 44.81295, "lon": 20.40054, "score": 61, "district": "Novi Beograd (Blok 65)", "area": 106, "price": 2438, "url": "https://www.halooglasi.com/nekretnine/izdavanje-lokala/west-65-izdavanje-noviji-atraktivan-lokal-106/5425647293474?kid=3", "r500": 6894}, {"lat": 44.8187, "lon": 20.4672, "score": 82, "district": "Stari grad (Bajlonijeva pijaca)", "area": 146, "price": 3500, "url": "https://www.halooglasi.com/nekretnine/izdavanje-lokala/veliki-i-prostran-lokal-na-prometnoj-lokaciji/5425647163623?kid=1", "r500": 21505}, {"lat": 44.8167, "lon": 20.476, "score": 82, "district": "Palilula (Botanička bašta)", "area": 170, "price": 3500, "url": "https://www.halooglasi.com/nekretnine/izdavanje-lokala/bulevar-despota-stefana-visenamenski-pp/5425646782095?kid=1", "r500": 17639}, {"lat": 44.7659403, "lon": 20.481475, "score": 66, "district": "Voždovac (Gornji Voždovac)", "area": 177, "price": null, "url": "https://maps.app.goo.gl/LoLRuKLq9YQ8oqUv9", "r500": 9632}, {"lat": 44.77671, "lon": 20.5324, "score": 25, "district": "Unknown", "area": 140, "price": 2800, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/centar-zvezdara-opstina-beograd/lokal/67125fafbd51ec850904ff04", "r500": 3495}, {"lat": 44.803578952435174, "lon": 20.46902772332548, "score": 82, "district": "Vračar (Slavija)", "area": 200, "price": 6000, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/slavija-vracar-beograd/lokal/697211a31994c4dcfe0df111", "r500": 26139}, {"lat": 44.8154322, "lon": 20.4645501, "score": 82, "district": "Стари Град", "area": 140, "price": 3400, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/beograd-centar-stari-grad-opstina-beograd/lokal/636bb9b3030f43414a075453", "r500": 22571}, {"lat": 44.82794, "lon": 20.4535, "score": 56, "district": "Unknown", "area": 116, "price": 2800, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/kdistrict-stari-grad-opstina-beograd/ugostiteljski-objekat/69c2d4928f0f8f54b308b926", "r500": 6826}, {"lat": 44.77671, "lon": 20.5324, "score": 25, "district": "Unknown", "area": 165, "price": 3800, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/centar-zvezdara-opstina-beograd/poslovni-prostor/68d5da6e8b2945f3a60f7d0a", "r500": 3495}, {"lat": 44.805029, "lon": 20.401598, "score": 77, "district": "Novi Beograd (Blok 67a (A blok))", "area": 105, "price": 2400, "url": "https://www.halooglasi.com/nekretnine/izdavanje-lokala/a-blok-lokal-izdavanje-105-m2-useljiv-odmah/5425647344124?kid=4", "r500": 9369}, {"lat": 44.80307, "lon": 20.45427, "score": 82, "district": "Savski Venac (Sarajevska)", "area": 164, "price": 4000, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/sarajevska-savski-venac-beograd/lokal/6a47b6f31ba0f376570e3945", "r500": 19076}, {"lat": 44.81741714, "lon": 20.48318672, "score": 65, "district": "Profesorska kolonija - Hala Pionir", "area": 126, "price": 3200, "url": "https://www.nekretnine.rs/oglasi/1255167/", "r500": 7909}, {"lat": 44.77389908, "lon": 20.41659927, "score": 70, "district": "Golf naselje - Košutnjak", "area": 110, "price": 2530, "url": "https://www.nekretnine.rs/oglasi/1254911/", "r500": 10558}, {"lat": 44.79780579, "lon": 20.47056961, "score": 77, "district": "Vračar (Hram Svetog Save - Neimar - Čubura)", "area": 125, "price": 2600, "url": "https://www.nekretnine.rs/oglasi/1255185/", "r500": 21420}, {"lat": 44.7751, "lon": 20.5081, "score": 31, "district": "Voždovac (Medaković 3)", "area": 100, "price": 2000, "url": "https://www.halooglasi.com/nekretnine/izdavanje-lokala/izdavanje-lokala-odmah-useljiv-idealno-za-sho/5425647389703?kid=1", "r500": 5724}, {"lat": 44.808576078286, "lon": 20.41256745335, "score": 48, "district": "Novi Beograd (Blok 65)", "area": 155, "price": 5800, "url": "https://www.4zida.rs/izdavanje-poslovnih-prostora/blok-65-novi-beograd-beograd/poslovni-prostor/6a50e73c53179b181b09493d", "r500": 3798}, {"lat": 44.793472, "lon": 20.466555, "score": 75, "district": "Vračar (Karađorđev park)", "area": 102, "price": 3000, "url": "https://www.halooglasi.com/nekretnine/izdavanje-lokala/lokal-102m2-43m2-na-top-lokaciji/5425646661235?kid=1", "r500": 10101}];
+const TITLES={
+  osm:['🗺 Плотность · OSM (этажность)','Σ(footprint × этажей × 0.8) / м²-на-чел-по-типу (кварт. 40, дома 55). Различает высотки/частный сектор. Так считается скоринг.'],
+  kontur:['🗺 Плотность · Kontur Population','Census, размазанный по площади застройки. НЕ видит этажность → частный сектор завышен.']
+};
+const map = L.map('map').setView([44.81, 20.46], 12);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+  {attribution:'© OpenStreetMap, © CARTO', maxZoom:19}).addTo(map);
+
+const STOPS = [[12000,'#800026'],[8000,'#bd0026'],[5000,'#e31a1c'],[3000,'#fc4e2a'],
+               [1500,'#fd8d3c'],[600,'#feb24c'],[150,'#fed976'],[0,'#ffeda0']];
+function densColor(d){ for(const [t,c] of STOPS){ if(d>=t) return c; } return '#ffeda0'; }
+function scoreColor(s){ return s>=70?'#16a34a':s>=50?'#eab308':s>=30?'#f97316':'#dc2626'; }
+
+let GJ=null, densLayer=null, mode='osm';
+function dval(p){ return mode==='osm'?p.osm_norm:p.kontur; }
+function renderDens(){
+  if(densLayer) map.removeLayer(densLayer);
+  densLayer=L.geoJSON(GJ,{
+    style:f=>({fillColor:densColor(dval(f.properties)),weight:0.3,color:'#999',fillOpacity:0.6}),
+    onEachFeature:(f,l)=>{const p=f.properties;
+      l.bindPopup(`<b>${dval(p).toLocaleString('ru')}</b> чел./км² (${mode==='osm'?'OSM':'Kontur'})`+
+        `<hr style="margin:4px 0;border:0;border-top:1px solid #eee">`+
+        `OSM (этажность): ${p.osm_norm.toLocaleString('ru')}/км²<br>Kontur: ${p.kontur.toLocaleString('ru')}/км²`);}
+  });
+  densLayer.addTo(map); densLayer.bringToBack();
+}
+function setMode(m){ mode=m;
+  document.getElementById('bO').className=m==='osm'?'on':'';
+  document.getElementById('bK').className=m==='kontur'?'on':'';
+  document.getElementById('ttl').innerHTML=TITLES[m][0]+'<small>'+TITLES[m][1]+'</small>';
+  if(GJ) renderDens();
+}
+fetch('density_compare_bg.geojson').then(r=>r.json()).then(gj=>{GJ=gj; renderDens();});
+
+const dodoIcon = L.divIcon({className:'',html:'<div class="dodo-marker"><img src="dodo-logo.png"></div>',
+  iconSize:[30,30],iconAnchor:[15,15]});
+DODO.forEach(d=>L.marker([d.lat,d.lon],{icon:dodoIcon,zIndexOffset:1000})
+  .bindPopup(d.name).addTo(map));
+
+const lotLayer = L.layerGroup().addTo(map);
+LOTS.forEach(p=>{
+  L.circleMarker([p.lat,p.lon],{radius:6,fillColor:scoreColor(p.score),color:'#fff',
+    weight:1.5,fillOpacity:0.95,zIndexOffset:500})
+   .bindPopup(`<b>${p.district}</b><br>Скоринг <b>${p.score}/100</b>`+
+     (p.r500!=null?` · ~${Number(p.r500).toLocaleString('ru')} жит. в 500м`:'')+
+     `<br>${p.area||'—'} м² · ${p.price||'—'} €/мес`+
+     (p.url?`<br><a href="${p.url}" target="_blank">объявление</a>`:''))
+   .addTo(lotLayer);
+});
+
+const bk=document.getElementById('buckets');
+const labels=['12 000+','8–12 тыс','5–8 тыс','3–5 тыс','1,5–3 тыс','600–1500','150–600','< 150'];
+STOPS.forEach((s,i)=>{ bk.insertAdjacentHTML('beforeend',
+  `<div class="row"><i style="background:${s[1]}"></i>${labels[i]}</div>`); });
+document.getElementById('src').innerHTML='Переключай OSM ↔ Kontur — шкала общая.<br>'+
+  '<a href="lokali.html">← карта помещений со скорингом</a> · <a href="naselje_compare.html">Нови-Сад</a>';
+setMode('osm');
+</script></body></html>

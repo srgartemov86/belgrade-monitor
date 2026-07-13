@@ -1,0 +1,50 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Плотность населения · Нови-Сад</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  html,body{margin:0;height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+  #map{position:absolute;inset:0}
+  .legend{position:absolute;right:12px;top:12px;z-index:1000;background:#fff;padding:10px 12px;
+    border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.2);font-size:13px;max-width:230px}
+  .legend h4{margin:0 0 6px;font-size:13px}
+  .legend .row{display:flex;align-items:center;margin:2px 0}
+  .legend i{width:16px;height:12px;margin-right:7px;border-radius:2px;display:inline-block}
+  .legend .sub{color:#6b7280;font-size:11px;margin-top:6px;line-height:1.4}
+  .legend a{color:#2563eb;text-decoration:none}
+  .title{position:absolute;left:12px;top:12px;z-index:1000;background:#fff;padding:8px 12px;
+    border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.2);font-size:14px;font-weight:600}
+</style></head><body>
+<div id="map"></div>
+<div class="title">🗺 Плотность населения Нови-Сада (Kontur)</div>
+<div class="legend">
+  <h4>Жителей на км²</h4>
+  <div id="buckets"></div>
+  <div class="sub">Данные: Kontur Population (H3 r8).<br>В bbox ~417 тыс. жителей.<br><a href="naselje.html">← плотность Белграда</a></div>
+</div>
+<script>
+const map = L.map('map').setView([45.2551, 19.8452], 12);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+  {attribution:'© OpenStreetMap, © CARTO', maxZoom:19}).addTo(map);
+
+const STOPS = [[8000,'#800026'],[5000,'#bd0026'],[3000,'#e31a1c'],[2000,'#fc4e2a'],
+               [1000,'#fd8d3c'],[400,'#feb24c'],[100,'#fed976'],[0,'#ffeda0']];
+function densColor(d){ for(const [t,c] of STOPS){ if(d>=t) return c; } return '#ffeda0'; }
+
+fetch('kontur_novisad.geojson').then(r=>r.json()).then(gj=>{
+  L.geoJSON(gj,{
+    style:f=>({fillColor:densColor(f.properties.density),weight:0.3,color:'#999',
+               fillOpacity:0.6}),
+    onEachFeature:(f,l)=>l.bindPopup(
+      `<b>${f.properties.density.toLocaleString('ru')}</b> чел./км²<br>в гексагоне ~${f.properties.pop.toLocaleString('ru')} жит.`)
+  }).addTo(map);
+});
+
+L.marker([45.2551, 19.8452]).addTo(map).bindPopup('Trg slobode · центр');
+
+const bk=document.getElementById('buckets');
+const labels=['8 000+','5–8 тыс','3–5 тыс','2–3 тыс','1–2 тыс','400–1000','100–400','< 100'];
+STOPS.forEach((s,i)=>{ bk.insertAdjacentHTML('beforeend',
+  `<div class="row"><i style="background:${s[1]}"></i>${labels[i]}</div>`); });
+</script></body></html>
