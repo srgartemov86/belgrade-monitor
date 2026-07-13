@@ -60,6 +60,15 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PIZZA_QUIET: '1'
 
+      - name: Watchdog cluj-monitor
+        if: always()
+        run: python watchdog.py cluj-monitor "Cluj-монитор"
+        env:
+          WATCHDOG_PAT: ${{ secrets.WATCHDOG_PAT }}
+          TG_SESSION: ${{ secrets.TG_SESSION }}
+          TG_API_ID: ${{ secrets.TG_API_ID }}
+          TG_API_HASH: ${{ secrets.TG_API_HASH }}
+
       - name: Commit state back
         if: always()
         run: |
