@@ -153,9 +153,14 @@ def _centroid(el):
     return None
 
 
-def fetch_osm(lat, lon, timeout=85):
-    """Один Overpass-запрос: здания + POI + транспорт в радиусе FETCH_RADIUS."""
-    q = (f"[out:json][timeout:80];("
+def fetch_osm(lat, lon, timeout=180):
+    """Один Overpass-запрос: здания + POI + транспорт в радиусе FETCH_RADIUS.
+
+    ВАЖНО (2026-07-14): в плотном центре Белграда запрос зданий+POI в 1100 м идёт
+    ~95–120 с (Cluj с идентичным кодом укладывается в ~15 с — там застройка реже).
+    Со старым timeout=85 такие лоты стабильно падали в score=None → скоринг «не
+    проставлялся» ни в подпись Telegram, ни в кол. M листа. Подняли с запасом."""
+    q = (f"[out:json][timeout:170];("
          f'way["building"](around:{FETCH_RADIUS},{lat},{lon});'
          f'relation["building"](around:{FETCH_RADIUS},{lat},{lon});'
          f'nwr["amenity"](around:{FETCH_RADIUS},{lat},{lon});'

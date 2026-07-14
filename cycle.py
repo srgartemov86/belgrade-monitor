@@ -1136,7 +1136,18 @@ def run_process():
 
             caption = build_caption(cand, detail, district_str, flags)
             if sc:
-                caption = caption + "\n\n" + scoring.score_line(sc)
+                sl = scoring.score_line(sc)
+                if sl:
+                    # Скоринг ставим ПЕРЕД блоком «📝 Кратко», а не после. driver.py
+                    # переклеивает «Кратко» на русский срезом caption[:index('📝 Кратко:')]
+                    # — если скоринг после Кратко, он теряется (баг «аналогично Клужу»,
+                    # 2026-07-14). Перед Кратко он остаётся в «голове», срез его сохраняет.
+                    if '📝 Кратко:' in caption:
+                        idx = caption.index('📝 Кратко:')
+                        caption = caption[:idx] + sl + '\n\n' + caption[idx:]
+                    else:
+                        caption = caption + "\n\n" + sl
+                    caption = caption[:1024]
 
             passes.append({
                 'listing_key': key,
@@ -1286,11 +1297,16 @@ def run_process():
         # троттлинг и не растянуть часовой цикл. Скорим в порядке €/м² убыв.
         # (как в дайджесте) — при нехватке бюджета приоритет дорогим за метр.
         SCORE_BUDGET = 20
+        # Overpass в центре Белграда может идти ~190 с/лот (после подъёма timeout).
+        # Ограничиваем ещё и по стенным часам, чтобы реджект-скоринг не растянул цикл
+        # (у GitHub Actions job-таймаут — не дать одному циклу его выесть).
+        SCORE_WALL_BUDGET = 300  # сек
         _scored = 0
+        _score_t0 = time.time()
         for r in sorted(rejects,
                         key=lambda x: ((x.get('price') or 0) / (x.get('area') or 1)),
                         reverse=True):
-            if _scored >= SCORE_BUDGET:
+            if _scored >= SCORE_BUDGET or (time.time() - _score_t0) > SCORE_WALL_BUDGET:
                 break
             lat, lon = r.get('lat'), r.get('lon')
             if lat is None or lon is None:
