@@ -1482,6 +1482,21 @@ def cmd_finalize():
     t0 = time.time()
     out = {'ok': True}
 
+    # «Last scan» в реджект-листе (J1) — обновляется КАЖДЫМ прогоном, даже пустым.
+    # Сергей мониторит лист глазами: свежий штамп + нет строк = тихий рынок,
+    # старый штамп = монитор умер, бить тревогу (как в cluj-monitor).
+    try:
+        from datetime import datetime as _dt
+        import zoneinfo
+        _now = _dt.now(zoneinfo.ZoneInfo('Europe/Belgrade')).strftime('%Y-%m-%d %H:%M')
+        _sheets_service().spreadsheets().values().update(
+            spreadsheetId=SPREADSHEET_ID, range="'не прошли фильтр'!J1",
+            valueInputOption='RAW',
+            body={'values': [[f'Last scan: {_now} (Belgrade time)']]}).execute()
+        out['last_scan_stamp'] = True
+    except Exception as e:
+        out['last_scan_stamp'] = f'fail: {e}'
+
     # check_status manages its own state writes; prints summary on stdout
     cr = subprocess.run(['python3', str(SCRIPT_DIR / 'check_status.py')],
                         capture_output=True, text=True, timeout=300)
