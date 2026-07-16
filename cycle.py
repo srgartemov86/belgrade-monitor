@@ -1886,6 +1886,13 @@ def main():
         DRY_RUN = True
         print('=== DRY-RUN: state и Google Sheet НЕ будут изменены ===', file=sys.stderr)
 
+    if args.dry_run and (args.finalize or args.mark_sent):
+        # finalize/mark-sent пишут через подпроцессы (check_status → лист,
+        # gen_map → surge) и webhook — dry-run их не гейтит. Запрещаем совсем.
+        print('dry-run поддерживает только process-фазу (без --finalize/--mark-sent)',
+              file=sys.stderr)
+        return 2
+
     if args.mark_sent:
         return cmd_mark_sent(args.mark_sent[0], args.mark_sent[1], desc_ru=args.desc_ru)
     if args.finalize:
