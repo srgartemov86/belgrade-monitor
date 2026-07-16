@@ -17,6 +17,9 @@ from pathlib import Path
 
 HERE = Path(__file__).parent
 CHAT_ID = os.environ.get('BG_CHAT_ID', '3951547035')
+# Служебные уведомления (health-алерты, weekly-отчёт) — лично Сергею в Daily wrap up,
+# не в рабочий чат лотов (просьба 2026-07-16).
+ALERT_CHAT_ID = os.environ.get('BG_ALERT_CHAT_ID', '5131688215')
 MANY_PASSES = 15  # SKILL: при ≥15 лотов — одна сводка вместо N сообщений
 
 # Глоссарий sr→ru (REFERENCE.md): термины, по которым принимается решение.
@@ -128,8 +131,8 @@ def send_album(caption, photos):
         os.unlink(cap_path)
 
 
-def send_text(text, reply_to=None):
-    args = ['send_text.py', CHAT_ID, '-']
+def send_text(text, reply_to=None, chat_id=None):
+    args = ['send_text.py', chat_id or CHAT_ID, '-']
     if reply_to:
         args += ['--reply-to', str(reply_to)]
     r = subprocess.run([sys.executable] + args, input=text, capture_output=True,
@@ -231,13 +234,14 @@ def main():
         alerts.append('🐤 канарейка парсеров:\n   ' + '\n   '.join(canary_bad))
     if alerts:
         send_text('⚠️ Монитор Белград — аномалии цикла:\n'
-                  + '\n'.join('· ' + a for a in alerts))
+                  + '\n'.join('· ' + a for a in alerts),
+                  chat_id=ALERT_CHAT_ID)
 
     # --- Weekly-самоотчёт (понедельник, раз в день; cycle.py сам решает) ---
     try:
         rep = run_json(['cycle.py', '--weekly-report'], 300)
         if rep.get('text'):
-            send_text(rep['text'])
+            send_text(rep['text'], chat_id=ALERT_CHAT_ID)
     except Exception as e:
         print(f'  weekly-report failed: {e}', file=sys.stderr)
 
