@@ -164,6 +164,24 @@ def sweep_nekretnine(pages=3):
             url_l = (r.get('seo') or {}).get('url') or f"https://www.nekretnine.rs/oglasi/{re0.get('id')}/"
             typ = (p0.get('typology') or {}).get('name') or (re0.get('typology') or {}).get('name')
             loc = p0.get('location') or {}
+            # Detail-страница nekretnine теперь под DataDome (403) — координаты, район
+            # и фото берём прямо из JSON-API свипа (здесь всё есть, до 20 фото).
+            # В multimedia у кадров часто только 'small' (xxs-c, 320px) — нормализуем
+            # любой размер в полноразмер xxl (/image/{id}/xxl.jpg), иначе в Telegram превью.
+            def _xxl(u):
+                return re.sub(r'/[^/]+\.jpg(?:\?.*)?$', '/xxl.jpg', u) if u else u
+            photo_urls = []
+            for ph in ((p0.get('multimedia') or {}).get('photos') or [])[:10]:
+                u = ph.get('urls') or {}
+                big = u.get('large') or u.get('medium') or u.get('small')
+                if big:
+                    photo_urls.append(_xxl(big))
+            if not photo_urls:
+                pu = (p0.get('photo') or {}).get('urls') or {}
+                big = pu.get('large') or pu.get('medium') or pu.get('small')
+                if big:
+                    photo_urls.append(_xxl(big))
+            lat, lon = loc.get('latitude'), loc.get('longitude')
             listings.append({
                 'source': 'nekretnine.rs',
                 'id': str(re0.get('id')),
@@ -174,6 +192,12 @@ def sweep_nekretnine(pages=3):
                 'type': typ,
                 'date': None,
                 'street': loc.get('address'),
+                'lat': float(lat) if isinstance(lat, (int, float)) else None,
+                'lon': float(lon) if isinstance(lon, (int, float)) else None,
+                'subdistrict': loc.get('microzone'),
+                'macrozone': loc.get('macrozone'),
+                'photo_url': photo_urls[0] if photo_urls else None,
+                'photo_urls': photo_urls,
             })
             page_count += 1
         _v(f'  nek p{p}: {page_count} listings ({dt:.2f}s, {len(body)//1024}KB)')

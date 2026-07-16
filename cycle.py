@@ -1063,8 +1063,23 @@ def run_process():
                 continue
 
             detail = parse_detail(html, cand)
+            # nekretnine detail часто под DataDome (403 → пустой detail). Координаты,
+            # улицу, район и фото доливаем из JSON-API свипа (cand) — там всё есть,
+            # тогда фильтры/скоринг/карта работают как при живом detail (2026-07-16).
+            if 'lat' not in detail and isinstance(cand.get('lat'), (int, float)) \
+                    and isinstance(cand.get('lon'), (int, float)):
+                detail['lat'] = cand['lat']
+                detail['lon'] = cand['lon']
+            if not detail.get('street') and cand.get('street'):
+                detail['street'] = cand['street']
+            if not detail.get('subdistrict') and cand.get('subdistrict'):
+                detail['subdistrict'] = cand['subdistrict']
+            if not detail.get('photo_url') and cand.get('photo_url'):
+                detail['photo_url'] = cand['photo_url']
             passed, flags, reason = apply_filters(cand, detail)
             district_str = extract_district(cand, detail)
+            if (not district_str or district_str == 'Unknown') and cand.get('macrozone'):
+                district_str = cand['macrozone']
 
             rec = {
                 'source': src, 'id': cid, 'url': cand['url'],
@@ -1087,6 +1102,11 @@ def run_process():
             if detail.get('photo_url'): rec['photo_url'] = detail['photo_url']
             purls = extract_photo_urls(html, src)
             if purls: rec['photo_urls'] = purls
+            # nekretnine: фото из API свипа (detail-html под DataDome — extract даёт 0).
+            if not rec.get('photo_urls') and cand.get('photo_urls'):
+                rec['photo_urls'] = cand['photo_urls']
+            if not rec.get('photo_url') and cand.get('photo_url'):
+                rec['photo_url'] = cand['photo_url']
 
             if not passed:
                 rec['rejected'] = True
