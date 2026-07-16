@@ -22,22 +22,39 @@ Behavior:
 - Column J (Комментарий) NEVER touched by bot.
 - Column I (Дата снятия) and K (Статус) — bot writes from check_status.py when lot dies.
 """
-import json, os, ssl, sys, urllib.request
+import json, os, ssl, sys, time, urllib.request
 from datetime import datetime, timezone
 
 WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxDxDV1Ha7RA1HbhR8935d0rTFpIzadBGkOac2YEGEOCjhVP-VJ57TDi6ud_Q8EUe7i/exec'
 SECRET = 'pizz-belgrade-3-secret-2026'
 
+
+def _retry(fn, tries=3, base_delay=2.0):
+    """Google API/webhook моргают (429/5xx/сеть) — 3 попытки с backoff вместо
+    потери записи (реджекты, вставка лота, обновление цены)."""
+    last = None
+    for i in range(tries):
+        try:
+            return fn()
+        except Exception as e:
+            last = e
+            if i < tries - 1:
+                time.sleep(base_delay * (i + 1))
+    raise last
+
+
 def _post(payload, timeout=30):
-    body = json.dumps(payload).encode()
-    req = urllib.request.Request(WEBHOOK_URL, data=body,
-                                  headers={'Content-Type': 'application/json'},
-                                  method='POST')
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
-    with urllib.request.urlopen(req, timeout=timeout, context=ctx) as r:
-        return json.loads(r.read().decode())
+    def _do():
+        body = json.dumps(payload).encode()
+        req = urllib.request.Request(WEBHOOK_URL, data=body,
+                                     headers={'Content-Type': 'application/json'},
+                                     method='POST')
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        with urllib.request.urlopen(req, timeout=timeout, context=ctx) as r:
+            return json.loads(r.read().decode())
+    return _retry(_do)
 
 def _utc_now_str():
     return datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
@@ -135,8 +152,10 @@ def append_reject_rows(rows):
         ).execute()
         return {'ok': True, 'inserted': len(rows), 'op': 'append_fallback'}
     n = len(rows)
-    # 1) вставить n пустых строк сразу под заголовком (index 1, 0-based)
-    svc.spreadsheets().batchUpdate(
+    # 1) вставить n пустых строк сразу под заголовком (index 1, 0-based).
+    # insertDimension не идемпотентна: ретрай после «успел вставить, ответ потерялся»
+    # даст лишние пустые строки — терпимо и видно глазами, потеря данных хуже.
+    _retry(lambda: svc.spreadsheets().batchUpdate(
         spreadsheetId=SPREADSHEET_ID,
         body={'requests': [{
             'insertDimension': {
@@ -145,14 +164,14 @@ def append_reject_rows(rows):
                 'inheritFromBefore': False,
             }
         }]},
-    ).execute()
-    # 2) записать значения в освободившиеся строки A2:H{1+n}
-    svc.spreadsheets().values().update(
+    ).execute())
+    # 2) записать значения в освободившиеся строки A2:H{1+n} (идемпотентно)
+    _retry(lambda: svc.spreadsheets().values().update(
         spreadsheetId=SPREADSHEET_ID,
         range=f"'{REJECT_SHEET_NAME}'!A2:H{1 + n}",
         valueInputOption='USER_ENTERED',
         body={'values': rows},
-    ).execute()
+    ).execute())
     return {'ok': True, 'inserted': n, 'op': 'insert_at_top'}
 
 # Backwards compat — old append_rows still works

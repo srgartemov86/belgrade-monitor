@@ -145,7 +145,7 @@ def main():
         return 0
 
     passes = out.get('passes') or []
-    sent = failed = 0
+    sent = failed = nophoto_sent = 0
 
     if len(passes) >= MANY_PASSES:
         lines = [f'🍕 {len(passes)} новых лотов (сводка):']
@@ -176,6 +176,8 @@ def main():
                     mid = res.get('first_message_id')
                 else:
                     mid = 0 if send_text(caption) else None
+                    if p.get('had_photos'):
+                        nophoto_sent += 1  # фото были в объявлении, но не скачались
                 if mid is None:
                     raise RuntimeError('send failed')
                 subprocess.run([sys.executable, 'cycle.py', '--mark-sent',
@@ -196,14 +198,58 @@ def main():
 
     fin = run_json(['cycle.py', '--finalize'], 900)
 
+    # --- Health-алерт: аномалии цикла → короткое ⚠️ в тот же чат ---
+    # Раньше всё это молчало в JSON-логе Actions, который никто не читает.
     s = out.get('summary') or {}
+    alerts = []
+    if s.get('sources_down'):
+        alerts.append('⛔ источники недоступны: ' + ', '.join(s['sources_down']))
+    ff = [r for r in (out.get('rejects') or [])
+          if str(r.get('reason', '')).startswith('fetch_fail')]
+    if len(ff) >= 3:
+        alerts.append(f'🌐 detail не скачался у {len(ff)} лотов (бан/сеть?)')
+    if failed:
+        alerts.append(f'✉️ не отправилось лотов: {failed}')
+    if nophoto_sent:
+        alerts.append(f'📷 постов без фото (фото в объявлении были): {nophoto_sent}')
+    noscore = [p for p in passes if p.get('score') is None]
+    if noscore:
+        alerts.append(f'📊 скоринг не посчитался у {len(noscore)} отправленных')
+    rs = out.get('reject_sheet') or {}
+    if rs and not rs.get('ok'):
+        alerts.append('📄 реджект-лист не записался')
+    if fin.get('map_ok') is False:
+        alerts.append('🗺 карта не сгенерировалась')
+    if fin.get('map_surge_ok') is False:
+        alerts.append('🌍 surge-деплой карты упал')
+    if isinstance(fin.get('last_scan_stamp'), str):
+        alerts.append('🕐 штамп Last scan не записался')
+    canary_bad = [f'{k} — {v}' for k, v in
+                  ((fin.get('canary') or {}).get('results') or {}).items()
+                  if str(v).startswith('FAIL')]
+    if canary_bad:
+        alerts.append('🐤 канарейка парсеров:\n   ' + '\n   '.join(canary_bad))
+    if alerts:
+        send_text('⚠️ Монитор Белград — аномалии цикла:\n'
+                  + '\n'.join('· ' + a for a in alerts))
+
+    # --- Weekly-самоотчёт (понедельник, раз в день; cycle.py сам решает) ---
+    try:
+        rep = run_json(['cycle.py', '--weekly-report'], 300)
+        if rep.get('text'):
+            send_text(rep['text'])
+    except Exception as e:
+        print(f'  weekly-report failed: {e}', file=sys.stderr)
+
     print(json.dumps({
         'sweep': s.get('sweep_raw'), 'new': s.get('new'),
         'passes': len(passes), 'sent': sent, 'send_failed': failed,
+        'deferred': s.get('deferred'), 'nophoto_sent': nophoto_sent,
         'rejects': s.get('rejects'), 'duplicates': s.get('duplicates'),
         'price_changes': len(out.get('price_changes') or []),
         'sources_down': s.get('sources_down'),
         'map_ok': fin.get('map_ok'), 'surge_ok': fin.get('map_surge_ok'),
+        'alerts_sent': len(alerts),
     }, ensure_ascii=False))
     # Упавшая отправка не должна валить workflow: state цел, лот доедет позже
     return 0

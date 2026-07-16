@@ -58,6 +58,29 @@ def halo_get(url, timeout=15, attempts=4):
         _halo_sid[0] += 1  # неудача → новый sticky-sid → новый exit-IP
     return None
 
+
+def nek_get(url, timeout=20, attempts=4):
+    """GET nekretnine.rs detail: DataDome режет обычный curl по TLS-отпечатку (403),
+    но curl_cffi chrome131 проходит напрямую (проверено 2026-07-16). С DC-IP GitHub
+    может резать и по IP — тогда фолбэк через residential-прокси с ротацией exit-IP.
+    Возвращает Response 200 с __NEXT_DATA__, либо None."""
+    if not HAS_CFFI:
+        return None
+    for i in range(attempts):
+        imp = _HALO_IMPS[(i + 2) % len(_HALO_IMPS)]  # начинаем с chrome131
+        # 1-я попытка напрямую (даром), дальше — через прокси
+        pr = _halo_proxy_url() if i > 0 else None
+        proxies = {'http': pr, 'https': pr} if pr else None
+        try:
+            r = cffi_requests.get(url, impersonate=imp, timeout=timeout,
+                                  proxies=proxies, allow_redirects=True)
+            if r.status_code == 200 and '__NEXT_DATA__' in r.text:
+                return r
+        except Exception:
+            pass
+        _halo_sid[0] += 1
+    return None
+
 BAD_TYPES = re.compile(r'kancelarij|magacin|skladiste|skladište|hala\b|poslovna zgrada|garaž|garaz|polusuteren|suteren|tržni|trzni|stan\b', re.I)
 
 def fetch(url, timeout=10):

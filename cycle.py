@@ -197,12 +197,18 @@ def haversine_km(lat1, lon1, lat2, lon2):
     return 2 * R * asin(sqrt(a))
 
 
+DRY_RUN = False  # --dry-run: считаем всё, НИЧЕГО не пишем (state/лист)
+
+
 def load_state():
     with open(STATE_PATH) as f:
         return json.load(f)
 
 
 def save_state(s):
+    if DRY_RUN:
+        print('  [dry-run] state.json НЕ сохранён', file=sys.stderr)
+        return
     tmp = STATE_PATH + '.tmp'
     with open(tmp, 'w', encoding='utf-8') as f:
         json.dump(s, f, ensure_ascii=False, indent=2)
@@ -226,6 +232,11 @@ def fetch_html(url, timeout=20):
     if 'halooglasi.com' in url:
         # halo_get: ретраи + прокси (HALO_PROXY) — с DC-IP GitHub напрямую 403
         r = curl_sweep.halo_get(url, timeout=timeout)
+        return (r.text, r.status_code) if r is not None else ('', 0)
+    if 'nekretnine.rs' in url:
+        # DataDome режет обычный curl по TLS (403-заглушка без __NEXT_DATA__);
+        # nek_get: curl_cffi напрямую → при неудаче residential-прокси (2026-07-16)
+        r = curl_sweep.nek_get(url, timeout=timeout)
         return (r.text, r.status_code) if r is not None else ('', 0)
     try:
         r = subprocess.run(
@@ -299,7 +310,44 @@ def parse_4zida(html):
         try: out['ceiling'] = float(cm.group(1).replace(',', '.'))
         except Exception: pass
 
+    _ldjson_enrich(html, out)
     return out
+
+
+def _ldjson_enrich(html, out):
+    """API-first дозаполнение из schema.org ld+json (4zida кладёт Place/Offer/
+    CommercialProperty). Стабильнее регулярок по вёрстке: geo, цена, фото.
+    Заполняет только отсутствующие поля — HTML-парсер остаётся приоритетным."""
+    try:
+        blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>',
+                            html, re.DOTALL)
+        photos = []
+        for b in blocks:
+            try:
+                d = json.loads(b)
+            except Exception:
+                continue
+            items = d.get('@graph', [d]) if isinstance(d, dict) else []
+            for it in items:
+                if not isinstance(it, dict):
+                    continue
+                t = it.get('@type') or ''
+                if t == 'Place' and 'lat' not in out:
+                    geo = it.get('geo') or {}
+                    la, lo = geo.get('latitude'), geo.get('longitude')
+                    if isinstance(la, (int, float)) and isinstance(lo, (int, float)):
+                        out['lat'], out['lon'] = float(la), float(lo)
+                if t in ('CommercialProperty', 'Apartment', 'House', 'RealEstateListing'):
+                    for im in (it.get('image') or []):
+                        u = im.get('contentUrl') or im.get('url') if isinstance(im, dict) else im
+                        if isinstance(u, str) and u.startswith('http') and u not in photos:
+                            photos.append(u)
+        if photos and not out.get('photo_url'):
+            out['photo_url'] = photos[0]
+        if photos:
+            out['photos_ld'] = photos[:10]
+    except Exception:
+        pass  # обогащение best-effort, парсер не валим
 
 
 def parse_nekretnine(html):
@@ -784,6 +832,9 @@ def write_rejects_to_sheet(rejects):
             r.get('url') or '',
             label,
         ])
+    if DRY_RUN:
+        print(f'  [dry-run] реджект-лист: {len(rows)} строк НЕ записаны', file=sys.stderr)
+        return {'ok': True, 'inserted': 0, 'dry_run': True}
     try:
         import sheets_append
         return sheets_append.append_reject_rows(rows)
@@ -1037,7 +1088,7 @@ def run_process():
             capped.append(c)
         s['pending_candidates'] = leftover
 
-        passes, rejects, duplicates = [], [], []
+        passes, rejects, duplicates, deferred = [], [], [], []
 
         for cand in capped:
             src = cand.get('source', '?')
@@ -1107,6 +1158,9 @@ def run_process():
                 rec['photo_urls'] = cand['photo_urls']
             if not rec.get('photo_url') and cand.get('photo_url'):
                 rec['photo_url'] = cand['photo_url']
+            # 4zida: фото из ld+json (стабильнее вёрстки).
+            if not rec.get('photo_urls') and detail.get('photos_ld'):
+                rec['photo_urls'] = detail['photos_ld']
 
             if not passed:
                 rec['rejected'] = True
@@ -1172,7 +1226,28 @@ def run_process():
                 if photo_path:
                     break
 
+            # --- Инварианты перед отправкой: запрет тихой деградации ---
+            # Пасс без фото/координат/скоринга при ПЕРВОЙ попытке не уходит урезанным:
+            # откладываем на следующий цикл (сеть/Overpass часто оживают за 2 часа).
+            # Со второй попытки отправляем, но с явной пометкой в caption.
+            missing = []
+            if photo_candidates and not photo_path:
+                missing.append('фото')
+            if rec.get('geo_lat') is None:
+                missing.append('координаты')
+            elif sc is None:
+                missing.append('скоринг')
+            retry_n = int(cand.get('_send_retry') or 0)
+            if missing and retry_n == 0:
+                cand['_send_retry'] = 1
+                s['pending_candidates'].append(cand)
+                deferred.append({'key': key, 'missing': missing, 'url': cand['url']})
+                continue
+            invariant_note = f"⚠️ недоступно: {', '.join(missing)}\n" if missing else ''
+
             caption = build_caption(cand, detail, district_str, flags)
+            if invariant_note:
+                caption += invariant_note
             if sc:
                 sl = scoring.score_line(sc)
                 if sl:
@@ -1198,6 +1273,8 @@ def run_process():
                 'price': cand.get('price'),
                 'url': cand['url'],
                 'flags': flags,
+                'score': (sc or {}).get('score'),
+                'had_photos': bool(photo_candidates),
             })
 
         # --- Реджекты по цене / цене за м² ---
@@ -1376,6 +1453,12 @@ def run_process():
         passes.sort(key=lambda p: 0 if p.get('feedback_like') else 1)
 
         s['last_cycle_at'] = now_iso()
+        # Статистика цикла для штампа Last scan в реджект-листе (finalize её читает).
+        s['last_cycle_stats'] = {
+            'at': now_iso(), 'sweep_raw': len(all_l), 'new': len(new_lots),
+            'passes': len(passes), 'rejects': len(rejects),
+            'sources_down': sources_down,
+        }
         save_state(s)
 
         elapsed = time.time() - t0
@@ -1389,6 +1472,7 @@ def run_process():
             'passes': len(passes),
             'rejects': len(rejects),
             'duplicates': len(duplicates),
+            'deferred': len(deferred),
             'price_changes': len(price_changes),
             'sources_down': sources_down,
             'errors': sweep_errors[:5],
@@ -1422,6 +1506,7 @@ def run_process():
             'passes': passes,
             'rejects': rejects,
             'duplicates': duplicates,
+            'deferred': deferred,
             'price_changes': price_changes,
             'reject_digest': None,
             'reject_sheet': reject_sheet,
@@ -1496,23 +1581,154 @@ def cmd_mark_sent(listing_key, message_id, desc_ru=None):
     return 0
 
 
+def run_canary(s):
+    """Канарейка: раз в сутки по 1 живому лоту с каждого источника — парсер вернул
+    цену/координаты/фото? Сломался парсер или пришёл бан — видно в тот же день через
+    health-алерт, а не «через месяц заметили Unknown»."""
+    res = {}
+    # API-каналы: nekretnine и cityexpert отдают всё нужное прямо в свипе.
+    try:
+        nk = curl_sweep.sweep_nekretnine(1)
+        c = nk[0] if nk else {}
+        ok = bool(c.get('price') and c.get('area') and c.get('lat') and c.get('photo_url'))
+        res['nekretnine_api'] = 'ok' if ok else (
+            f"FAIL: price={bool(c.get('price'))} lat={bool(c.get('lat'))} "
+            f"photo={bool(c.get('photo_url'))} (пустой ответ)" if not nk else
+            f"FAIL: price={bool(c.get('price'))} lat={bool(c.get('lat'))} photo={bool(c.get('photo_url'))}")
+    except Exception as e:
+        res['nekretnine_api'] = f'FAIL: {e}'
+    try:
+        ce = curl_sweep.sweep_cityexpert(1)
+        ok = bool(ce and ce[0].get('price') and ce[0].get('area'))
+        res['cityexpert_api'] = 'ok' if ok else 'FAIL: пустой ответ / без цены'
+    except Exception as e:
+        res['cityexpert_api'] = f'FAIL: {e}'
+    # Detail-каналы: свежий живой in_sheet лот 4zida и halooglasi.
+    for prefix, src_name, label in (('4zida_', '4zida.rs', '4zida_detail'),
+                                    ('halooglasi_', 'halooglasi.com', 'halo_detail')):
+        rec = None
+        for k, v in sorted(s.get('listings', {}).items(),
+                           key=lambda kv: ((kv[1] or {}).get('last_seen_at') or ''),
+                           reverse=True):
+            if (k.startswith(prefix) and isinstance(v, dict) and v.get('in_sheet')
+                    and not v.get('removed_from_sheet') and v.get('url')):
+                rec = v
+                break
+        if rec is None:
+            res[label] = 'skip: нет живого лота'
+            continue
+        try:
+            html, code = fetch_html(rec['url'])
+            if not html or code != 200:
+                res[label] = f'FAIL: http={code}'
+                continue
+            d = parse_detail(html, {'source': src_name, 'url': rec['url']})
+            ok = bool(d.get('photo_url') and (d.get('lat') or d.get('street')
+                                              or d.get('description')))
+            res[label] = 'ok' if ok else 'FAIL: detail без фото/гео/описания'
+        except Exception as e:
+            res[label] = f'FAIL: {e}'
+    return res
+
+
+def build_weekly_report(s):
+    """Текст weekly-самоотчёта: воронка за 7 дней из state. None если данных нет."""
+    now = datetime.now(timezone.utc)
+    cutoff = now - timedelta(days=7)
+    seen = rejected = insheet = alerted = nophoto = noscore = 0
+    reasons = {}
+    for v in s.get('listings', {}).values():
+        if not isinstance(v, dict):
+            continue
+        try:
+            fs = datetime.fromisoformat((v.get('first_seen_at') or '').replace('Z', '+00:00'))
+        except Exception:
+            continue
+        if fs < cutoff:
+            continue
+        seen += 1
+        if v.get('in_sheet'):
+            insheet += 1
+            if v.get('alerted'):
+                alerted += 1
+            if v.get('score') is None and v.get('geo_lat') is not None:
+                noscore += 1
+            if not v.get('photo_urls') and not v.get('photo_url'):
+                nophoto += 1
+        elif v.get('rejected'):
+            rejected += 1
+            r = str((v.get('flags') or ['?'])[0])
+            if 'per_m2' in r: b = '€/м² < 20'
+            elif 'price_far' in r: b = 'цена далеко вне диапазона'
+            elif r.startswith('price'): b = 'цена вне 1300–6000'
+            elif 'office' in r or 'kancelarij' in r or 'poslovn' in r: b = 'офис/БЦ'
+            elif 'floor' in r or 'sprat' in r: b = 'этаж'
+            elif 'far_muni' in r or 'zemun' in r: b = 'вне зоны'
+            elif 'duplicate' in r: b = 'дубли'
+            elif 'fetch_fail' in r: b = 'detail не скачался'
+            else: b = 'прочее'
+            reasons[b] = reasons.get(b, 0) + 1
+    if seen == 0:
+        return None
+    lines = [f'📊 Монитор Белград — неделя:',
+             f'· просмотрено новых: {seen}',
+             f'· в таблицу/Telegram: {insheet} ({100*insheet//max(seen,1)}%)',
+             f'· отсеяно: {rejected}']
+    for b, n in sorted(reasons.items(), key=lambda x: -x[1])[:6]:
+        lines.append(f'   – {b}: {n}')
+    if noscore or nophoto:
+        lines.append(f'· аномалии у отправленных: без скоринга {noscore}, без фото {nophoto}')
+    can = (s.get('canary') or {}).get('results') or {}
+    bad = [f'{k}' for k, v in can.items() if str(v).startswith('FAIL')]
+    lines.append('· канарейка парсеров: ' + ('⚠️ ' + ', '.join(bad) if bad else 'все ok'))
+    return '\n'.join(lines)
+
+
+def cmd_weekly_report():
+    """--weekly-report: если сегодня понедельник (Belgrade) и ещё не слали — вернуть
+    текст отчёта и пометить дату в state. Отправляет driver."""
+    import zoneinfo
+    now_b = datetime.now(zoneinfo.ZoneInfo('Europe/Belgrade'))
+    today = now_b.strftime('%Y-%m-%d')
+    with StateLock():
+        s = load_state()
+        if now_b.weekday() != 0 or s.get('weekly_report_sent') == today:
+            print(json.dumps({}))
+            return 0
+        text = build_weekly_report(s)
+        if text:
+            s['weekly_report_sent'] = today
+            save_state(s)
+    print(json.dumps({'text': text} if text else {}, ensure_ascii=False))
+    return 0
+
+
 def cmd_finalize():
     """Run check_status + gen_map + write runs.log line. Single tool-call replacement
     for the previous 3-step agent flow."""
     t0 = time.time()
     out = {'ok': True}
 
-    # «Last scan» в реджект-листе (J1) — обновляется КАЖДЫМ прогоном, даже пустым.
-    # Сергей мониторит лист глазами: свежий штамп + нет строк = тихий рынок,
-    # старый штамп = монитор умер, бить тревогу (как в cluj-monitor).
+    # «Last scan» в реджект-листе (J1) — обновляется КАЖДЫМ прогоном, даже пустым,
+    # и несёт статистику цикла: одна ячейка отвечает «жив и что видел».
+    # Свежий штамп + нет строк = тихий рынок; старый штамп = монитор умер.
     try:
+        if DRY_RUN:
+            raise RuntimeError('dry-run: штамп не пишем')
         from datetime import datetime as _dt
         import zoneinfo
         _now = _dt.now(zoneinfo.ZoneInfo('Europe/Belgrade')).strftime('%Y-%m-%d %H:%M')
+        _st = load_state().get('last_cycle_stats') or {}
+        _down = _st.get('sources_down') or []
+        _n_src = 4 - len(_down)
+        _extra = ''
+        if _st:
+            _extra = (f" · sweep {_st.get('sweep_raw', '?')} · new {_st.get('new', '?')}"
+                      f" · src {_n_src}/4" + (f" · DOWN: {','.join(_down)}" if _down else ''))
         _sheets_service().spreadsheets().values().update(
             spreadsheetId=SPREADSHEET_ID, range="'не прошли фильтр'!J1",
             valueInputOption='RAW',
-            body={'values': [[f'Last scan: {_now} (Belgrade time)']]}).execute()
+            body={'values': [[f'Last scan: {_now} (Belgrade){_extra}']]}).execute()
         out['last_scan_stamp'] = True
     except Exception as e:
         out['last_scan_stamp'] = f'fail: {e}'
@@ -1565,12 +1781,25 @@ def cmd_finalize():
         feedback = None
         out['feedback_error'] = str(e)[:200]
 
+    # Канарейка парсеров: раз в сутки, сетевые запросы ДО StateLock (не держим лок).
+    canary = None
+    _canary_date = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+    try:
+        _s0 = load_state()
+        if (_s0.get('canary') or {}).get('date') != _canary_date:
+            canary = run_canary(_s0)
+    except Exception as e:
+        canary = {'canary_error': f'FAIL: {e}'}
+
     with StateLock():
         s = load_state()
         listings = s.get('listings', {})
         if feedback:
             s['feedback_aggregates'] = feedback
             out['feedback_districts'] = len(feedback['by_district'])
+        if canary is not None:
+            s['canary'] = {'date': _canary_date, 'results': canary}
+            out['canary'] = s['canary']
 
         # Компакция: терминальным записям старше 45 дней тяжёлые поля не нужны
         # (описания и фото-списки — основной вес state.json).
@@ -1645,12 +1874,24 @@ def main():
                     help='Русское «Кратко» для Sheets кол. F (вместо сырого сербского описания)')
     ap.add_argument('--finalize', action='store_true',
                     help='Run check_status + gen_map + runs.log')
+    ap.add_argument('--weekly-report', action='store_true',
+                    help='Вернуть текст weekly-отчёта (понедельник, раз в день), отправляет driver')
+    ap.add_argument('--dry-run', action='store_true',
+                    help='Полный прогон БЕЗ записи: state не сохраняется, лист не трогается. '
+                         'Для ручных прогонов — иначе дубли с облачным монитором.')
     args = ap.parse_args()
+
+    if args.dry_run:
+        global DRY_RUN
+        DRY_RUN = True
+        print('=== DRY-RUN: state и Google Sheet НЕ будут изменены ===', file=sys.stderr)
 
     if args.mark_sent:
         return cmd_mark_sent(args.mark_sent[0], args.mark_sent[1], desc_ru=args.desc_ru)
     if args.finalize:
         return cmd_finalize()
+    if args.weekly_report:
+        return cmd_weekly_report()
     return run_process()
 
 

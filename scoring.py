@@ -170,14 +170,19 @@ def fetch_osm(lat, lon, timeout=180):
          f'node["highway"="bus_stop"](around:{FETCH_RADIUS},{lat},{lon});'
          f'nwr["railway"~"^(station|tram_stop|subway_entrance|halt)$"](around:{FETCH_RADIUS},{lat},{lon});'
          f");out tags geom;")
-    for m in MIRRORS:
-        try:
-            r = requests.post(m, data={"data": q},
-                              headers={"User-Agent": UA}, timeout=timeout)
-            if r.status_code == 200:
-                return r.json().get("elements", [])
-        except Exception:
-            continue
+    # 2 круга по зеркалам с паузой: разовый затык одного зеркала (частая причина
+    # score=None) не должен ронять скоринг — второй круг обычно добирает.
+    for round_n in range(2):
+        for m in MIRRORS:
+            try:
+                r = requests.post(m, data={"data": q},
+                                  headers={"User-Agent": UA}, timeout=timeout)
+                if r.status_code == 200:
+                    return r.json().get("elements", [])
+            except Exception:
+                continue
+        if round_n == 0:
+            time.sleep(5)
     return None
 
 
