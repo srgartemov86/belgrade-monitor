@@ -1603,31 +1603,41 @@ def run_canary(s):
         res['cityexpert_api'] = 'ok' if ok else 'FAIL: пустой ответ / без цены'
     except Exception as e:
         res['cityexpert_api'] = f'FAIL: {e}'
-    # Detail-каналы: свежий живой in_sheet лот 4zida и halooglasi.
+    # Detail-каналы: свежие живые in_sheet лоты 4zida и halooglasi.
+    # Пробуем до 3 лотов: свежеудалённый лот отдаёт 200 с редиректом на категорию
+    # (парсер честно возвращает пусто) — один мёртвый подопытный не должен давать
+    # ложную тревогу (кейс halo_detail 2026-07-17). FAIL — только если пустые ВСЕ.
     for prefix, src_name, label in (('4zida_', '4zida.rs', '4zida_detail'),
                                     ('halooglasi_', 'halooglasi.com', 'halo_detail')):
-        rec = None
+        recs = []
         for k, v in sorted(s.get('listings', {}).items(),
                            key=lambda kv: ((kv[1] or {}).get('last_seen_at') or ''),
                            reverse=True):
             if (k.startswith(prefix) and isinstance(v, dict) and v.get('in_sheet')
                     and not v.get('removed_from_sheet') and v.get('url')):
-                rec = v
-                break
-        if rec is None:
+                recs.append(v)
+                if len(recs) >= 3:
+                    break
+        if not recs:
             res[label] = 'skip: нет живого лота'
             continue
-        try:
-            html, code = fetch_html(rec['url'])
-            if not html or code != 200:
-                res[label] = f'FAIL: http={code}'
-                continue
-            d = parse_detail(html, {'source': src_name, 'url': rec['url']})
-            ok = bool(d.get('photo_url') and (d.get('lat') or d.get('street')
-                                              or d.get('description')))
-            res[label] = 'ok' if ok else 'FAIL: detail без фото/гео/описания'
-        except Exception as e:
-            res[label] = f'FAIL: {e}'
+        last_reason = 'нет данных'
+        for rec in recs:
+            try:
+                html, code = fetch_html(rec['url'])
+                if not html or code != 200:
+                    last_reason = f'http={code}'
+                    continue
+                d = parse_detail(html, {'source': src_name, 'url': rec['url']})
+                if d.get('photo_url') and (d.get('lat') or d.get('street')
+                                           or d.get('description')):
+                    res[label] = 'ok'
+                    break
+                last_reason = 'detail пустой (лот удалён/редизайн?)'
+            except Exception as e:
+                last_reason = str(e)
+        else:
+            res[label] = f'FAIL x{len(recs)}: {last_reason}'
     return res
 
 
