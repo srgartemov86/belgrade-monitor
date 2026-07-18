@@ -1641,7 +1641,7 @@ def run_canary(s):
     return res
 
 
-def build_weekly_report(s):
+def build_weekly_report(s, market_line=None):
     """Текст weekly-самоотчёта: воронка за 7 дней из state. None если данных нет."""
     now = datetime.now(timezone.utc)
     cutoff = now - timedelta(days=7)
@@ -1691,7 +1691,50 @@ def build_weekly_report(s):
     can = (s.get('canary') or {}).get('results') or {}
     bad = [f'{k}' for k, v in can.items() if str(v).startswith('FAIL')]
     lines.append('· канарейка парсеров: ' + ('⚠️ ' + ', '.join(bad) if bad else 'все ok'))
+    if market_line:
+        lines.append(market_line)
     return '\n'.join(lines)
+
+
+def market_selfcheck(s, days=7):
+    """Самосверка с рынком: у 4zida дата создания зашита в ObjectId объявления —
+    считаем, сколько объявлений реально появилось за N дней и сколько из
+    подходящих (lokal/poslovni-prostor 100–220 м², не Земун/пригород) монитор
+    записал в state. Подходящий лот МИМО state = красный флаг (пропуск sweep'а):
+    даже далёкий промах по цене обязан лежать в state как silent-reject."""
+    try:
+        lst = curl_sweep.sweep_4zida(20)
+    except Exception as e:
+        return f'· рынок (4zida, {days}д): sweep failed — {str(e)[:80]}'
+    cut = (datetime.now(timezone.utc) - timedelta(days=days)).timestamp()
+
+    def oid_ts(i):
+        try:
+            return int(str(i)[:8], 16)
+        except Exception:
+            return None
+
+    fresh = [l for l in lst if (oid_ts(l.get('id')) or 0) >= cut]
+    known = {k.split('_', 1)[-1] for k in s.get('listings', {})}
+    recorded = sum(1 for l in fresh if str(l.get('id')) in known)
+
+    def is_fitting(l):
+        if not (l.get('area') and 100 <= l['area'] <= 220):
+            return False
+        if (l.get('type') or '') not in ('lokal', 'poslovni-prostor'):
+            return False
+        u = (l.get('url') or '').lower()
+        return not any(sl in u for sl in ZEMUN_SLUGS + FAR_MUNI_SLUGS)
+
+    fitting = [l for l in fresh if is_fitting(l)]
+    missed = [l for l in fitting if str(l.get('id')) not in known]
+    line = (f'· рынок (4zida, {days}д): новых объявлений {len(fresh)}, '
+            f'из них локалы 100–220 м²: {len(fitting)}, записано монитором: {recorded}')
+    if missed:
+        line += ('\n   ⚠️ ПРОПУЩЕНЫ подходящие: '
+                 + '; '.join(f"{l.get('area')}м²/{l.get('price')}€ {l.get('url')}"
+                             for l in missed[:3]))
+    return line
 
 
 def cmd_weekly_report():
@@ -1700,12 +1743,18 @@ def cmd_weekly_report():
     import zoneinfo
     now_b = datetime.now(zoneinfo.ZoneInfo('Europe/Belgrade'))
     today = now_b.strftime('%Y-%m-%d')
+    if now_b.weekday() != 0 or load_state().get('weekly_report_sent') == today:
+        print(json.dumps({}))
+        return 0
+    # Сетевая самосверка с рынком — ДО StateLock (сеть под локом не держим).
+    s0 = load_state()
+    market = market_selfcheck(s0)
     with StateLock():
         s = load_state()
-        if now_b.weekday() != 0 or s.get('weekly_report_sent') == today:
+        if s.get('weekly_report_sent') == today:  # гонка с параллельным циклом
             print(json.dumps({}))
             return 0
-        text = build_weekly_report(s)
+        text = build_weekly_report(s, market_line=market)
         if text:
             s['weekly_report_sent'] = today
             save_state(s)
