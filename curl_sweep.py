@@ -59,17 +59,17 @@ def halo_get(url, timeout=15, attempts=4):
     return None
 
 
-def nek_get(url, timeout=20, attempts=4):
-    """GET nekretnine.rs detail: DataDome режет обычный curl по TLS-отпечатку (403),
-    но curl_cffi chrome131 проходит напрямую (проверено 2026-07-16). С DC-IP GitHub
-    может резать и по IP — тогда фолбэк через residential-прокси с ротацией exit-IP.
+def nek_get(url, timeout=20, attempts=6):
+    """GET nekretnine.rs detail: DataDome режет обычный curl по TLS-отпечатку (403).
+    2026-07-16 curl_cffi chrome131 проходил напрямую; 2026-07-22 DataDome ужесточился
+    и режет и cffi с «холодных» IP — поэтому при наличии residential-прокси ВСЕ
+    попытки идут через него с ротацией exit-IP (direct с DC-IP GitHub бессмысленен).
     Возвращает Response 200 с __NEXT_DATA__, либо None."""
     if not HAS_CFFI:
         return None
     for i in range(attempts):
         imp = _HALO_IMPS[(i + 2) % len(_HALO_IMPS)]  # начинаем с chrome131
-        # 1-я попытка напрямую (даром), дальше — через прокси
-        pr = _halo_proxy_url() if i > 0 else None
+        pr = _halo_proxy_url()  # None если прокси не задан (локальный Mac) → direct
         proxies = {'http': pr, 'https': pr} if pr else None
         try:
             r = cffi_requests.get(url, impersonate=imp, timeout=timeout,

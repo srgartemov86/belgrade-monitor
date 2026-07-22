@@ -1104,7 +1104,32 @@ def run_process():
             # else: new OR zombie (no terminal status) — fall through to detail-fetch
 
             html, status = fetch_html(cand['url'])
-            if not html:
+            if not html and src == 'nekretnine.rs' and cand.get('lat') is not None:
+                # DataDome заглушил detail, но JSON-API свипа уже дал гео/фото/цену/
+                # площадь — обрабатываем на них с флагами uncertain (этаж/потолок
+                # неизвестны). Раньше такой лот умирал как fetch_fail, включая
+                # ПРОХОДНЫЕ по цене (кейс 22.07: 4 лота по 20.7–25.4 €/м²).
+                html = ''
+                detail = {}
+            elif not html:
+                # 1-й провал — pending-ретрай следующим циклом (сеть/бан часто
+                # временные). 2-й — реджект С ЗАПИСЬЮ в state: раньше fetch_fail
+                # не записывался → нет дедупа → тот же лот дублировался в листе
+                # каждым циклом (кейс 21-22.07: 4 лота × 2 пачки строк).
+                if int(cand.get('_fetch_retry') or 0) == 0:
+                    cand['_fetch_retry'] = 1
+                    s['pending_candidates'].append(cand)
+                    deferred.append({'key': key, 'missing': ['detail(fetch)'],
+                                     'url': cand['url']})
+                    continue
+                s['listings'][key] = {
+                    'source': src, 'id': cid, 'url': cand['url'],
+                    'area_m2': cand.get('area'), 'price_eur': cand.get('price'),
+                    'address': (cand.get('street') or '').strip(), 'district': '',
+                    'first_seen_at': now_iso(), 'last_seen_at': now_iso(),
+                    'in_sheet': False, 'alerted': False, 'rejected': True,
+                    'flags': [f'fetch_fail:http={status}'],
+                }
                 rejects.append({
                     'key': key, 'reason': f'fetch_fail:http={status}',
                     'district': '', 'address': (cand.get('street') or '').strip(),
@@ -1112,8 +1137,8 @@ def run_process():
                     'url': cand['url'], 'source': src, 'lat': None, 'lon': None,
                 })
                 continue
-
-            detail = parse_detail(html, cand)
+            else:
+                detail = parse_detail(html, cand)
             # nekretnine detail часто под DataDome (403 → пустой detail). Координаты,
             # улицу, район и фото доливаем из JSON-API свипа (cand) — там всё есть,
             # тогда фильтры/скоринг/карта работают как при живом detail (2026-07-16).
