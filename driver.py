@@ -131,10 +131,12 @@ def send_album(caption, photos):
         os.unlink(cap_path)
 
 
-def send_text(text, reply_to=None, chat_id=None):
+def send_text(text, reply_to=None, chat_id=None, html=False):
     args = ['send_text.py', chat_id or CHAT_ID, '-']
     if reply_to:
         args += ['--reply-to', str(reply_to)]
+    if html:
+        args += ['--html']
     r = subprocess.run([sys.executable] + args, input=text, capture_output=True,
                        text=True, timeout=60, cwd=HERE)
     sys.stderr.write(r.stderr or '')
@@ -242,6 +244,9 @@ def main():
         rep = run_json(['cycle.py', '--weekly-report'], 300)
         if rep.get('text'):
             send_text(rep['text'], chat_id=ALERT_CHAT_ID)
+        # формат-как-в-Клуже: воронка недели с буллетами прошедших — в рабочий чат
+        if rep.get('chat_text'):
+            send_text(rep['chat_text'], html=True)
     except Exception as e:
         print(f'  weekly-report failed: {e}', file=sys.stderr)
 

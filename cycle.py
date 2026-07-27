@@ -1666,6 +1666,47 @@ def run_canary(s):
     return res
 
 
+def build_weekly_chat_digest(s):
+    """Сводка недели для рабочего чата Белград-3 (формат клужского daily summary):
+    воронка + буллеты прошедших лотов с ссылками. HTML-разметка (send_text --html)."""
+    now = datetime.now(timezone.utc)
+    cutoff = now - timedelta(days=7)
+    seen = rejected = 0
+    passed = []
+    for v in s.get('listings', {}).values():
+        if not isinstance(v, dict):
+            continue
+        # first_seen_at в старых лотах бывает epoch-числом — парсим как weekly_report
+        try:
+            fs = datetime.fromisoformat(str(v.get('first_seen_at') or '').replace('Z', '+00:00'))
+        except Exception:
+            continue
+        if fs < cutoff:
+            continue
+        seen += 1
+        if v.get('in_sheet'):
+            passed.append(v)
+        elif v.get('rejected'):
+            rejected += 1
+    sheet = ('https://docs.google.com/spreadsheets/d/'
+             '1jL7junHZDJCqG2EDp6olOPmPoOCConXR7xKz-QM-qAo/edit')
+    end = datetime.now(timezone.utc)
+    period = f"{(end - timedelta(days=7)).strftime('%d.%m')}–{end.strftime('%d.%m')}"
+    lines = [
+        f'📊 Итоги недели · {period}',
+        f'· разобрано новых объявлений: {seen}',
+        f'· отсеяно фильтрами: {rejected} → <a href="{sheet}#gid=1460013302">лист «не прошли фильтр»</a>',
+        f'· прошло в работу: {len(passed)} → <a href="{sheet}">таблица локалов</a>',
+    ]
+    for v in sorted(passed, key=lambda x: x.get('sent_at') or '')[:10]:
+        label = (f"{v.get('district') or '?'} · {v.get('area_m2')} м² · "
+                 f"{v.get('price_eur')} €/мес")
+        lines.append(f'   • <a href="{v.get("url")}">{label}</a>' if v.get('url')
+                     else f'   • {label}')
+    lines.append('🗺 Карта: https://dodo-belgrade-lokali.surge.sh/lokali.html')
+    return '\n'.join(lines)
+
+
 def build_weekly_report(s, market_line=None):
     """Текст weekly-самоотчёта: воронка за 7 дней из state. None если данных нет."""
     now = datetime.now(timezone.utc)
@@ -1780,10 +1821,11 @@ def cmd_weekly_report():
             print(json.dumps({}))
             return 0
         text = build_weekly_report(s, market_line=market)
+        chat_text = build_weekly_chat_digest(s)
         if text:
             s['weekly_report_sent'] = today
             save_state(s)
-    print(json.dumps({'text': text} if text else {}, ensure_ascii=False))
+    print(json.dumps({'text': text, 'chat_text': chat_text} if text else {}, ensure_ascii=False))
     return 0
 
 

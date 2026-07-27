@@ -17,6 +17,7 @@ async def main():
     reply_to = None
     if '--reply-to' in sys.argv:
         reply_to = int(sys.argv[sys.argv.index('--reply-to') + 1])
+    parse_mode = 'html' if '--html' in sys.argv else None
     text = (sys.stdin.read() if src == '-' else open(src, encoding='utf-8').read())[:4000]
 
     from telethon import TelegramClient
@@ -37,7 +38,7 @@ async def main():
         if entity is None:
             print(json.dumps({'ok': False, 'error': f'cannot resolve chat {chat_id}'}))
             return 1
-        msg = await client.send_message(entity, text, reply_to=reply_to)
+        msg = await client.send_message(entity, text, reply_to=reply_to, parse_mode=parse_mode, link_preview=False)
         print(json.dumps({'ok': True, 'message_id': msg.id}))
         return 0
     finally:
