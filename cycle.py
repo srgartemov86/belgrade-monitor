@@ -1147,7 +1147,17 @@ def run_process():
                 continue
             per_src[src] = per_src.get(src, 0) + 1
             capped.append(c)
-        s['pending_candidates'] = leftover
+        # Очередь дедуплицируем: один лот попадает в candidates и из pending, и
+        # из stuck (known_ids() исключает его только из new_lots), поэтому без
+        # этого хвост очереди копит копии и съедает слоты следующих циклов.
+        _seen_q, _uniq = set(), []
+        for _c in leftover:
+            _qk = f"{(_c.get('source') or '?').split('.')[0]}_{_c.get('id')}"
+            if _qk in _seen_q:
+                continue
+            _seen_q.add(_qk)
+            _uniq.append(_c)
+        s['pending_candidates'] = _uniq
 
         passes, rejects, duplicates, deferred = [], [], [], []
 
