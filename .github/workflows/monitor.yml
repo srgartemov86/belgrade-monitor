@@ -74,9 +74,20 @@ jobs:
         run: |
           git config user.name "belgrade-monitor-bot"
           git config user.email "bot@users.noreply.github.com"
-          # -A data: git add с явным списком атомарно падает, если какого-то файла
-          # ещё нет — и тогда state молча не коммитится (урок cluj, баг 1-го прогона)
-          git add -A data public
-          git diff --cached --quiet || git commit -m "cycle $(date -u +%Y-%m-%dT%H:%MZ)"
-          git pull --rebase origin main || true
-          git push || true
+          # -A data: явный список падает, если файла ещё нет, и state молча не коммитится
+          git add -A data
+          git diff --cached --quiet && exit 0
+          git commit -m "cycle $(date -u +%Y-%m-%dT%H:%MZ)"
+          # Раньше тут было `git pull --rebase || true; git push || true`: при
+          # параллельном пуше ребейз конфликтовал, оба шага молча падали, и
+          # состояние прогона ТЕРЯЛОСЬ — лот уже уехал в чат и таблицу, но в
+          # state этого не оставалось, и следующий цикл слал его повторно.
+          # Состояние раннера новее нашего data/, поэтому при конфликте берём своё.
+          for i in 1 2 3; do
+            git fetch -q origin main || true
+            git merge -q -X ours origin/main -m "merge origin (keep runner state)" || git merge --abort || true
+            git push -q && exit 0
+            sleep 5
+          done
+          echo "state push failed after 3 attempts" >&2
+          exit 1
