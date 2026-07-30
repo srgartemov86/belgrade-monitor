@@ -2035,6 +2035,12 @@ def cmd_finalize():
                 r['dead_reason'] = 'legacy_key_unreachable'
                 r['removed_human'] = True
                 legacy_marked += 1
+            elif int(r.get('stuck_retries') or 0) < STUCK_RETRIES and dt is not None:
+                # Лот ещё в бюджете повторных попыток отправки — хоронить рано.
+                # Жнец режет по 24 часам, а при реальном ритме прогонов (~3/сутки)
+                # шесть попыток растягиваются на двое суток, и он успевал убить
+                # лот, который система как раз пыталась дожать.
+                continue
             elif dt is None or dt < zombie_cutoff:
                 # No timestamps OR older than 24h with no terminal status → dead
                 r['removed_from_sheet'] = True
