@@ -2000,7 +2000,12 @@ def cmd_finalize():
 
         # Компакция: терминальным записям старше 45 дней тяжёлые поля не нужны
         # (описания и фото-списки — основной вес state.json).
-        compact_cutoff = datetime.now(timezone.utc) - timedelta(days=45)
+        # 45 дней держали тяжёлые поля (описание, фото, скоринг) у уже отклонённых
+        # лотов, а state целиком коммитится в git КАЖДЫМ прогоном. У Белграда
+        # это дало файл на 3.6 МБ; порог в 3 дня сжимает 1700 записей и режет
+        # его на четверть. Дольше эти поля не нужны: реджект в дайджест уходит
+        # в том же цикле, а дедуп сверяется только с лотами из таблицы.
+        compact_cutoff = datetime.now(timezone.utc) - timedelta(days=3)
         compacted = 0
         for k, r in listings.items():
             if not (r.get('rejected') or r.get('removed_from_sheet')):
