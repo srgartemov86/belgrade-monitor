@@ -47483,7 +47483,7 @@
       "address": "Vidikovacka",
       "district": "Unknown",
       "first_seen_at": "2026-06-29T06:10:57.789422+00:00",
-      "last_seen_at": "2026-07-31T10:30:12.814584+00:00",
+      "last_seen_at": "2026-07-31T12:30:52.105397+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -75490,13 +75490,13 @@
         "like": 2,
         "dislike": 20
       },
-      "Palilula (Botanička bašta)": {
-        "like": 0,
-        "dislike": 2
-      },
       "Palilula": {
         "like": 0,
         "dislike": 20
+      },
+      "Palilula (Botanička bašta)": {
+        "like": 0,
+        "dislike": 2
       },
       "Centar - Skupština - Terazije": {
         "like": 0,
@@ -75530,13 +75530,13 @@
         "like": 0,
         "dislike": 19
       },
-      "Voždovac": {
-        "like": 0,
-        "dislike": 21
-      },
       "Voždovac (Šumice)": {
         "like": 0,
         "dislike": 3
+      },
+      "Voždovac": {
+        "like": 0,
+        "dislike": 21
       },
       "Vukov spomenik - Đeram": {
         "like": 0,
@@ -75646,13 +75646,13 @@
         "like": 0,
         "dislike": 4
       },
-      "Stari Grad (Dorćol)": {
-        "like": 0,
-        "dislike": 16
-      },
       "Stari Grad": {
         "like": 0,
         "dislike": 30
+      },
+      "Stari Grad (Dorćol)": {
+        "like": 0,
+        "dislike": 16
       },
       "Palilula Centar - Tašmajdan - Pravni fakultet": {
         "like": 0,
