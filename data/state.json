@@ -5826,7 +5826,7 @@
       "reject_reason": "1. sprat (REJECT)",
       "in_sheet": false,
       "first_seen_at": "2026-05-15T13:10:30.898387Z",
-      "last_seen_at": "2026-08-04T10:30:33.576353+00:00",
+      "last_seen_at": "2026-08-04T12:30:26.080025+00:00",
       "compacted": true
     },
     "4zida_6a070f649ff064174f00c694": {
@@ -10563,7 +10563,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-05-27T11:53:25.106675+00:00",
-      "last_seen_at": "2026-08-04T10:30:33.576159+00:00",
+      "last_seen_at": "2026-08-04T12:30:26.079833+00:00",
       "in_sheet": false,
       "alerted": false,
       "flags": [
@@ -31005,7 +31005,7 @@
       "district": "Novi Beograd (Sava Centar)",
       "subdistrict": null,
       "first_seen_at": "2026-06-16T11:08:19.961840+00:00",
-      "last_seen_at": "2026-08-04T10:30:33.576348+00:00",
+      "last_seen_at": "2026-08-04T12:30:26.080018+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -48191,7 +48191,7 @@
       "address": "Marka Oreškovića",
       "district": "Unknown",
       "first_seen_at": "2026-06-30T16:47:07.911789+00:00",
-      "last_seen_at": "2026-08-04T10:30:33.576578+00:00",
+      "last_seen_at": "2026-08-04T12:30:26.080268+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -51784,7 +51784,7 @@
       "address": "NEBOJSINA",
       "district": "Vračar",
       "first_seen_at": "2026-07-03T16:08:13.307355+00:00",
-      "last_seen_at": "2026-08-04T10:30:33.576224+00:00",
+      "last_seen_at": "2026-08-04T12:30:26.079901+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -52045,7 +52045,7 @@
       "address": "Kneza Višeslava",
       "district": "Unknown",
       "first_seen_at": "2026-07-04T10:08:10.389823+00:00",
-      "last_seen_at": "2026-08-04T10:30:33.576138+00:00",
+      "last_seen_at": "2026-08-04T12:30:26.079811+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -75995,13 +75995,13 @@
   },
   "feedback_aggregates": {
     "by_district": {
-      "Vračar": {
-        "like": 3,
-        "dislike": 88
-      },
       "Vračar (Hram Svetog Save - Neimar - Čubura)": {
         "like": 0,
         "dislike": 18
+      },
+      "Vračar": {
+        "like": 3,
+        "dislike": 88
       },
       "Profesorska kolonija - Hala Pionir": {
         "like": 0,
@@ -76017,11 +76017,15 @@
       },
       "Zvezdara (Dimitrija Tucovića)": {
         "like": 0,
-        "dislike": 4
+        "dislike": 2
       },
       "Zvezdara": {
         "like": 3,
         "dislike": 50
+      },
+      "Zvezdara (Dimitrija Tucovića)": {
+        "like": 0,
+        "dislike": 4
       },
       "Ušće - Gazela - Staro Sajmište": {
         "like": 0,
@@ -76055,10 +76059,6 @@
         "like": 0,
         "dislike": 5
       },
-      "Novi Beograd (Stari Merkator)": {
-        "like": 0,
-        "dislike": 3
-      },
       "Novi Beograd": {
         "like": 2,
         "dislike": 37
@@ -76078,6 +76078,10 @@
       "Palilula": {
         "like": 0,
         "dislike": 20
+      },
+      "Palilula (Botanička bašta)": {
+        "like": 0,
+        "dislike": 2
       },
       "Centar - Skupština - Terazije": {
         "like": 0,
@@ -76167,13 +76171,13 @@
         "like": 0,
         "dislike": 3
       },
-      "Savski venac (Senjak)": {
-        "like": 0,
-        "dislike": 5
-      },
       "Savski venac": {
         "like": 0,
         "dislike": 11
+      },
+      "Savski venac (Senjak)": {
+        "like": 0,
+        "dislike": 5
       },
       "Novi Beograd (Sava Centar)": {
         "like": 0,
