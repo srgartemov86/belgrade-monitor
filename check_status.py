@@ -148,7 +148,63 @@ def fetch(url, timeout=20):
         return 'ERR', 0, str(e)[:80], None
 
 
+LAST_SEEN = {}  # key → last_seen_at ISO, заполняется в main() для stale-правила
+STALE_DAYS = 45
+
+
+def check_nekretnine(key, src, url):
+    """nekretnine.rs: <title> пустой (ставится клиентом) и DataDome режет curl —
+    старый title-детект давал вечное 'unknown', лоты не умирали никогда
+    (аудит 2026-09-04: 28 активных nekretnine-лотов, часть с мая). Теперь:
+      • nek_get (cffi + residential-прокси) → __NEXT_DATA__
+      • canonical/realEstate.id ≠ запрошенному → редирект на другое объявление → dead
+      • объявление не обновлялось >45 дн И не видно в свипе >45 дн → dead (stale):
+        живые агентства «поднимают» объявления, протухшие висят без обновлений
+      • свежее updatedAt → alive; иначе unknown (last_seen не трогаем)"""
+    import curl_sweep
+    r = curl_sweep.nek_get(url, timeout=20)
+    if r is None:
+        return key, src, url, 'ERR', 0, 'nek_get: DataDome/proxy', 'unknown'
+    body = r.text
+    m = re.search(r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>',
+                  body, re.DOTALL)
+    if not m:
+        return key, src, url, str(r.status_code), len(body), 'no NEXT_DATA', 'unknown'
+    try:
+        dd = json.loads(m.group(1))['props']['pageProps'].get('detailData') or {}
+    except Exception:
+        return key, src, url, str(r.status_code), len(body), 'NEXT_DATA parse err', 'unknown'
+    re0 = dd.get('realEstate') or {}
+    if not re0:
+        return key, src, url, '200', len(body), 'no realEstate', 'dead'
+    exp = re.search(r'/oglasi/(\d+)/', url)
+    canonical = ((dd.get('seo') or {}).get('canonical') or '').rstrip('/')
+    if exp and str(re0.get('id')) != exp.group(1):
+        return key, src, url, '200', len(body), f'redirect→{re0.get("id")}', 'dead'
+    if not exp and canonical and canonical != url.rstrip('/'):
+        return key, src, url, '200', len(body), f'redirect→{canonical[-30:]}', 'dead'
+    now = dt.datetime.now(dt.timezone.utc)
+    upd = re0.get('updatedAt')
+    upd_dt = dt.datetime.fromtimestamp(upd, dt.timezone.utc) if isinstance(upd, (int, float)) else None
+    ls = LAST_SEEN.get(key)
+    try:
+        ls_dt = dt.datetime.fromisoformat(ls.replace('Z', '+00:00')) if ls else None
+    except Exception:
+        ls_dt = None
+    stale = dt.timedelta(days=STALE_DAYS)
+    if upd_dt and now - upd_dt > stale and (ls_dt is None or now - ls_dt > stale):
+        return key, src, url, '200', len(body), f'stale updated={upd_dt:%Y-%m-%d}', 'dead'
+    if upd_dt and now - upd_dt <= stale:
+        return key, src, url, '200', len(body), f'updated={upd_dt:%Y-%m-%d}', 'alive'
+    return key, src, url, '200', len(body), 'present, not fresh', 'unknown'
+
+
 def check_one(key, src, url):
+    if src == 'nekretnine.rs':
+        try:
+            return check_nekretnine(key, src, url)
+        except Exception as e:
+            return key, src, url, 'ERR', 0, str(e)[:60], 'unknown'
     http_code, size, title, valid_to = fetch(url)
     verdict = is_dead(src, http_code, size, title, valid_to)
     return key, src, url, http_code, size, title, verdict
@@ -165,7 +221,10 @@ def main():
 
     # Group candidates by source
     by_source = {}
+    LAST_SEEN.clear()
     for k, v in state['listings'].items():
+        if not isinstance(v, dict): continue
+        LAST_SEEN[k] = v.get('last_seen_at')
         if not v.get('in_sheet'): continue
         if v.get('removed_from_sheet'): continue
         if v.get('rejected'): continue

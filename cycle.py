@@ -373,6 +373,12 @@ def parse_nekretnine(html):
         return out
 
     out['title'] = re0.get('title') or ''
+    # Даты из NEXT_DATA (unix): раньше у nekretnine не извлекались вовсе —
+    # кол. G листа пустая, фильтр свежести слепой (2026-09-04).
+    for fld, key in (('createdAt', 'published_at'), ('updatedAt', 'refreshed_at')):
+        ts = re0.get(fld)
+        if isinstance(ts, (int, float)) and ts > 0:
+            out[key] = datetime.fromtimestamp(ts, timezone.utc).strftime('%Y-%m-%d')
     props = re0.get('properties') or [{}]
     p0 = props[0] if props else {}
     out['description'] = p0.get('description') or ''
@@ -508,8 +514,11 @@ def extract_district(cand, detail):
         m = re.search(r'/izdavanje-poslovnih-prostora/([^/]+)/', cand.get('url', ''))
         if m:
             slug = m.group(1)
-            if slug.endswith('-beograd'):
-                slug = slug[:-len('-beograd')]
+            # 4zida с 08.2026 пишет «…-stari-grad-opstina-beograd» — без среза
+            # «-opstina» район уходил в Unknown (Kralja Petra, Trg Republike, Dorćol)
+            for suffix in ('-opstina-beograd', '-beograd', '-opstina'):
+                if slug.endswith(suffix):
+                    slug = slug[:-len(suffix)]
             for muni_key in sorted(MUNI_SLUGS, key=len, reverse=True):
                 if slug == muni_key:
                     return MUNI_SLUGS[muni_key]
@@ -900,6 +909,64 @@ def parse_detail(html, cand):
 def _price_similar(p1, p2):
     """Цены «про одно и то же»: разница ≤ max(100€, 3%)."""
     return abs(p1 - p2) <= max(100, 0.03 * max(p1, p2))
+
+
+def dedupe_passes_same_cycle(s, passes, duplicates):
+    """Кросс-посты, пришедшие ОДНИМ прогоном, обходят find_active_duplicate
+    (он сверяет только с in_sheet-лотами, а внутрицикловые ещё не отправлены) —
+    кейсы 16.08 (Blok 65: 4zida+halooglasi) и 31.08 (164 м²/4500 €: 4zida+nekretnine)
+    = по 2 карточки одного помещения. Матчинг пар внутри passes: площадь ±3 м² +
+    цена похожа + (гео <250 м ИЛИ одинаковое начало описания ИЛИ точные
+    метраж+цена+район). Оставляем лот с адресом, второй клеим как alt_url."""
+    def desc_prefix(k):
+        d = (s['listings'].get(k, {}).get('description') or '').lower()
+        return re.sub(r'\s+', '', d)[:120]
+
+    kept = []
+    for p_ in passes:
+        rec = s['listings'].get(p_['listing_key'], {})
+        dup_of = None
+        for q in kept:
+            qrec = s['listings'].get(q['listing_key'], {})
+            a1, a2 = rec.get('area_m2'), qrec.get('area_m2')
+            p1, p2 = rec.get('price_eur'), qrec.get('price_eur')
+            if not (a1 and a2 and p1 and p2):
+                continue
+            if abs(a1 - a2) > 3 or not _price_similar(p1, p2):
+                continue
+            geo_close = False
+            if all(rec.get(x) is not None for x in ('geo_lat', 'geo_lon')) and \
+               all(qrec.get(x) is not None for x in ('geo_lat', 'geo_lon')):
+                geo_close = haversine_km(rec['geo_lat'], rec['geo_lon'],
+                                         qrec['geo_lat'], qrec['geo_lon']) < 0.25
+            same_text = (desc_prefix(p_['listing_key']) and
+                         desc_prefix(p_['listing_key']) == desc_prefix(q['listing_key']))
+            exact = (p_.get('area') == q.get('area') and p_.get('price') == q.get('price')
+                     and (p_.get('district') or '').split('(')[0].strip().lower()
+                     == (q.get('district') or '').split('(')[0].strip().lower()
+                     and bool(p_.get('district')) and p_.get('district') != 'Unknown')
+            if geo_close or same_text or exact:
+                dup_of = q
+                break
+        if dup_of is None:
+            kept.append(p_)
+            continue
+        if rec.get('address') and not s['listings'].get(dup_of['listing_key'], {}).get('address'):
+            kept[kept.index(dup_of)] = p_
+            p_, dup_of = dup_of, p_
+            rec = s['listings'].get(p_['listing_key'], {})
+        canon = s['listings'].get(dup_of['listing_key'], {})
+        canon.setdefault('alt_urls', [])
+        if rec.get('url') and rec['url'] not in canon['alt_urls']:
+            canon['alt_urls'].append(rec['url'])
+        rec['rejected'] = True
+        rec['duplicate_of'] = dup_of['listing_key']
+        duplicates.append({'key': p_['listing_key'],
+                           'duplicate_of': dup_of['listing_key'],
+                           'url': rec.get('url'), 'canonical_url': canon.get('url'),
+                           'district': p_.get('district'), 'area': rec.get('area_m2'),
+                           'price': rec.get('price_eur'), 'same_cycle': True})
+    return kept
 
 
 def find_active_duplicate(s, rec, self_key):
@@ -1547,6 +1614,7 @@ def run_process():
                 p['caption'] = ('⭐ Район, где уже есть лоты «В работе»\n'
                                 + p['caption'])[:1024]
         passes.sort(key=lambda p: 0 if p.get('feedback_like') else 1)
+        passes = dedupe_passes_same_cycle(s, passes, duplicates)
 
         s['last_cycle_at'] = now_iso()
         # Статистика цикла для штампа Last scan в реджект-листе (finalize её читает).
@@ -1988,6 +2056,28 @@ def cmd_finalize():
     except Exception as e:
         canary = {'canary_error': f'FAIL: {e}'}
 
+    # Бэкфилл скоринга: до 3 активных лотов без score за финализ (бюджет 240 с),
+    # тоже ДО лока. Бэклог в 109 лотов рассосётся за ~40 циклов без отдельного джоба.
+    backfilled = {}
+    if not DRY_RUN:
+        try:
+            _t0 = time.time()
+            _cands = [(k, r) for k, r in (_s0.get('listings') or {}).items()
+                      if isinstance(r, dict) and r.get('in_sheet') and not r.get('removed_from_sheet')
+                      and r.get('score') is None and r.get('geo_lat') is not None
+                      and not str(r.get('geo_source') or '').startswith('nominatim')]
+            _cands.sort(key=lambda kv: str(kv[1].get('first_seen_at') or ''), reverse=True)
+            for k, r in _cands[:3]:
+                if time.time() - _t0 > 240:
+                    break
+                sc = scoring.score_location(r['geo_lat'], r['geo_lon'], dodo_points=DODO_POINTS)
+                if sc and sc.get('score') is not None:
+                    sc['geo_source'] = r.get('geo_source')
+                    backfilled[k] = sc
+            out['score_backfilled'] = len(backfilled)
+        except Exception as e:
+            out['score_backfill_error'] = str(e)[:120]
+
     with StateLock():
         s = load_state()
         listings = s.get('listings', {})
@@ -1997,6 +2087,25 @@ def cmd_finalize():
         if canary is not None:
             s['canary'] = {'date': _canary_date, 'results': canary}
             out['canary'] = s['canary']
+        for k, sc in backfilled.items():
+            r = listings.get(k)
+            if isinstance(r, dict) and r.get('score') is None:
+                r['score'] = sc['score']; r['score_data'] = sc; r['scored_at'] = now_iso()
+        # Гигиена гео: Nominatim-фолбэк по названию улицы промахивался на 15 км
+        # (кейс Braće Jugović → точка под Ripanj). Такие точки снимаем с карты
+        # (лот остаётся, координаты в *_rejected), скоринг по ним — мусор.
+        geo_rejected = 0
+        for k, r in listings.items():
+            if not isinstance(r, dict) or not r.get('in_sheet') or r.get('removed_from_sheet'):
+                continue
+            if str(r.get('geo_source') or '').startswith('nominatim') and r.get('geo_lat') is not None:
+                if haversine_km(r['geo_lat'], r['geo_lon'], 44.8167, 20.4583) > 12:
+                    r['geo_lat_rejected'] = r.pop('geo_lat')
+                    r['geo_lon_rejected'] = r.pop('geo_lon')
+                    r['geo_source'] = 'nominatim_rejected'
+                    r['score'] = None
+                    geo_rejected += 1
+        out['geo_rejected'] = geo_rejected
 
         # Компакция: терминальным записям старше 45 дней тяжёлые поля не нужны
         # (описания и фото-списки — основной вес state.json).
