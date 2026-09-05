@@ -22394,7 +22394,7 @@
       "district": "Vračar (Juzni Bulevar)",
       "subdistrict": null,
       "first_seen_at": "2026-06-06T15:08:06.307132+00:00",
-      "last_seen_at": "2026-09-05T08:30:08.617806+00:00",
+      "last_seen_at": "2026-09-05T10:29:56.062099+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -54502,7 +54502,7 @@
       "address": "Nedeljka Gvozdenovića",
       "district": "",
       "first_seen_at": "2026-07-06T16:17:41.711529+00:00",
-      "last_seen_at": "2026-09-05T08:30:08.617798+00:00",
+      "last_seen_at": "2026-09-05T10:29:56.062089+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -94978,11 +94978,15 @@
       },
       "Vračar (Crveni Krst Vracar)": {
         "like": 0,
-        "dislike": 2
+        "dislike": 6
       },
       "Vračar": {
         "like": 3,
         "dislike": 93
+      },
+      "Vračar (Crveni Krst Vracar)": {
+        "like": 0,
+        "dislike": 2
       },
       "Vračar (Centar)": {
         "like": 1,
@@ -95010,11 +95014,15 @@
       },
       "Savski Venac": {
         "like": 0,
-        "dislike": 35
+        "dislike": 3
       },
       "Savski Venac (Senjak)": {
         "like": 0,
         "dislike": 11
+      },
+      "Savski Venac": {
+        "like": 0,
+        "dislike": 35
       },
       "Centar - Skupština - Terazije": {
         "like": 0,
@@ -95524,11 +95532,11 @@
         "like": 0,
         "dislike": 2
       },
-      "Rakovica": {
+      "Rakovica (Miljakovac)": {
         "like": 0,
         "dislike": 1
       },
-      "Rakovica (Miljakovac)": {
+      "Rakovica": {
         "like": 0,
         "dislike": 1
       },
@@ -95564,11 +95572,11 @@
         "like": 0,
         "dislike": 1
       },
-      "Zemun": {
+      "Zemun (Centar)": {
         "like": 0,
         "dislike": 1
       },
-      "Zemun (Centar)": {
+      "Zemun": {
         "like": 0,
         "dislike": 1
       },
