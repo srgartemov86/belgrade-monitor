@@ -7,20 +7,50 @@ StringSession, запущенная параллельно с двух ранн�
 CLI-аргументы и JSON-выход совпадают с telethon-скриптами, поэтому
 driver.py и watchdog.py не меняются.
 """
-import json, os, sys
-
-import requests
+import json, os, ssl, sys, urllib.error, urllib.parse, urllib.request, uuid
 
 API = 'https://api.telegram.org/bot{token}/{method}'
 
 
-def _call(method, data=None, files=None, timeout=90):
-    r = requests.post(API.format(token=os.environ['TG_BOT_TOKEN'], method=method),
-                      data=data, files=files, timeout=timeout)
+def _ssl_ctx():
     try:
-        return r.json()
+        import certifi  # на macOS-сборках python без него падает проверка сертификата
+        return ssl.create_default_context(cafile=certifi.where())
     except Exception:
-        return {'ok': False, 'description': f'HTTP {r.status_code}'}
+        return ssl.create_default_context()
+
+
+def _call(method, data=None, files=None, timeout=90):
+    """POST в Bot API только на stdlib: без requests, чтобы скрипт работал в любом
+    окружении (раннер, тестовый workflow, локальный venv)."""
+    url = API.format(token=os.environ['TG_BOT_TOKEN'], method=method)
+    fields = {k: str(v) for k, v in (data or {}).items()}
+    if files:
+        boundary = uuid.uuid4().hex
+        body = bytearray()
+        for k, v in fields.items():
+            body += (f'--{boundary}\r\nContent-Disposition: form-data; name="{k}"'
+                     f'\r\n\r\n').encode() + v.encode() + b'\r\n'
+        for k, fh in files.items():
+            fname = os.path.basename(getattr(fh, 'name', k))
+            body += (f'--{boundary}\r\nContent-Disposition: form-data; name="{k}"; '
+                     f'filename="{fname}"\r\nContent-Type: application/octet-stream'
+                     f'\r\n\r\n').encode() + fh.read() + b'\r\n'
+        body += f'--{boundary}--\r\n'.encode()
+        req = urllib.request.Request(url, data=bytes(body), headers={
+            'Content-Type': f'multipart/form-data; boundary={boundary}'})
+    else:
+        req = urllib.request.Request(url, data=urllib.parse.urlencode(fields).encode())
+    try:
+        with urllib.request.urlopen(req, timeout=timeout, context=_ssl_ctx()) as r:
+            return json.loads(r.read().decode())
+    except urllib.error.HTTPError as e:
+        try:
+            return json.loads(e.read().decode())
+        except Exception:
+            return {'ok': False, 'description': f'HTTP {e.code}'}
+    except Exception as e:
+        return {'ok': False, 'description': f'{type(e).__name__}: {e}'}
 
 
 def _with_chat(chat_id, fn):
