@@ -1400,9 +1400,14 @@ def run_process():
                 missing.append('координаты')
             elif sc is None:
                 missing.append('скоринг')
-            retry_n = int(cand.get('_send_retry') or 0)
+            # Счётчик отсрочек храним в state по ключу лота, а не только в кандидате:
+            # «зависшие» пересобираются из базы без _send_retry и обрабатываются первыми,
+            # из-за чего лот без координат/фото откладывался бесконечно (кейс Клужа 10.09.2026).
+            _defers = s.setdefault('send_defers', {})
+            retry_n = max(int(cand.get('_send_retry') or 0), int(_defers.get(key) or 0))
             if missing and retry_n == 0:
                 cand['_send_retry'] = 1
+                _defers[key] = 1
                 s['pending_candidates'].append(cand)
                 deferred.append({'key': key, 'missing': missing, 'url': cand['url']})
                 continue
