@@ -22,7 +22,7 @@ import requests
 
 OWNER = 'srgartemov86'
 THRESHOLD_H = 3.5
-ALERT_CHAT = '5131688215'  # Daily wrap up
+ALERT_CHAT = '135201285'  # Daily wrap up
 WORK_START_UTC = dt.time(9, 30)
 WORK_END_UTC = dt.time(21, 0)
 

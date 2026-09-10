@@ -58,7 +58,8 @@ def _with_chat(chat_id, fn):
     супергрупп и id как есть для личных чатов — пробуем оба варианта."""
     s = str(chat_id).strip()
     last = None
-    for cid in ([s] if s.startswith('-') else [f'-100{s}', s]):
+    # -100<id> супергруппа/канал, -<id> старая обычная группа, <id> личка
+    for cid in ([s] if s.startswith('-') else [f'-100{s}', f'-{s}', s]):
         res = fn(cid)
         if res.get('ok'):
             return res

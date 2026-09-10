@@ -19,7 +19,7 @@ HERE = Path(__file__).parent
 CHAT_ID = os.environ.get('BG_CHAT_ID', '3951547035')
 # Служебные уведомления (health-алерты, weekly-отчёт) — лично Сергею в Daily wrap up,
 # не в рабочий чат лотов (просьба 2026-07-16).
-ALERT_CHAT_ID = os.environ.get('BG_ALERT_CHAT_ID', '5131688215')
+ALERT_CHAT_ID = os.environ.get('BG_ALERT_CHAT_ID', '135201285')
 MANY_PASSES = 15  # SKILL: при ≥15 лотов — одна сводка вместо N сообщений
 
 # Глоссарий sr→ru (REFERENCE.md): термины, по которым принимается решение.
