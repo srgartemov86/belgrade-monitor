@@ -31,6 +31,9 @@ def keychain(account):
 
 
 async def main():
+    if __import__('os').environ.get('TG_BOT_TOKEN'):  # Bot API вместо сессии (10.09.2026)
+        import tg_bot
+        return tg_bot.cli_send_album(sys.argv)
     if len(sys.argv) < 4:
         print(json.dumps({'ok': False, 'error': 'usage: send_album.py CHAT_ID CAPTION_FILE PHOTO...'}))
         return 1

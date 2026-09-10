@@ -54,6 +54,7 @@ jobs:
           BG_PUBLIC: ${{ github.workspace }}/public
           GOOGLE_TOKEN_PATH: /tmp/google-token.json
           TG_SESSION: ${{ secrets.TG_SESSION }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_API_ID: ${{ secrets.TG_API_ID }}
           TG_API_HASH: ${{ secrets.TG_API_HASH }}
           HALO_PROXY: ${{ secrets.HALO_PROXY }}
@@ -66,6 +67,7 @@ jobs:
         env:
           WATCHDOG_PAT: ${{ secrets.WATCHDOG_PAT }}
           TG_SESSION: ${{ secrets.TG_SESSION }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_API_ID: ${{ secrets.TG_API_ID }}
           TG_API_HASH: ${{ secrets.TG_API_HASH }}
 
@@ -75,6 +77,7 @@ jobs:
         env:
           WATCHDOG_PAT: ${{ secrets.WATCHDOG_PAT }}
           TG_SESSION: ${{ secrets.TG_SESSION }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_API_ID: ${{ secrets.TG_API_ID }}
           TG_API_HASH: ${{ secrets.TG_API_HASH }}
 

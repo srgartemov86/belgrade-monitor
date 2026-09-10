@@ -9,6 +9,9 @@ from send_album import keychain
 
 
 async def main():
+    if __import__('os').environ.get('TG_BOT_TOKEN'):  # Bot API вместо сессии (10.09.2026)
+        import tg_bot
+        return tg_bot.cli_send_text(sys.argv)
     if len(sys.argv) < 3:
         print(json.dumps({'ok': False, 'error': 'usage: send_text.py CHAT_ID TEXT_FILE [--reply-to N]'}))
         return 1
