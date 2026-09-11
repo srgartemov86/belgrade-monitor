@@ -71,16 +71,6 @@ jobs:
           TG_API_ID: ${{ secrets.TG_API_ID }}
           TG_API_HASH: ${{ secrets.TG_API_HASH }}
 
-      - name: Watchdog budapest-monitor
-        if: always()
-        run: python watchdog.py budapest-monitor "Будапешт-монитор"
-        env:
-          WATCHDOG_PAT: ${{ secrets.WATCHDOG_PAT }}
-          TG_SESSION: ${{ secrets.TG_SESSION }}
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_API_ID: ${{ secrets.TG_API_ID }}
-          TG_API_HASH: ${{ secrets.TG_API_HASH }}
-
       - name: Commit state back
         if: always()
         run: |
