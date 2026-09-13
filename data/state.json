@@ -1,5 +1,5 @@
 {
-  "version": 285,
+  "version": 286,
   "first_run_at": "2026-05-01T15:10:00Z",
   "last_run_at": "2026-05-13T14:55:53.765472+00:00",
   "filter": {
@@ -246,7 +246,7 @@
       "geo_lat": 44.7905,
       "geo_lon": 20.48923,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-12T19:23:35.728948+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://img.cityexpert.rs/properties/720x/62000/62627/slike/cityexpert.rs_-_nekretnina_id_-_62627_-_0757_-_20240305.jpg",
@@ -312,7 +312,7 @@
       "geo_lat": 44.79472,
       "geo_lon": 20.45677,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-12T19:23:35.728948+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://img.cityexpert.rs/properties/720x/46000/46598/slike/cityexpert.rs_-_nekretnina_id_-_46598_-_0153_-_20211206.jpg"
@@ -362,7 +362,7 @@
       "geo_lat": 44.80532,
       "geo_lon": 20.47074,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-12T19:23:35.728948+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://img.cityexpert.rs/properties/720x/72000/72786/slike/cityexpert.rs_-_nekretnina_id_-_72786_-_0603_-_20250611.jpg",
@@ -1756,7 +1756,7 @@
       "geo_lon": 20.4893,
       "dist_from_center_km": 3.09,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-12T16:53:57.671614+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://img.halooglasi.com/slike/oglasi/Thumbs/241210/l/zvezdara---bulevar-kralja-aleksandra-id23831-5425645047597-71810242544.jpg"
@@ -2092,7 +2092,7 @@
       "geo_lat": 44.820420056363,
       "geo_lon": 20.463428756697,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-12T14:06:50.691692+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://resizer2.4zida.rs/q6nnJ3XxnJmWekvLNiJkQVehPfXVOnEonHyWupmTj8I/rs:fit:1920:1080:0/bG9jYWw6Ly8vNjlhZWJjODFmZDY2MzMzMWQ0MDUxMzhjLzc3ZGQ4YThlZDBfd20.jpeg",
@@ -2215,7 +2215,7 @@
       "geo_lat": 44.758078,
       "geo_lon": 20.486423,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-13T09:54:40.288163+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710371+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://img.halooglasi.com/slike/oglasi/Thumbs/250509/l/lokal-150m-vojvode-stepe-391-square-2-5425644575535-71811612260.jpg",
@@ -2309,7 +2309,7 @@
       "geo_lat": 44.795080295686,
       "geo_lon": 20.478032040051,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-12T14:06:50.691692+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://resizer2.4zida.rs/zA_98xhl49eqqsRfqzyBIMZctf4FoizUJhNybEGgwmM/rs:fit:1920:1080:0/bG9jYWw6Ly8vNjlhOThkOGIyMDBlNjUyZGI0MDk3NDQzLzE4MDQwYzhkYmJfd20.jpeg",
@@ -2453,7 +2453,7 @@
       "geo_lat": 44.80532,
       "geo_lon": 20.47074,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-12T19:23:35.728948+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://img.cityexpert.rs/properties/720x/76000/76339/slike/cityexpert.rs_-_nekretnina_id_-_76339_-_0626_-_20260110.jpg",
@@ -2836,7 +2836,7 @@
       "geo_lat": 44.776178,
       "geo_lon": 20.502269,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-13T09:54:40.288149+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710365+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "removed_from_sheet": true,
       "stale_marked_at": "2026-06-20T09:20:03.902618+00:00",
@@ -2920,7 +2920,7 @@
       "lon": 20.475611,
       "status": "sent",
       "first_seen_at": "2026-05-06T09:18:15Z",
-      "last_seen_at": "2026-09-12T16:53:57.671614+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "photo_path": "/Users/dodo/Клод Код/.pizzeria-photos/halo_5425644528932.jpg",
       "geo_lat": 44.787985,
@@ -3621,7 +3621,7 @@
       "geo_lat": 44.79359,
       "geo_lon": 20.47877,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-12T14:06:50.691692+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://resizer2.4zida.rs/TbCnW0GDdzoqDwCeAEJ95JRcCow1Y8vl5tAwFjzQdZI/rs:fit:1920:1080:0/bG9jYWw6Ly8vNjlmZGNhMWI4MzhjNWNiNTE4MDgzYzlkL2M3MTIyMGEzNzFfd20.jpeg",
@@ -4126,7 +4126,7 @@
       "geo_lat": 44.784278,
       "geo_lon": 20.480134,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-13T09:53:14.017223+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709981+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://resizer2.4zida.rs/BJ90iePs0UldDYv5JwgIdZHW_DBRKeIMOgPz60I79MI/rs:fit:1920:1080:0/bG9jYWw6Ly8vNjlkNjdlYjJlMjlhZDMzNDRjMDZlN2VjL2RlMjBhNGU5ODNfd20.jpeg",
@@ -4982,7 +4982,7 @@
       "removed_from_sheet": true,
       "stale_marked_at": "2026-05-14T10:25:05.916709+00:00",
       "dead_reason": "live_status_check_2026-05-14",
-      "last_seen_at": "2026-09-13T09:53:14.017327+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710033+00:00",
       "compacted": true
     },
     "4zida_698c5ae2da369a66f40d45c3": {
@@ -5084,7 +5084,7 @@
       "date_posted_estimate_from_objectid": "2025-07-16",
       "first_seen_at": "2026-05-12T13:13:04.699833+00:00",
       "geo_source": "detail",
-      "last_seen_at": "2026-09-13T09:53:14.017337+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710038+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://resizer2.4zida.rs/GZXVNX0xszNEng12Ic9MLlLrP1__JPNPNrjFKLDHDn4/rs:fit:1920:1080:0/bG9jYWw6Ly8vNjg3NzZjMTg5M2MzZDdmMGNkMDNiYzIwLzc3MWIxNDI3MjJfd20.jpeg",
@@ -5996,7 +5996,7 @@
       "rejected": true,
       "reject_reason": "kancelarija_per_opis_IT_office",
       "first_seen_at": "2026-05-14T12:26:10.647369+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017172+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709952+00:00",
       "compacted": true
     },
     "4zida_6a05afddefae879d3c05dff2": {
@@ -6661,7 +6661,7 @@
       "geo_lon": 20.5140311,
       "geo_source": "detail",
       "first_seen_at": "2026-05-15T14:11:43.211312+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017088+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709906+00:00",
       "in_sheet": true,
       "alerted": true,
       "validated": true,
@@ -7480,7 +7480,7 @@
       "district": "Palilula (Zira)",
       "subdistrict": null,
       "first_seen_at": "2026-05-18T07:19:40.539536+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288041+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710307+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -7587,7 +7587,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-05-18T12:35:07.597906+00:00",
-      "last_seen_at": "2026-09-12T14:06:50.691692+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -10170,7 +10170,7 @@
       "district": "Novi Beograd (Blok 28)",
       "subdistrict": null,
       "first_seen_at": "2026-05-26T06:45:43.390955+00:00",
-      "last_seen_at": "2026-09-12T14:06:50.691692+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -10389,7 +10389,7 @@
       "district": "Vračar (Kalenic Pijaca)",
       "subdistrict": null,
       "first_seen_at": "2026-05-26T06:45:45.477581+00:00",
-      "last_seen_at": "2026-09-12T14:06:50.691692+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -11057,7 +11057,7 @@
       "district": "Savski venac (Dedinje)",
       "subdistrict": null,
       "first_seen_at": "2026-05-26T11:26:18.027687+00:00",
-      "last_seen_at": "2026-09-12T16:53:57.671614+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -12811,7 +12811,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-05-28T15:07:17.301188+00:00",
-      "last_seen_at": "2026-09-12T14:06:50.691692+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -13495,7 +13495,7 @@
       "district": "Voždovac (Banjica)",
       "subdistrict": null,
       "first_seen_at": "2026-05-29T10:20:32.733174+00:00",
-      "last_seen_at": "2026-09-12T19:23:35.728948+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -13862,7 +13862,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-05-29T11:51:32.200498+00:00",
-      "last_seen_at": "2026-09-12T19:23:35.728948+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -14973,7 +14973,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-05-30T10:59:22.053004+00:00",
-      "last_seen_at": "2026-09-12T14:06:50.691692+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -15043,7 +15043,7 @@
       "district": "Voždovac (Dušanovac)",
       "subdistrict": null,
       "first_seen_at": "2026-05-30T10:59:22.690513+00:00",
-      "last_seen_at": "2026-09-12T16:53:57.671614+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -15451,7 +15451,7 @@
       "district": "Savski Venac (Dedinje)",
       "subdistrict": null,
       "first_seen_at": "2026-05-31T19:49:46.308494+00:00",
-      "last_seen_at": "2026-09-12T14:06:50.691692+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -17349,7 +17349,7 @@
       "district": "Vračar",
       "subdistrict": null,
       "first_seen_at": "2026-06-02T11:09:02.533145+00:00",
-      "last_seen_at": "2026-09-12T19:23:35.728948+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -19339,7 +19339,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-03T09:08:01.399553+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017380+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710061+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -22171,7 +22171,7 @@
       "district": "Savski venac (Sarajevska)",
       "subdistrict": null,
       "first_seen_at": "2026-06-05T10:07:40.165189+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288175+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710378+00:00",
       "in_sheet": false,
       "alerted": false,
       "flags": [
@@ -23332,7 +23332,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-06T10:21:05.306955+00:00",
-      "last_seen_at": "2026-09-12T14:06:50.691692+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -26188,7 +26188,7 @@
       "district": "Savski Venac (Dedinje)",
       "subdistrict": null,
       "first_seen_at": "2026-06-09T15:27:45.997525+00:00",
-      "last_seen_at": "2026-09-12T13:53:35.198340+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -28481,7 +28481,7 @@
       "district": "Lipov lad",
       "subdistrict": null,
       "first_seen_at": "2026-06-11T06:06:44.533165+00:00",
-      "last_seen_at": "2026-09-12T19:23:35.728948+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -29124,7 +29124,7 @@
       "district": "Čukarica (Banovo brdo)",
       "subdistrict": null,
       "first_seen_at": "2026-06-11T11:07:47.228403+00:00",
-      "last_seen_at": "2026-09-12T15:53:28.949477+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -29265,7 +29265,7 @@
       "district": "Novi Beograd (Blok 65)",
       "subdistrict": null,
       "first_seen_at": "2026-06-11T14:07:41.185805+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017308+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710024+00:00",
       "in_sheet": false,
       "alerted": false,
       "flags": [
@@ -30323,7 +30323,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-13T07:44:23.522108+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017211+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709974+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -30426,7 +30426,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-13T10:05:01.477423+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017274+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710008+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -30693,7 +30693,7 @@
       "district": "Voždovac (Vojvode Stepe)",
       "subdistrict": null,
       "first_seen_at": "2026-06-13T10:05:07.463921+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288237+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710411+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -30726,7 +30726,7 @@
       "district": "Vračar (Hram Svetog Save)",
       "subdistrict": null,
       "first_seen_at": "2026-06-13T11:11:21.588093+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017181+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709957+00:00",
       "in_sheet": false,
       "alerted": false,
       "flags": [
@@ -30747,7 +30747,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-13T12:19:17.752357+00:00",
-      "last_seen_at": "2026-09-12T19:23:35.728948+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -32003,7 +32003,7 @@
       "district": "Zvezdara (Đeram pijaca)",
       "subdistrict": null,
       "first_seen_at": "2026-06-15T12:08:15.746856+00:00",
-      "last_seen_at": "2026-08-15T20:26:00.816139+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710500+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -32638,7 +32638,7 @@
       "district": "Savski venac (Dedinje)",
       "subdistrict": null,
       "first_seen_at": "2026-06-15T16:15:09.431845+00:00",
-      "last_seen_at": "2026-09-12T15:53:28.949477+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -33239,7 +33239,7 @@
       "district": "Novi Beograd (Sava Centar)",
       "subdistrict": null,
       "first_seen_at": "2026-06-16T11:08:19.961840+00:00",
-      "last_seen_at": "2026-09-12T13:53:35.198340+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -34183,7 +34183,7 @@
       "district": "Novi Beograd (Bežanijska kosa 2)",
       "subdistrict": null,
       "first_seen_at": "2026-06-17T07:08:42.231611+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288200+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710391+00:00",
       "in_sheet": false,
       "alerted": false,
       "flags": [
@@ -37879,7 +37879,7 @@
       "address": "Banovo Brdo",
       "district": "",
       "first_seen_at": "2026-06-20T11:55:55.376103+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017114+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709921+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -38854,7 +38854,7 @@
       "address": "Miljakovačka, Rakovica",
       "district": "Rakovica",
       "first_seen_at": "2026-06-20T15:22:22.601653+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287928+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710248+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -38967,7 +38967,7 @@
       "address": "Terazije, Stari grad",
       "district": "Stari grad",
       "first_seen_at": "2026-06-20T15:22:24.058446+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287938+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710252+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -38986,7 +38986,7 @@
       "address": "Kneza Višeslava, Čukarica",
       "district": "Unknown",
       "first_seen_at": "2026-06-20T15:22:24.575637+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287945+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710256+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -39023,7 +39023,7 @@
       "address": "Pop Lukina, Stari grad",
       "district": "Unknown",
       "first_seen_at": "2026-06-20T15:22:24.980658+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287954+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710261+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -39040,7 +39040,7 @@
       "address": "Vojvode Stepe Stepanovića, Grocka",
       "district": "Grocka",
       "first_seen_at": "2026-06-20T15:22:24.980942+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287962+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710265+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -39058,7 +39058,7 @@
       "address": "Vojvode Stepe Stepanovića, Grocka",
       "district": "Grocka",
       "first_seen_at": "2026-06-20T15:22:24.981076+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287966+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710268+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -39077,7 +39077,7 @@
       "address": "Požeška, Čukarica",
       "district": "Unknown",
       "first_seen_at": "2026-06-20T15:22:25.388289+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287916+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710243+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -39095,7 +39095,7 @@
       "address": "Danila Bojovića, Voždovac",
       "district": "Unknown",
       "first_seen_at": "2026-06-20T15:22:25.907481+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287972+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710271+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -39113,7 +39113,7 @@
       "address": "Dragoslava Srejovića, Zvezdara",
       "district": "Unknown",
       "first_seen_at": "2026-06-20T16:17:13.862894+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287977+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710275+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -39130,7 +39130,7 @@
       "address": "Slavka Miljkovića, Rakovica",
       "district": "Rakovica",
       "first_seen_at": "2026-06-20T16:17:13.863022+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287983+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710277+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -39168,7 +39168,7 @@
       "address": "Dragoslava Jovanovića",
       "district": "Unknown",
       "first_seen_at": "2026-06-20T16:17:14.337402+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288055+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710315+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -39225,7 +39225,7 @@
       "address": "Izdaje se poslovni prostor- Senjak",
       "district": "Unknown",
       "first_seen_at": "2026-06-20T16:17:15.082282+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288157+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710368+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -39362,7 +39362,7 @@
       "address": "Uzun Mirkova",
       "district": "Unknown",
       "first_seen_at": "2026-06-20T17:08:24.200998+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288191+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710386+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -39444,7 +39444,7 @@
       "address": "Brankova",
       "district": "Unknown",
       "first_seen_at": "2026-06-20T17:08:25.280544+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288010+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710289+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -41975,7 +41975,7 @@
       "address": "Premium kancelarije 200m2 uz reku Beograd",
       "district": "Unknown",
       "first_seen_at": "2026-06-22T13:08:08.052097+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288339+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710476+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -42424,7 +42424,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-22T18:27:50.224602+00:00",
-      "last_seen_at": "2026-09-12T13:53:35.198340+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -42549,7 +42549,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-23T06:16:08.059975+00:00",
-      "last_seen_at": "2026-09-12T13:53:35.198340+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -42884,7 +42884,7 @@
       "address": "Bulevar kralja Aleksandra",
       "district": "Unknown",
       "first_seen_at": "2026-06-23T08:08:00.633528+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017194+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709964+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -43991,7 +43991,7 @@
       "address": "Poslovni lokal duplex 105m², Dedinje",
       "district": "Unknown",
       "first_seen_at": "2026-06-23T13:08:13.708329+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288213+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710398+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -47001,7 +47001,7 @@
       "address": "Vojvode Stepe 197",
       "district": "Unknown",
       "first_seen_at": "2026-06-25T19:10:26.808457+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.016993+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709848+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -48290,7 +48290,7 @@
       "address": "Zrenjaninski Put",
       "district": "Unknown",
       "first_seen_at": "2026-06-26T19:55:09.991978+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017422+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710086+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -49132,7 +49132,7 @@
       "address": "Jedinstvena prilika u centru NS infostan ukljucen",
       "district": "Unknown",
       "first_seen_at": "2026-06-28T09:09:49.479854+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288378+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710496+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -51343,7 +51343,7 @@
       "address": "Bulevar Jna",
       "district": "Unknown",
       "first_seen_at": "2026-07-02T05:23:21.524291+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017142+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709936+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -52260,7 +52260,7 @@
       "address": "Tošin bunar",
       "district": "Unknown",
       "first_seen_at": "2026-07-02T07:08:23.948318+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288127+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710353+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -53824,7 +53824,7 @@
       "address": "Mite Rakića",
       "district": "Unknown",
       "first_seen_at": "2026-07-03T12:07:53.934117+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288306+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710458+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -55421,7 +55421,7 @@
       "address": "Bilevar kralja Aleksandra br.458",
       "district": "Unknown",
       "first_seen_at": "2026-07-06T08:08:18.497364+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288081+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710330+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -56568,7 +56568,7 @@
       "address": "Vrhunska lokacija - Office space - Opština NBG",
       "district": "Novi Beograd",
       "first_seen_at": "2026-07-07T17:23:52.558026+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288372+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710493+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -59405,7 +59405,7 @@
       "address": "Moderan 5,0 stan 171m2 kao poslovni prostor u cent",
       "district": "Unknown",
       "first_seen_at": "2026-07-10T13:08:18.958196+00:00",
-      "last_seen_at": "2026-09-13T09:54:43.046085+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710518+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -59444,7 +59444,7 @@
       "address": "LION",
       "district": "Unknown",
       "first_seen_at": "2026-07-10T14:08:13.673959+00:00",
-      "last_seen_at": "2026-09-13T07:53:08.109218+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710083+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -60041,7 +60041,7 @@
       "address": "Bežanijskih Ilegalaca",
       "district": "Unknown",
       "first_seen_at": "2026-07-11T11:08:43.451023+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288029+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710300+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -60141,7 +60141,7 @@
       "address": "Generala Lešjanina",
       "district": "Unknown",
       "first_seen_at": "2026-07-11T18:29:58.567802+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017293+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710016+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -60161,7 +60161,7 @@
       "address": "Šumice",
       "district": "Unknown",
       "first_seen_at": "2026-07-11T18:29:59.192818+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017314+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710027+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -60324,7 +60324,7 @@
       "address": "Žarkovo",
       "district": "Unknown",
       "first_seen_at": "2026-07-12T11:24:41.759931+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017267+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710003+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -60778,7 +60778,7 @@
       "address": "Vardarska",
       "district": "Vračar (Juzni Bulevar)",
       "first_seen_at": "2026-07-13T06:23:58.391049+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017205+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709971+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -60978,7 +60978,7 @@
       "address": "Železnik",
       "district": "",
       "first_seen_at": "2026-07-13T15:32:07.780633+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017165+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709948+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -61513,7 +61513,7 @@
       "address": "Milentija Popovića",
       "district": "Novi Beograd (Sava Centar)",
       "first_seen_at": "2026-07-14T10:55:20.906592+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017108+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709917+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -61553,7 +61553,7 @@
       "address": "KRUNSKA",
       "district": "",
       "first_seen_at": "2026-07-14T10:55:21.564560+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017124+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709926+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -61614,7 +61614,7 @@
       "address": "Generala Lešjanina",
       "district": "Unknown",
       "first_seen_at": "2026-07-14T10:55:27.250643+00:00",
-      "last_seen_at": "2026-09-13T09:54:43.046067+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710513+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -61634,7 +61634,7 @@
       "address": "Dr Drage Ljočić",
       "district": "Palilula",
       "first_seen_at": "2026-07-14T10:55:27.250680+00:00",
-      "last_seen_at": "2026-09-13T09:54:43.046058+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710510+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -62121,7 +62121,7 @@
       "address": "Raška Dimitrijevića",
       "district": "Novi Beograd (Bezanijska Kosa 2)",
       "first_seen_at": "2026-07-15T06:29:51.225709+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017041+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709882+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -62800,7 +62800,7 @@
       "address": "Živka Davidovića, Zvezdara",
       "district": "Unknown",
       "first_seen_at": "2026-07-15T08:58:37.423228+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287909+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710239+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -62817,7 +62817,7 @@
       "address": "Nedeljka Gvozdenovića",
       "district": "",
       "first_seen_at": "2026-07-15T10:55:36.915218+00:00",
-      "last_seen_at": "2026-08-17T13:05:05.166630+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709856+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -62836,7 +62836,7 @@
       "address": "Sterijina",
       "district": "",
       "first_seen_at": "2026-07-15T10:55:36.915240+00:00",
-      "last_seen_at": "2026-08-17T06:29:58.917173+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709862+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -62855,7 +62855,7 @@
       "address": "Vojvođanska",
       "district": "",
       "first_seen_at": "2026-07-15T10:55:36.915259+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017017+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709870+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -62970,7 +62970,7 @@
       "address": "Nedeljka Gvozdenovića",
       "district": "Novi Beograd",
       "first_seen_at": "2026-07-15T10:55:38.757933+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288384+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710503+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -66237,7 +66237,7 @@
       "address": "BLOK 21",
       "district": "Novi Beograd (Blok 21)",
       "first_seen_at": "2026-07-21T16:30:55.146030+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.016975+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709838+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -67555,7 +67555,7 @@
       "address": "Riste Marjanovića",
       "district": "Unknown",
       "first_seen_at": "2026-07-22T14:30:29.564736+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288351+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710482+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -67847,7 +67847,7 @@
       "district": "Novi Beograd (Blok 23)",
       "subdistrict": null,
       "first_seen_at": "2026-07-23T08:30:27.594653+00:00",
-      "last_seen_at": "2026-09-12T15:53:28.949477+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -67919,7 +67919,7 @@
       "address": "Centar",
       "district": "Unknown",
       "first_seen_at": "2026-07-23T08:30:35.528383+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288116+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710347+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -68426,7 +68426,7 @@
       "address": "Braće Ribnikar, Zvezdara",
       "district": "Unknown",
       "first_seen_at": "2026-07-24T10:32:09.487816+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287904+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710236+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -69796,7 +69796,7 @@
       "address": "Karađorđeva",
       "district": "Unknown",
       "first_seen_at": "2026-07-27T14:31:46.184996+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288088+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710334+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -73470,7 +73470,7 @@
       "address": "Zrenjaninski put, odličan lokal novogradnja 176m2",
       "district": "Unknown",
       "first_seen_at": "2026-08-03T14:30:52.113066+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288141+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710361+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -73616,7 +73616,7 @@
       "address": "Izdavanje luksuznog poslovnog prostora,salonska zg",
       "district": "Unknown",
       "first_seen_at": "2026-08-04T08:30:20.191956+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288276+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710431+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -76648,7 +76648,7 @@
       "address": "Autokomanda",
       "district": "Unknown",
       "first_seen_at": "2026-08-10T10:30:10.966659+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017361+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710051+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -76897,7 +76897,7 @@
       "address": "Palmira Toljatija 5",
       "district": "Novi Beograd",
       "first_seen_at": "2026-08-11T07:33:35.596011+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288345+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710479+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -76937,7 +76937,7 @@
       "address": "Reprezentativan poslovni prostor sa garažom",
       "district": "Unknown",
       "first_seen_at": "2026-08-11T09:12:37.053774+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288312+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710462+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -78586,7 +78586,7 @@
       "address": "Brankova",
       "district": "Savski Venac (Zeleni Venac)",
       "first_seen_at": "2026-08-13T15:12:10.929087+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017083+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709903+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -78647,7 +78647,7 @@
       "address": "DEDINJE BELI DVOR",
       "district": "Savski Venac (Lisicji Potok)",
       "first_seen_at": "2026-08-13T17:09:52.518096+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017072+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709897+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -78965,7 +78965,7 @@
       "district": "Voždovac (Autokomanda)",
       "subdistrict": null,
       "first_seen_at": "2026-08-15T14:11:44.440826+00:00",
-      "last_seen_at": "2026-09-12T15:53:28.949477+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -79027,7 +79027,7 @@
       "district": "Voždovac (Autokomanda)",
       "subdistrict": null,
       "first_seen_at": "2026-08-15T14:12:50.233988+00:00",
-      "last_seen_at": "2026-09-12T15:53:28.949477+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -79085,7 +79085,7 @@
       "address": "Bulevar oslobođenja",
       "district": "Unknown",
       "first_seen_at": "2026-08-15T14:12:56.874392+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017027+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709875+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -79105,7 +79105,7 @@
       "address": "Vuka Karadžića 25",
       "district": "",
       "first_seen_at": "2026-08-15T14:12:56.874446+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017002+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709853+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -79143,7 +79143,7 @@
       "address": "Beogradska",
       "district": "Vračar (Beogradska)",
       "first_seen_at": "2026-08-15T14:12:58.130677+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017011+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709867+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -80341,7 +80341,7 @@
       "district": "Stari grad (Centar)",
       "subdistrict": null,
       "first_seen_at": "2026-08-17T08:59:51.434105+00:00",
-      "last_seen_at": "2026-09-12T15:53:28.949477+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -80423,7 +80423,7 @@
       "district": "Vračar (Crveni Krst Vracar)",
       "subdistrict": null,
       "first_seen_at": "2026-08-17T09:57:06.452609+00:00",
-      "last_seen_at": "2026-09-12T13:53:35.198340+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -81317,7 +81317,7 @@
       "address": "Zrenjaninski Put",
       "district": "Unknown",
       "first_seen_at": "2026-08-19T06:30:17.293976+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017389+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710067+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -82489,7 +82489,7 @@
       "address": "Nine Kirsanove",
       "district": "Zvezdara",
       "first_seen_at": "2026-08-20T06:16:46.425331+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288294+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710440+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -82716,7 +82716,7 @@
       "address": "Kneginje Ljubice",
       "district": "Unknown",
       "first_seen_at": "2026-08-20T14:54:21.349060+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288108+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710344+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -83397,7 +83397,7 @@
       "address": "Kancelarijski prostor, 3 gar. mesta, Cvijićeva, 18",
       "district": "Unknown",
       "first_seen_at": "2026-08-21T14:01:05.557432+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288075+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710327+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -84152,7 +84152,7 @@
       "address": "Luke Vojvodića",
       "district": "Rakovica",
       "first_seen_at": "2026-08-24T14:59:27.841308+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288221+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710402+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -86322,7 +86322,7 @@
       "address": "Bulevar Arsenija Čarnojevića 174",
       "district": "Novi Beograd (Blok 34 Studentski Grad)",
       "first_seen_at": "2026-08-28T12:29:43.958002+00:00",
-      "last_seen_at": "2026-09-13T09:53:13.624155+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709771+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -86367,7 +86367,7 @@
       "address": "Brankova",
       "district": "Savski Venac (Zeleni Venac)",
       "first_seen_at": "2026-08-28T12:29:44.371350+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017035+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709878+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -86665,7 +86665,7 @@
       "address": "Kneza Miloša",
       "district": "Unknown",
       "first_seen_at": "2026-08-29T06:29:50.659398+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288023+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710296+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -87457,7 +87457,7 @@
       "district": "Stari Grad (Dorćol)",
       "subdistrict": null,
       "first_seen_at": "2026-08-31T16:24:08.010154+00:00",
-      "last_seen_at": "2026-09-12T19:23:35.728948+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -87542,7 +87542,7 @@
       "address": "Palmotićeva",
       "district": "Unknown",
       "first_seen_at": "2026-08-31T16:24:27.000908+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288263+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710425+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -87586,7 +87586,7 @@
       "address": "Pariske komune",
       "district": "Novi Beograd",
       "first_seen_at": "2026-08-31T16:24:27.001099+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288362+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710488+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -87625,7 +87625,7 @@
       "address": "Džona Kenedija",
       "district": "Unknown",
       "first_seen_at": "2026-09-01T06:18:38.964495+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288169+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710374+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -87670,7 +87670,7 @@
       "address": "Narodnog Fronta 4",
       "district": "Unknown",
       "first_seen_at": "2026-09-01T08:30:01.965141+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.016986+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709844+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -87774,7 +87774,7 @@
       "address": "Kancelarijski prostor 130m², Centar, parking",
       "district": "Unknown",
       "first_seen_at": "2026-09-01T10:30:17.407922+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288356+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710485+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -88117,7 +88117,7 @@
       "address": "Bulevar Despota Stefana",
       "district": "Unknown",
       "first_seen_at": "2026-09-01T19:56:20.766206+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288034+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710303+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -89174,7 +89174,7 @@
       "address": "Višnjička",
       "district": "Unknown",
       "first_seen_at": "2026-09-02T14:29:58.917234+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288326+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710469+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -89503,7 +89503,7 @@
       "address": "Milana Kašanina",
       "district": "Unknown",
       "first_seen_at": "2026-09-03T05:44:46.367627+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288135+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710357+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -89837,7 +89837,7 @@
       "address": "Poslovni prostor za izdavanje, Centar, 102m²",
       "district": "",
       "first_seen_at": "2026-09-03T18:39:45.850930+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288300+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710455+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -90075,7 +90075,7 @@
       "address": "Bulevar Zorana Djindjica",
       "district": "Unknown",
       "first_seen_at": "2026-09-04T05:22:42.041197+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288288+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710437+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -90168,7 +90168,7 @@
       "district": "Akademija - Arena - Blok 25 do 30",
       "subdistrict": null,
       "first_seen_at": "2026-09-04T10:29:53.013210+00:00",
-      "last_seen_at": "2026-09-12T19:23:35.728948+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -90230,7 +90230,7 @@
       "district": "Zvezdara (Đeram pijaca)",
       "subdistrict": null,
       "first_seen_at": "2026-09-04T10:30:05.317616+00:00",
-      "last_seen_at": "2026-09-12T15:53:28.949477+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -90406,7 +90406,7 @@
       "address": "Poslovni prostor sa 5 kancelarija, Novi Beograd",
       "district": "Unknown",
       "first_seen_at": "2026-09-04T10:30:43.369756+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288334+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710473+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -91505,7 +91505,7 @@
       "address": "GORNJI DORĆOL",
       "district": "Stari Grad (Dorcol)",
       "first_seen_at": "2026-09-07T12:26:31.354968+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.016968+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709834+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -91630,7 +91630,7 @@
       "address": "Ljube Nedića",
       "district": "Unknown",
       "first_seen_at": "2026-09-07T12:26:45.559167+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288102+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710341+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -91675,7 +91675,7 @@
       "address": "Jurija Gagarina",
       "district": "Unknown",
       "first_seen_at": "2026-09-07T12:26:47.405411+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288016+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710293+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -91800,7 +91800,7 @@
       "address": "Vodovodska 117 A",
       "district": "Unknown",
       "first_seen_at": "2026-09-07T14:30:17.769597+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288095+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710337+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -91884,7 +91884,8 @@
       "flags": [
         "office:\\d+\\s*kancelarij(?:a|e|sk",
         "price_per_m2=18.8"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1483555": {
       "source": "nekretnine.rs",
@@ -91917,7 +91918,7 @@
       "address": "Bulevar Mihajla Pupina",
       "district": "Unknown",
       "first_seen_at": "2026-09-08T06:30:03.385482+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288258+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710422+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -92028,7 +92029,8 @@
       "flags": [
         "distance=19.0km",
         "price=1100"
-      ]
+      ],
+      "compacted": true
     },
     "halooglasi_5425647648656": {
       "source": "halooglasi.com",
@@ -92061,7 +92063,7 @@
       "address": "Vojvode Stepe",
       "district": "Voždovac (Centar)",
       "first_seen_at": "2026-09-08T14:29:49.475968+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017412+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710078+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -92101,7 +92103,7 @@
       "address": "Topličin venac",
       "district": "Stari Grad (Toplicin Venac)",
       "first_seen_at": "2026-09-08T19:54:51.619545+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017401+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710072+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -92154,32 +92156,8 @@
         "price_per_m2=16.6"
       ],
       "score": 77,
-      "score_data": {
-        "score": 77,
-        "residents_500": 15293,
-        "residents_1000": 56240,
-        "transit_300": 14,
-        "shops_300": 209,
-        "food_400": 206,
-        "offices_500": 64,
-        "edu_500": 22,
-        "competitors_200": 55,
-        "nearest_dodo_km": 0.2,
-        "breakdown": {
-          "catchment": 1.0,
-          "secondary": 1.0,
-          "transit": 1.0,
-          "retail": 1.0,
-          "food": 1.0,
-          "daytime": 1.0,
-          "comp_penalty": 1.0,
-          "cannib_penalty": 0.66
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 6257,
-        "residents_500_osm_raw": 15293
-      },
-      "scored_at": "2026-09-08T19:55:13.540227+00:00"
+      "scored_at": "2026-09-08T19:55:13.540227+00:00",
+      "compacted": true
     },
     "nekretnine_1487533": {
       "source": "nekretnine.rs",
@@ -92610,32 +92588,8 @@
         "price_per_m2=13.1"
       ],
       "score": 77,
-      "score_data": {
-        "score": 77,
-        "residents_500": 22256,
-        "residents_1000": 70794,
-        "transit_300": 21,
-        "shops_300": 268,
-        "food_400": 209,
-        "offices_500": 90,
-        "edu_500": 20,
-        "competitors_200": 57,
-        "nearest_dodo_km": 0.26,
-        "breakdown": {
-          "catchment": 1.0,
-          "secondary": 1.0,
-          "transit": 1.0,
-          "retail": 1.0,
-          "food": 1.0,
-          "daytime": 1.0,
-          "comp_penalty": 1.0,
-          "cannib_penalty": 0.57
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 7460,
-        "residents_500_osm_raw": 22256
-      },
-      "scored_at": "2026-09-09T06:23:46.297551+00:00"
+      "scored_at": "2026-09-09T06:23:46.297551+00:00",
+      "compacted": true
     },
     "nekretnine_1488811": {
       "source": "nekretnine.rs",
@@ -92653,7 +92607,8 @@
       "flags": [
         "price_far",
         "price=700"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1488429": {
       "source": "nekretnine.rs",
@@ -92673,32 +92628,8 @@
         "price_per_m2=13.9"
       ],
       "score": 82,
-      "score_data": {
-        "score": 82,
-        "residents_500": 23898,
-        "residents_1000": 78154,
-        "transit_300": 6,
-        "shops_300": 134,
-        "food_400": 73,
-        "offices_500": 29,
-        "edu_500": 4,
-        "competitors_200": 10,
-        "nearest_dodo_km": 2.67,
-        "breakdown": {
-          "catchment": 1.0,
-          "secondary": 1.0,
-          "transit": 1.0,
-          "retail": 1.0,
-          "food": 1.0,
-          "daytime": 1.0,
-          "comp_penalty": 1.0,
-          "cannib_penalty": 0.0
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 11790,
-        "residents_500_osm_raw": 23898
-      },
-      "scored_at": "2026-09-09T06:22:02.744799+00:00"
+      "scored_at": "2026-09-09T06:22:02.744799+00:00",
+      "compacted": true
     },
     "nekretnine_1487789": {
       "source": "nekretnine.rs",
@@ -92718,32 +92649,8 @@
         "price_per_m2=10.0"
       ],
       "score": 35,
-      "score_data": {
-        "score": 35,
-        "residents_500": 5792,
-        "residents_1000": 21963,
-        "transit_300": 2,
-        "shops_300": 6,
-        "food_400": 4,
-        "offices_500": 2,
-        "edu_500": 4,
-        "competitors_200": 2,
-        "nearest_dodo_km": 1.05,
-        "breakdown": {
-          "catchment": 0.58,
-          "secondary": 0.55,
-          "transit": 0.33,
-          "retail": 0.15,
-          "food": 0.2,
-          "daytime": 0.45,
-          "comp_penalty": 0.25,
-          "cannib_penalty": 0.0
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 3590,
-        "residents_500_osm_raw": 5792
-      },
-      "scored_at": "2026-09-09T06:25:11.296630+00:00"
+      "scored_at": "2026-09-09T06:25:11.296630+00:00",
+      "compacted": true
     },
     "nekretnine_1487241": {
       "source": "nekretnine.rs",
@@ -92763,32 +92670,8 @@
         "price_per_m2=17.3"
       ],
       "score": 82,
-      "score_data": {
-        "score": 82,
-        "residents_500": 15758,
-        "residents_1000": 76879,
-        "transit_300": 9,
-        "shops_300": 62,
-        "food_400": 67,
-        "offices_500": 63,
-        "edu_500": 11,
-        "competitors_200": 20,
-        "nearest_dodo_km": 0.93,
-        "breakdown": {
-          "catchment": 1.0,
-          "secondary": 1.0,
-          "transit": 1.0,
-          "retail": 1.0,
-          "food": 1.0,
-          "daytime": 1.0,
-          "comp_penalty": 1.0,
-          "cannib_penalty": 0.0
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 7495,
-        "residents_500_osm_raw": 15758
-      },
-      "scored_at": "2026-09-09T06:21:08.088273+00:00"
+      "scored_at": "2026-09-09T06:21:08.088273+00:00",
+      "compacted": true
     },
     "nekretnine_1487049": {
       "source": "nekretnine.rs",
@@ -92808,32 +92691,8 @@
         "price_per_m2=11.9"
       ],
       "score": 77,
-      "score_data": {
-        "score": 77,
-        "residents_500": 21101,
-        "residents_1000": 77888,
-        "transit_300": 4,
-        "shops_300": 60,
-        "food_400": 59,
-        "offices_500": 29,
-        "edu_500": 8,
-        "competitors_200": 13,
-        "nearest_dodo_km": 1.25,
-        "breakdown": {
-          "catchment": 1.0,
-          "secondary": 1.0,
-          "transit": 0.67,
-          "retail": 1.0,
-          "food": 1.0,
-          "daytime": 1.0,
-          "comp_penalty": 1.0,
-          "cannib_penalty": 0.0
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 6679,
-        "residents_500_osm_raw": 21101
-      },
-      "scored_at": "2026-09-09T06:24:02.316883+00:00"
+      "scored_at": "2026-09-09T06:24:02.316883+00:00",
+      "compacted": true
     },
     "nekretnine_1487589": {
       "source": "nekretnine.rs",
@@ -92853,32 +92712,8 @@
         "price_per_m2=12.4"
       ],
       "score": 82,
-      "score_data": {
-        "score": 82,
-        "residents_500": 27361,
-        "residents_1000": 78489,
-        "transit_300": 6,
-        "shops_300": 238,
-        "food_400": 106,
-        "offices_500": 103,
-        "edu_500": 7,
-        "competitors_200": 38,
-        "nearest_dodo_km": 2.03,
-        "breakdown": {
-          "catchment": 1.0,
-          "secondary": 1.0,
-          "transit": 1.0,
-          "retail": 1.0,
-          "food": 1.0,
-          "daytime": 1.0,
-          "comp_penalty": 1.0,
-          "cannib_penalty": 0.0
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 12380,
-        "residents_500_osm_raw": 27361
-      },
-      "scored_at": "2026-09-09T06:23:51.350697+00:00"
+      "scored_at": "2026-09-09T06:23:51.350697+00:00",
+      "compacted": true
     },
     "nekretnine_1487679": {
       "source": "nekretnine.rs",
@@ -92897,7 +92732,8 @@
       "flags": [
         "distance=8.3km",
         "price_per_m2=10.7"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1487177": {
       "source": "nekretnine.rs",
@@ -92917,32 +92753,8 @@
         "price_per_m2=19.6"
       ],
       "score": 75,
-      "score_data": {
-        "score": 75,
-        "residents_500": 10668,
-        "residents_1000": 49263,
-        "transit_300": 10,
-        "shops_300": 27,
-        "food_400": 74,
-        "offices_500": 36,
-        "edu_500": 9,
-        "competitors_200": 22,
-        "nearest_dodo_km": 0.38,
-        "breakdown": {
-          "catchment": 1.0,
-          "secondary": 1.0,
-          "transit": 1.0,
-          "retail": 0.68,
-          "food": 1.0,
-          "daytime": 1.0,
-          "comp_penalty": 1.0,
-          "cannib_penalty": 0.37
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 5033,
-        "residents_500_osm_raw": 10668
-      },
-      "scored_at": "2026-09-09T06:20:58.636683+00:00"
+      "scored_at": "2026-09-09T06:20:58.636683+00:00",
+      "compacted": true
     },
     "nekretnine_1487293": {
       "source": "nekretnine.rs",
@@ -92961,7 +92773,8 @@
       "flags": [
         "office:\\bposlovna\\s+zgrada\\b",
         "price_per_m2=18.6"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1487263": {
       "source": "nekretnine.rs",
@@ -92980,7 +92793,8 @@
       "flags": [
         "office:\\bposlovna\\s+zgrada\\b",
         "price_per_m2=18.6"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1488549": {
       "source": "nekretnine.rs",
@@ -92999,7 +92813,8 @@
       "flags": [
         "office:\\d+\\s*kancelarij(?:a|e|sk",
         "price_per_m2=15.2"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1487375": {
       "source": "nekretnine.rs",
@@ -93019,32 +92834,8 @@
         "price_per_m2=19.3"
       ],
       "score": 62,
-      "score_data": {
-        "score": 62,
-        "residents_500": 10332,
-        "residents_1000": 35111,
-        "transit_300": 3,
-        "shops_300": 10,
-        "food_400": 12,
-        "offices_500": 11,
-        "edu_500": 3,
-        "competitors_200": 1,
-        "nearest_dodo_km": 2.67,
-        "breakdown": {
-          "catchment": 1.0,
-          "secondary": 0.88,
-          "transit": 0.5,
-          "retail": 0.25,
-          "food": 0.6,
-          "daytime": 0.57,
-          "comp_penalty": 0.12,
-          "cannib_penalty": 0.0
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 4352,
-        "residents_500_osm_raw": 10332
-      },
-      "scored_at": "2026-09-09T06:21:01.960996+00:00"
+      "scored_at": "2026-09-09T06:21:01.960996+00:00",
+      "compacted": true
     },
     "nekretnine_1487291": {
       "source": "nekretnine.rs",
@@ -93063,7 +92854,8 @@
       "flags": [
         "office:\\bposlovna\\s+zgrada\\b",
         "price_per_m2=18.6"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1487435": {
       "source": "nekretnine.rs",
@@ -93082,7 +92874,8 @@
       "flags": [
         "office:\\d+\\s*kancelarij(?:a|e|sk",
         "price_per_m2=17.7"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1487733": {
       "source": "nekretnine.rs",
@@ -93101,7 +92894,8 @@
       "flags": [
         "office:\\d+\\s*kancelarij(?:a|e|sk",
         "price_per_m2=12.7"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1487145": {
       "source": "nekretnine.rs",
@@ -93121,32 +92915,8 @@
         "price_per_m2=18.0"
       ],
       "score": 79,
-      "score_data": {
-        "score": 79,
-        "residents_500": 14691,
-        "residents_1000": 58254,
-        "transit_300": 4,
-        "shops_300": 49,
-        "food_400": 41,
-        "offices_500": 66,
-        "edu_500": 7,
-        "competitors_200": 6,
-        "nearest_dodo_km": 1.27,
-        "breakdown": {
-          "catchment": 1.0,
-          "secondary": 1.0,
-          "transit": 0.67,
-          "retail": 1.0,
-          "food": 1.0,
-          "daytime": 1.0,
-          "comp_penalty": 0.75,
-          "cannib_penalty": 0.0
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 3695,
-        "residents_500_osm_raw": 14691
-      },
-      "scored_at": "2026-09-09T08:30:43.978344+00:00"
+      "scored_at": "2026-09-09T08:30:43.978344+00:00",
+      "compacted": true
     },
     "nekretnine_1487119": {
       "source": "nekretnine.rs",
@@ -93166,32 +92936,8 @@
         "price_per_m2=13.7"
       ],
       "score": 78,
-      "score_data": {
-        "score": 78,
-        "residents_500": 17842,
-        "residents_1000": 57141,
-        "transit_300": 11,
-        "shops_300": 272,
-        "food_400": 204,
-        "offices_500": 72,
-        "edu_500": 23,
-        "competitors_200": 69,
-        "nearest_dodo_km": 0.34,
-        "breakdown": {
-          "catchment": 1.0,
-          "secondary": 1.0,
-          "transit": 1.0,
-          "retail": 1.0,
-          "food": 1.0,
-          "daytime": 1.0,
-          "comp_penalty": 1.0,
-          "cannib_penalty": 0.44
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 7064,
-        "residents_500_osm_raw": 17842
-      },
-      "scored_at": "2026-09-09T08:31:43.791909+00:00"
+      "scored_at": "2026-09-09T08:31:43.791909+00:00",
+      "compacted": true
     },
     "nekretnine_1486951": {
       "source": "nekretnine.rs",
@@ -93210,7 +92956,8 @@
       "flags": [
         "distance=7.3km",
         "price_per_m2=14.3"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1487187": {
       "source": "nekretnine.rs",
@@ -93230,32 +92977,8 @@
         "price_per_m2=19.4"
       ],
       "score": 77,
-      "score_data": {
-        "score": 77,
-        "residents_500": 17250,
-        "residents_1000": 63262,
-        "transit_300": 6,
-        "shops_300": 24,
-        "food_400": 21,
-        "offices_500": 25,
-        "edu_500": 7,
-        "competitors_200": 8,
-        "nearest_dodo_km": 2.87,
-        "breakdown": {
-          "catchment": 1.0,
-          "secondary": 1.0,
-          "transit": 1.0,
-          "retail": 0.6,
-          "food": 1.0,
-          "daytime": 1.0,
-          "comp_penalty": 1.0,
-          "cannib_penalty": 0.0
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 11937,
-        "residents_500_osm_raw": 17250
-      },
-      "scored_at": "2026-09-09T08:30:29.735392+00:00"
+      "scored_at": "2026-09-09T08:30:29.735392+00:00",
+      "compacted": true
     },
     "nekretnine_1487349": {
       "source": "nekretnine.rs",
@@ -93274,7 +92997,8 @@
       "flags": [
         "ceiling=2.8m",
         "price_per_m2=15.1"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1487311": {
       "source": "nekretnine.rs",
@@ -93293,7 +93017,8 @@
       "flags": [
         "office:\\d+\\s*kancelarij(?:a|e|sk",
         "price_per_m2=10.0"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1487795": {
       "source": "nekretnine.rs",
@@ -93313,32 +93038,8 @@
         "price_per_m2=10.8"
       ],
       "score": 80,
-      "score_data": {
-        "score": 80,
-        "residents_500": 19185,
-        "residents_1000": 72396,
-        "transit_300": 6,
-        "shops_300": 205,
-        "food_400": 156,
-        "offices_500": 66,
-        "edu_500": 18,
-        "competitors_200": 33,
-        "nearest_dodo_km": 0.45,
-        "breakdown": {
-          "catchment": 1.0,
-          "secondary": 1.0,
-          "transit": 1.0,
-          "retail": 1.0,
-          "food": 1.0,
-          "daytime": 1.0,
-          "comp_penalty": 1.0,
-          "cannib_penalty": 0.26
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 7456,
-        "residents_500_osm_raw": 19185
-      },
-      "scored_at": "2026-09-09T08:35:33.425890+00:00"
+      "scored_at": "2026-09-09T08:35:33.425890+00:00",
+      "compacted": true
     },
     "nekretnine_1486881": {
       "source": "nekretnine.rs",
@@ -93356,7 +93057,8 @@
       "rejected": true,
       "flags": [
         "price=1100"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1486903": {
       "source": "nekretnine.rs",
@@ -93375,7 +93077,8 @@
       "flags": [
         "distance=10.6km",
         "price_per_m2=13.7"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1487561": {
       "source": "nekretnine.rs",
@@ -93448,7 +93151,7 @@
       "address": "SENJAK",
       "district": "Savski Venac (Senjak)",
       "first_seen_at": "2026-09-09T10:29:40.387966+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.016949+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709825+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -93567,7 +93270,7 @@
       "address": "Bulevar Jna",
       "district": "Voždovac (Banjica)",
       "first_seen_at": "2026-09-09T12:29:48.512624+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017343+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710042+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -93594,33 +93297,8 @@
         "price_per_m2=12.5"
       ],
       "score": 23,
-      "score_data": {
-        "score": 23,
-        "residents_500": 1998,
-        "residents_1000": 20835,
-        "transit_300": 3,
-        "shops_300": 5,
-        "food_400": 4,
-        "offices_500": 2,
-        "edu_500": 0,
-        "competitors_200": 0,
-        "nearest_dodo_km": 2.04,
-        "breakdown": {
-          "catchment": 0.2,
-          "secondary": 0.52,
-          "transit": 0.5,
-          "retail": 0.12,
-          "food": 0.2,
-          "daytime": 0.05,
-          "comp_penalty": 0.0,
-          "cannib_penalty": 0.0
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 3738,
-        "residents_500_osm_raw": 1998,
-        "low_rise_flag": true
-      },
-      "scored_at": "2026-09-09T12:29:59.345631+00:00"
+      "scored_at": "2026-09-09T12:29:59.345631+00:00",
+      "compacted": true
     },
     "halooglasi_5425647651533": {
       "source": "halooglasi.com",
@@ -93640,32 +93318,8 @@
         "price_per_m2=13.6"
       ],
       "score": 77,
-      "score_data": {
-        "score": 77,
-        "residents_500": 19491,
-        "residents_1000": 81204,
-        "transit_300": 4,
-        "shops_300": 101,
-        "food_400": 94,
-        "offices_500": 41,
-        "edu_500": 14,
-        "competitors_200": 28,
-        "nearest_dodo_km": 0.91,
-        "breakdown": {
-          "catchment": 1.0,
-          "secondary": 1.0,
-          "transit": 0.67,
-          "retail": 1.0,
-          "food": 1.0,
-          "daytime": 1.0,
-          "comp_penalty": 1.0,
-          "cannib_penalty": 0.0
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 7903,
-        "residents_500_osm_raw": 19491
-      },
-      "scored_at": "2026-09-09T12:29:56.283074+00:00"
+      "scored_at": "2026-09-09T12:29:56.283074+00:00",
+      "compacted": true
     },
     "nekretnine_1490335": {
       "source": "nekretnine.rs",
@@ -94113,7 +93767,7 @@
       "address": "Otokara Keršovanija 11",
       "district": "",
       "first_seen_at": "2026-09-10T08:30:09.969264+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017374+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710058+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -94159,54 +93813,16 @@
         "office:\\bposlovna\\s+zgrada\\b",
         "uncertain_floor"
       ],
-      "description": "Agencijski ID: 116748, I/I, video nadzor, pomoćni objekti(1), izlog, klima, nov, montažni, parking, dvorište/bašta, poslovna zgrada. Izdaje se poslovna zgrada na Obrenovačkom drumu. U ponudi je postojeći objekat na jednoj polovini placa, dok se na drugoj polovini nalazi izlivena ploča na kojoj može da se sazida još jedan objekat po želji zakupca u površini od 350m2.\nZgrada se nalazi  na dva ista nivoa ( po 100m2) i ima višenamenske mogućnosti  biznisa. Pored zgrade se nalazi i parking sa rampom od 17 ari koji se takodje izdaje  uz objekat. \nZa bolji uvid najbolje zakazati gledanje nekretnine. Više informacija na: www.beocitynekretnine.rs Agencijska provizija 50% od jedne zakupnine. Telefoni: 060/555-2146  011/328-3901. Kontakt van radnog vremena: kancelarija@beocitynekretnine.rs",
       "geo_lat": 44.75360107,
       "geo_lon": 20.34402084,
       "geo_source": "detail",
       "refreshed_at": "2026-09-10",
       "published_at": "2026-09-10",
       "photo_url": "https://pic.nekretnine.rs/image/18656323/xxl.jpg",
-      "photo_urls": [
-        "https://pic.nekretnine.rs/image/18656323/xxl.jpg",
-        "https://pic.nekretnine.rs/image/18697021/xxl.jpg",
-        "https://pic.nekretnine.rs/image/18697031/xxl.jpg",
-        "https://pic.nekretnine.rs/image/18697045/xxl.jpg",
-        "https://pic.nekretnine.rs/image/18697053/xxl.jpg",
-        "https://pic.nekretnine.rs/image/18697061/xxl.jpg",
-        "https://pic.nekretnine.rs/image/18697071/xxl.jpg",
-        "https://pic.nekretnine.rs/image/18697085/xxl.jpg",
-        "https://pic.nekretnine.rs/image/18697095/xxl.jpg",
-        "https://pic.nekretnine.rs/image/18697103/xxl.jpg"
-      ],
       "rejected": true,
       "score": 7,
-      "score_data": {
-        "score": 7,
-        "residents_500": 509,
-        "residents_1000": 2609,
-        "transit_300": 2,
-        "shops_300": 0,
-        "food_400": 1,
-        "offices_500": 1,
-        "edu_500": 0,
-        "competitors_200": 1,
-        "nearest_dodo_km": 11.18,
-        "breakdown": {
-          "catchment": 0.05,
-          "secondary": 0.07,
-          "transit": 0.33,
-          "retail": 0.0,
-          "food": 0.05,
-          "daytime": 0.03,
-          "comp_penalty": 0.12,
-          "cannib_penalty": 0.0
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 900,
-        "residents_500_osm_raw": 509,
-        "low_rise_flag": true
-      },
-      "scored_at": "2026-09-10T10:54:29.179079+00:00"
+      "scored_at": "2026-09-10T10:54:29.179079+00:00",
+      "compacted": true
     },
     "nekretnine_1495371": {
       "source": "nekretnine.rs",
@@ -94228,11 +93844,11 @@
         "uncertain_ceiling",
         "uncertain_distance"
       ],
-      "description": "Agencijski ID: 123580, lokal. Lokal 145m2, magacinski prostor 20m2, ulaz i izlog iz Ruzveltove. Više informacija na: www.beocitynekretnine.rs Agencijska provizija 50% od jedne zakupnine. Telefoni: 060/555-2146  011/328-3901. Kontakt van radnog vremena: kancelarija@beocitynekretnine.rs",
       "refreshed_at": "2026-09-10",
       "published_at": "2026-09-10",
       "rejected": true,
-      "duplicate_of": "4zida_68d5da6e8b2945f3a60f7d0a"
+      "duplicate_of": "4zida_68d5da6e8b2945f3a60f7d0a",
+      "compacted": true
     },
     "nekretnine_1497301": {
       "source": "nekretnine.rs",
@@ -94244,7 +93860,7 @@
       "address": "Poslovni prostor, Mladenovac Centar, Beograd",
       "district": "",
       "first_seen_at": "2026-09-10T10:53:35.041274+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287846+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710206+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -94262,7 +93878,7 @@
       "address": "Poslovni prostor, Velika Moštanica - Ostružnica - Umka, Beograd",
       "district": "Velika Moštanica - Ostružnica - Umka",
       "first_seen_at": "2026-09-10T10:53:37.068750+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287858+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710212+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -94281,7 +93897,7 @@
       "address": "Poslovni prostor, Klinički centar - Kneza Milosa, Beograd",
       "district": "Klinički centar - Kneza Milosa",
       "first_seen_at": "2026-09-10T10:53:40.340387+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287853+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710209+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -94325,7 +93941,7 @@
       "address": "Poslovni prostor, Batajnica, Beograd",
       "district": "",
       "first_seen_at": "2026-09-10T10:53:40.340420+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287876+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710218+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -94344,7 +93960,7 @@
       "address": "Poslovni prostor, Novi Grad, Beograd",
       "district": "Novi Grad",
       "first_seen_at": "2026-09-10T10:53:42.075478+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287870+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710221+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -94382,7 +93998,7 @@
       "address": "Poslovni prostor, Beograd na vodi - Palata pravde, Beograd",
       "district": "Beograd na vodi - Palata pravde",
       "first_seen_at": "2026-09-10T10:53:52.362812+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287892+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710229+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -94838,7 +94454,7 @@
       "address": "Hram Svetog Save",
       "district": "Vračar (Hram Svetog Save)",
       "first_seen_at": "2026-09-10T13:53:18.012296+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017255+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709998+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -94874,7 +94490,7 @@
       "address": "Poslovni prostor, Miljakovac 1 - Mijakovac 2, Beograd",
       "district": "Miljakovac 1 - Mijakovac 2",
       "first_seen_at": "2026-09-10T19:40:48.113229+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287830+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710197+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -94911,7 +94527,7 @@
       "address": "Poslovni prostor, Kalenić - Slavija - Cvetni Trg, Beograd",
       "district": "Vračar (Kalenić - Slavija - Cvetni Trg)",
       "first_seen_at": "2026-09-11T05:53:27.272064+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287818+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710191+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -94930,7 +94546,7 @@
       "address": "Poslovni prostor, Gornji Grad, Beograd",
       "district": "Gornji Grad",
       "first_seen_at": "2026-09-11T05:53:29.740741+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287824+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710194+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -94974,7 +94590,7 @@
       "address": "Poslovni prostor, Krnjača - Kotež - Ovča, Beograd",
       "district": "",
       "first_seen_at": "2026-09-11T05:53:29.740781+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287836+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710200+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -94993,7 +94609,7 @@
       "address": "Poslovni prostor, Profesorska kolonija - Hala Pionir, Beograd",
       "district": "Profesorska kolonija - Hala Pionir",
       "first_seen_at": "2026-09-11T05:53:36.046515+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287841+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710203+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95037,7 +94653,7 @@
       "address": "Poslovni prostor, Kalenić - Slavija - Cvetni Trg, Beograd",
       "district": "",
       "first_seen_at": "2026-09-11T05:53:36.046562+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287863+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710215+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95056,7 +94672,7 @@
       "address": "Poslovni prostor, Dorćol, Beograd",
       "district": "Stari Grad (Dorćol)",
       "first_seen_at": "2026-09-11T05:53:38.394629+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287883+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710225+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95157,7 +94773,7 @@
       "district": "Voždovac (Ustanička)",
       "subdistrict": null,
       "first_seen_at": "2026-09-11T07:53:14.031123+00:00",
-      "last_seen_at": "2026-09-12T15:53:28.949477+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -95217,7 +94833,7 @@
       "address": "Živorada Đukića",
       "district": "Novi Beograd (Ledine)",
       "first_seen_at": "2026-09-11T09:53:18.338280+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017189+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709960+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95236,7 +94852,7 @@
       "address": "Poslovni prostor, Centar - Skupština - Terazije, Beograd",
       "district": "Centar - Skupština - Terazije",
       "first_seen_at": "2026-09-11T09:53:21.082217+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287718+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710166+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95281,7 +94897,7 @@
       "address": "Poslovni prostor, Bečmen - Dobanovci - Radiofar, Beograd",
       "district": "Bečmen - Dobanovci - Radiofar",
       "first_seen_at": "2026-09-11T09:53:28.559671+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287756+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710170+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95300,7 +94916,7 @@
       "address": "Poslovni prostor, Cvetanova ćuprija - Veliki Mokri Lug, Beograd",
       "district": "Cvetanova ćuprija - Veliki Mokri Lug",
       "first_seen_at": "2026-09-11T09:53:32.449889+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287772+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710174+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95319,7 +94935,7 @@
       "address": "Poslovni prostor, Kalenić - Slavija - Cvetni Trg, Beograd",
       "district": "Vračar (Kalenić - Slavija - Cvetni Trg)",
       "first_seen_at": "2026-09-11T09:53:34.648671+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287784+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710177+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95338,7 +94954,7 @@
       "address": "Poslovni prostor, Beograd",
       "district": "Unknown",
       "first_seen_at": "2026-09-11T09:53:36.762595+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287806+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710185+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95356,7 +94972,7 @@
       "address": "Nikole Grulovića",
       "district": "Unknown",
       "first_seen_at": "2026-09-11T09:53:38.030389+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288207+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710395+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95466,7 +95082,7 @@
       "district": "Čukarica (Banovo brdo)",
       "subdistrict": null,
       "first_seen_at": "2026-09-11T12:53:24.912217+00:00",
-      "last_seen_at": "2026-09-12T15:53:28.949477+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -95617,7 +95233,7 @@
       "address": "Blok 11c - Stari Merkator",
       "district": "Novi Beograd (Blok 11c Stari Merkator)",
       "first_seen_at": "2026-09-11T13:53:23.033014+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017159+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709945+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95636,7 +95252,7 @@
       "address": "Poslovni prostor, Lekino brdo, Beograd",
       "district": "Voždovac (Lekino brdo)",
       "first_seen_at": "2026-09-11T13:53:27.264217+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287689+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710152+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95680,7 +95296,7 @@
       "address": "Poslovni prostor, Batajnica, Beograd",
       "district": "",
       "first_seen_at": "2026-09-11T13:53:27.264259+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287707+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710161+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95699,7 +95315,7 @@
       "address": "Poslovni prostor, Kalenić - Slavija - Cvetni Trg, Beograd",
       "district": "Vračar (Kalenić - Slavija - Cvetni Trg)",
       "first_seen_at": "2026-09-11T13:53:31.129074+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287712+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710163+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95743,7 +95359,7 @@
       "address": "Poslovni prostor, Surčin Centar, Beograd",
       "district": "Surčin Centar",
       "first_seen_at": "2026-09-11T13:53:43.760491+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287793+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710180+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95762,7 +95378,7 @@
       "address": "Poslovni prostor, Beograd",
       "district": "Unknown",
       "first_seen_at": "2026-09-11T13:53:59.911327+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287811+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710188+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95844,7 +95460,7 @@
       "address": "Sarajevska",
       "district": "Savski Venac (Centar)",
       "first_seen_at": "2026-09-11T16:26:58.483824+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.017149+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709940+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95862,7 +95478,7 @@
       "address": "Makenzijeva",
       "district": "Unknown",
       "first_seen_at": "2026-09-11T16:26:59.873519+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287997+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710284+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95907,7 +95523,7 @@
       "address": "Poslovni prostor, Golf naselje - Košutnjak, Beograd",
       "district": "Golf naselje - Košutnjak",
       "first_seen_at": "2026-09-11T19:10:27.116741+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287695+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710155+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95951,7 +95567,7 @@
       "address": "Poslovni prostor, Bežanijski blokovi, Beograd",
       "district": "",
       "first_seen_at": "2026-09-11T19:10:27.116773+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287701+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710158+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -95971,7 +95587,7 @@
       "district": "Vračar (Hram Svetog Save - Neimar - Čubura)",
       "subdistrict": null,
       "first_seen_at": "2026-09-11T19:44:39.041068+00:00",
-      "last_seen_at": "2026-09-12T19:23:35.728948+00:00",
+      "last_seen_at": "2026-09-13T10:53:25.372063+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -96040,7 +95656,7 @@
       "address": "Poslovni prostor, Kalenić - Slavija - Cvetni Trg, Beograd",
       "district": "Vračar (Kalenić - Slavija - Cvetni Trg)",
       "first_seen_at": "2026-09-12T05:53:26.387146+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287678+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710146+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96085,7 +95701,7 @@
       "address": "Poslovni prostor, Autokomanda, Beograd",
       "district": "Voždovac (Autokomanda)",
       "first_seen_at": "2026-09-12T05:53:28.968365+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287683+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710149+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96129,7 +95745,7 @@
       "address": "Izdajem lokal u centru",
       "district": "",
       "first_seen_at": "2026-09-12T05:53:28.969003+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288227+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710405+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96184,7 +95800,7 @@
       "address": "Poslovni prostor, Centar - Skupština - Terazije, Beograd",
       "district": "Centar - Skupština - Terazije",
       "first_seen_at": "2026-09-12T07:53:24.929960+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287627+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710120+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96269,7 +95885,7 @@
       "address": "Poslovni prostor, Centar - Skupština - Terazije, Beograd",
       "district": "",
       "first_seen_at": "2026-09-12T09:53:26.792029+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287641+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710127+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96287,7 +95903,7 @@
       "address": "Poslovni prostor, Barajevo Centar, Beograd",
       "district": "Barajevo Centar",
       "first_seen_at": "2026-09-12T09:53:36.735339+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287649+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710132+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96306,7 +95922,7 @@
       "address": "Poslovni prostor, Železnik - Novi Železnik, Beograd",
       "district": "Železnik - Novi Železnik",
       "first_seen_at": "2026-09-12T09:53:40.407764+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287658+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710136+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96325,7 +95941,7 @@
       "address": "Poslovni prostor, Beograd",
       "district": "Unknown",
       "first_seen_at": "2026-09-12T09:53:43.899435+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287672+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710143+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96405,7 +96021,7 @@
       "address": "Poslovni prostor, Kalvarija, Beograd",
       "district": "",
       "first_seen_at": "2026-09-12T13:53:19.184880+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287611+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710114+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96423,7 +96039,7 @@
       "address": "Poslovni prostor, Zemun Polje, Beograd",
       "district": "",
       "first_seen_at": "2026-09-12T13:53:19.184918+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287665+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710139+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96442,7 +96058,7 @@
       "address": "Krunska",
       "district": "Unknown",
       "first_seen_at": "2026-09-12T15:53:27.079382+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.288186+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710383+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96461,7 +96077,7 @@
       "address": "Poslovni prostor, Paviljoni - Pariske komune - Ikarus, Beograd",
       "district": "Paviljoni - Pariske komune - Ikarus",
       "first_seen_at": "2026-09-12T19:21:26.101291+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287620+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710117+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96506,7 +96122,7 @@
       "address": "Poslovni prostor, Voždovačka crkva - FON - Saobraćajni fakultet, Beograd",
       "district": "Voždovačka crkva - FON - Saobraćajni fakultet",
       "first_seen_at": "2026-09-12T19:21:30.052772+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287634+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710123+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96570,7 +96186,7 @@
       "address": "Poslovni prostor, Konjarnik, Beograd",
       "district": "Zvezdara (Konjarnik)",
       "first_seen_at": "2026-09-13T07:53:29.362795+00:00",
-      "last_seen_at": "2026-09-13T09:54:19.209713+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710107+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96615,7 +96231,7 @@
       "address": "Jurija Gagarina 218",
       "district": "Novi Beograd (Blok 63)",
       "first_seen_at": "2026-09-13T09:53:14.016902+00:00",
-      "last_seen_at": "2026-09-13T09:53:14.016916+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.709814+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96634,7 +96250,7 @@
       "address": "Poslovni prostor, Palilula Centar - Tašmajdan - Pravni fakultet, Beograd",
       "district": "Palilula Centar - Tašmajdan - Pravni fakultet",
       "first_seen_at": "2026-09-13T09:53:35.038309+00:00",
-      "last_seen_at": "2026-09-13T09:53:35.038320+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710094+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96679,7 +96295,7 @@
       "address": "Poslovni prostor, Ledine, Beograd",
       "district": "Ledine",
       "first_seen_at": "2026-09-13T09:53:56.243318+00:00",
-      "last_seen_at": "2026-09-13T09:53:56.243329+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710097+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96697,7 +96313,7 @@
       "address": "Poslovni prostor, Višnjica - Slanci, Beograd",
       "district": "",
       "first_seen_at": "2026-09-13T09:53:56.243349+00:00",
-      "last_seen_at": "2026-09-13T09:53:56.243351+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710100+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96716,7 +96332,7 @@
       "address": "Poslovni prostor, Centar - Skupština - Terazije, Beograd",
       "district": "Centar - Skupština - Terazije",
       "first_seen_at": "2026-09-13T09:54:19.209688+00:00",
-      "last_seen_at": "2026-09-13T09:54:19.209698+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710104+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96761,7 +96377,7 @@
       "address": "Poslovni prostor, Golf naselje - Košutnjak, Beograd",
       "district": "Golf naselje - Košutnjak",
       "first_seen_at": "2026-09-13T09:54:40.287584+00:00",
-      "last_seen_at": "2026-09-13T09:54:40.287592+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710110+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96806,7 +96422,7 @@
       "address": "Jurija Gagarina",
       "district": "Unknown",
       "first_seen_at": "2026-09-13T09:54:43.046025+00:00",
-      "last_seen_at": "2026-09-13T09:54:43.046038+00:00",
+      "last_seen_at": "2026-09-13T10:53:23.710506+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -99455,7 +99071,7 @@
     }
   },
   "first_run": false,
-  "last_cycle_at": "2026-09-13T09:56:13.550875+00:00",
+  "last_cycle_at": "2026-09-13T10:53:23.710530+00:00",
   "sent_messages": {
     "legacy_0": {
       "sent_at": "2026-05-09T07:23:41.346227+00:00",
@@ -101104,13 +100720,13 @@
   },
   "feedback_aggregates": {
     "by_district": {
-      "Stari grad": {
-        "like": 2,
-        "dislike": 25
-      },
       "Stari grad (Dorćol)": {
         "like": 0,
         "dislike": 6
+      },
+      "Stari grad": {
+        "like": 2,
+        "dislike": 25
       },
       "Vračar (Crveni Krst Vracar)": {
         "like": 0,
@@ -101128,21 +100744,21 @@
         "like": 0,
         "dislike": 1
       },
-      "Novi Beograd": {
-        "like": 2,
-        "dislike": 45
-      },
       "Novi Beograd (Blok 65)": {
         "like": 0,
         "dislike": 6
       },
-      "Voždovac (Autokomanda)": {
-        "like": 0,
-        "dislike": 3
+      "Novi Beograd": {
+        "like": 2,
+        "dislike": 45
       },
       "Voždovac": {
         "like": 0,
         "dislike": 24
+      },
+      "Voždovac (Autokomanda)": {
+        "like": 0,
+        "dislike": 3
       },
       "Savski Venac": {
         "like": 0,
@@ -101160,13 +100776,13 @@
         "like": 0,
         "dislike": 1
       },
-      "Čukarica": {
-        "like": 1,
-        "dislike": 17
-      },
       "Čukarica (Banovo brdo)": {
         "like": 1,
         "dislike": 10
+      },
+      "Čukarica": {
+        "like": 1,
+        "dislike": 17
       },
       "Stari grad (Terazije)": {
         "like": 0,
@@ -101216,25 +100832,25 @@
         "like": 0,
         "dislike": 2
       },
-      "Zvezdara": {
-        "like": 3,
-        "dislike": 51
-      },
       "Zvezdara (Dimitrija Tucovića)": {
         "like": 0,
         "dislike": 5
+      },
+      "Zvezdara": {
+        "like": 3,
+        "dislike": 51
       },
       "Vračar (Kalenić pijaca)": {
         "like": 0,
         "dislike": 4
       },
-      "Palilula (Bulevar despota Stefana)": {
-        "like": 0,
-        "dislike": 1
-      },
       "Palilula": {
         "like": 0,
         "dislike": 21
+      },
+      "Palilula (Bulevar despota Stefana)": {
+        "like": 0,
+        "dislike": 1
       },
       "Ušće - Gazela - Staro Sajmište": {
         "like": 0,
@@ -101336,13 +100952,13 @@
         "like": 0,
         "dislike": 3
       },
-      "Savski venac (Senjak)": {
-        "like": 0,
-        "dislike": 5
-      },
       "Savski venac": {
         "like": 0,
         "dislike": 11
+      },
+      "Savski venac (Senjak)": {
+        "like": 0,
+        "dislike": 5
       },
       "Novi Beograd (Sava Centar)": {
         "like": 0,
@@ -101738,18 +101354,18 @@
       }
     },
     "source": "sheet_col_K",
-    "updated_at": "2026-09-12T19:26:25.132145+00:00"
+    "updated_at": "2026-09-13T10:56:07.648422+00:00"
   },
   "last_cycle_stats": {
-    "at": "2026-09-13T09:56:13.550879+00:00",
+    "at": "2026-09-13T10:53:23.710532+00:00",
     "sweep_raw": 927,
     "new": 0,
     "passes": 0,
-    "rejects": 4,
+    "rejects": 0,
     "sources_down": []
   },
   "canary": {
-    "date": "2026-09-12",
+    "date": "2026-09-13",
     "results": {
       "nekretnine_api": "ok",
       "cityexpert_api": "ok",
