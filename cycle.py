@@ -2004,17 +2004,25 @@ def cmd_finalize():
         out['last_scan_stamp'] = f'fail: {e}'
 
     # check_status manages its own state writes; prints summary on stdout
-    cr = subprocess.run(['python3', str(SCRIPT_DIR / 'check_status.py')],
-                        capture_output=True, text=True, timeout=300)
-    cout = (cr.stdout or '') + '\n' + (cr.stderr or '')
+    # Таймаут check_status не должен валить финализ: без него нет карты, штампа и
+    # health-алертов (13–14.09 так молча пропали 8 финализов подряд).
+    try:
+        cr = subprocess.run(['python3', str(SCRIPT_DIR / 'check_status.py')],
+                            capture_output=True, text=True, timeout=300)
+        cout = (cr.stdout or '') + '\n' + (cr.stderr or '')
+        check_rc, check_err = cr.returncode, cr.stderr
+    except subprocess.TimeoutExpired as e:
+        cout = ((e.stdout or b'').decode(errors='replace') if isinstance(e.stdout, bytes) else (e.stdout or '')) + '\n'
+        check_rc, check_err = -1, 'check_status timed out after 300s'
+        out['check_timeout'] = True
     m = re.search(r'(\d+)\s+killed[^a-z]*?(\d+)\s+alive', cout)
     killed = int(m.group(1)) if m else 0
     alive = int(m.group(2)) if m else 0
     out['check_killed'] = killed
     out['check_alive'] = alive
-    out['check_rc'] = cr.returncode
-    if cr.returncode != 0:
-        out['check_stderr_tail'] = (cr.stderr or '').strip().split('\n')[-3:]
+    out['check_rc'] = check_rc
+    if check_rc != 0:
+        out['check_stderr_tail'] = (check_err or '').strip().split('\n')[-3:]
 
     # Карта плотности населения: обновляем наложение лотов (без деплоя — его сделает
     # gen_map, он шипит весь public/). Best-effort, не валим цикл при ошибке.

@@ -39,7 +39,8 @@ STATE_PATH = os.path.join(os.environ.get('BG_DATA', '/Users/dodo/pizzeria-locati
                           'state.json')
 
 # Throttling per source (per cycle)
-MAX_PER_CYCLE_PER_SOURCE = {'4zida.rs': 15, 'nekretnine.rs': 25, 'halooglasi.com': 15, 'cityexpert.rs': 25}
+MAX_PER_CYCLE_PER_SOURCE = {'4zida.rs': 15, 'nekretnine.rs': 10, 'halooglasi.com': 15, 'cityexpert.rs': 25}
+SOURCE_BUDGET_SEC = 150  # источники идут параллельно, итог < 300 с таймаута финализа
 DELAY_SEC_PER_SOURCE = {'4zida.rs': 1.5, 'nekretnine.rs': 0.4, 'halooglasi.com': 1.0, 'cityexpert.rs': 0.3}
 
 # Don't check lots seen < this many hours ago (avoid checking fresh sweep results)
@@ -162,7 +163,7 @@ def check_nekretnine(key, src, url):
         живые агентства «поднимают» объявления, протухшие висят без обновлений
       • свежее updatedAt → alive; иначе unknown (last_seen не трогаем)"""
     import curl_sweep
-    r = curl_sweep.nek_get(url, timeout=20)
+    r = curl_sweep.nek_get(url, timeout=12, attempts=2)  # в check_status экономно: не пробился — unknown, дождёмся следующего цикла
     if r is None:
         return key, src, url, 'ERR', 0, 'nek_get: DataDome/proxy', 'unknown'
     body = r.text
@@ -254,8 +255,17 @@ def main():
 
     # Run per-source serial (with delay), across sources in parallel
     def run_source(src, items, delay):
+        # Бюджет времени на источник: финализ ждёт check_status 300 с, а nekretnine
+        # через прокси под DataDome может жечь по минуте на лот. 13–14.09 из-за этого
+        # упали 8 прогонов из 12 (TimeoutExpired → финализ без JSON → driver rc=1).
+        # Недопроверенные лоты просто ждут следующего цикла (oldest-first).
+        t0 = time.time()
         out = []
         for i, (k, s, u) in enumerate(items):
+            if time.time() - t0 > SOURCE_BUDGET_SEC:
+                print(f'  {src}: бюджет {SOURCE_BUDGET_SEC}s исчерпан, проверено {i} из {len(items)}',
+                      file=sys.stderr)
+                break
             if i > 0: time.sleep(delay)
             out.append(check_one(k, s, u))
         return out

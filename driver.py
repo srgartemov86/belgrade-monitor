@@ -223,6 +223,8 @@ def main():
     rs = out.get('reject_sheet') or {}
     if rs and not rs.get('ok'):
         alerts.append('📄 реджект-лист не записался')
+    if fin.get('check_timeout'):
+        alerts.append('🕐 check_status не уложился в 300 с (снятия с сайта отстают)')
     if fin.get('map_ok') is False:
         alerts.append('🗺 карта не сгенерировалась')
     if fin.get('map_surge_ok') is False:
