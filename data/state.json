@@ -1,5 +1,5 @@
 {
-  "version": 312,
+  "version": 313,
   "first_run_at": "2026-05-01T15:10:00Z",
   "last_run_at": "2026-05-13T14:55:53.765472+00:00",
   "filter": {
@@ -532,7 +532,7 @@
       "geo_lon": 20.4588,
       "dist_from_center_km": 1.66,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-15T14:54:12.827046+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://resizer2.4zida.rs/ymkrrp39eGLviKRqI3W0vvgb0mxRffl__Hd2frSY-ks/rs:fit:1920:1080:0/bG9jYWw6Ly8vNjlmMWU4MDM0ZGRhNzg3NjY0MDczZjg1LzE1ZGViZjU5MTZfd20.jpeg",
@@ -1048,7 +1048,7 @@
       "fast_path": "curl",
       "removed_from_sheet": true,
       "removed_reason": "cleanup_2026-05-02 (>220m² / outdated / periphery / office)",
-      "last_seen_at": "2026-09-15T20:14:56.133509+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567666+00:00",
       "compacted": true
     },
     "nekretnine_NkxJEBk4idpc": {
@@ -1768,7 +1768,7 @@
       "geo_lon": 20.4893,
       "dist_from_center_km": 3.09,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-15T16:57:43.435256+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://img.halooglasi.com/slike/oglasi/Thumbs/241210/l/zvezdara---bulevar-kralja-aleksandra-id23831-5425645047597-71810242544.jpg"
@@ -2936,7 +2936,7 @@
       "lon": 20.475611,
       "status": "sent",
       "first_seen_at": "2026-05-06T09:18:15Z",
-      "last_seen_at": "2026-09-15T16:57:43.435256+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "photo_path": "/Users/dodo/Клод Код/.pizzeria-photos/halo_5425644528932.jpg",
       "geo_lat": 44.787985,
@@ -3033,7 +3033,7 @@
       "geo_lat": 44.826874,
       "geo_lon": 20.4535935,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-15T14:54:12.827046+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://resizer2.4zida.rs/0pThAsMfo-ZjqrU6PU3uMTeRPJTYlavqNk0k9uZV6HM/rs:fit:1920:1080:0/bG9jYWw6Ly8vNjNjZTcwZGE0MjRlOTNlMGVlMDkwZWFkL2RjOWI5YWQwZjdfd20.jpeg",
@@ -3963,7 +3963,7 @@
       "geo_lat": 44.810793792721,
       "geo_lon": 20.436822536239,
       "geo_source": "detail",
-      "last_seen_at": "2026-09-15T14:54:12.827046+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://resizer2.4zida.rs/C1jVNSKPvzoZrA1WgknaxelcqypKIOkJD19iES89kkQ/rs:fit:1920:1080:0/bG9jYWw6Ly8vNjlmZGUyMzAwM2FmMzQ2YjcxMDI3YWViLzgwZTM4OGM4NTNfd20.jpeg",
@@ -4694,7 +4694,7 @@
       "validated": true,
       "alerted": true,
       "first_seen_at": "2026-05-10T19:54:36.776343+00:00",
-      "last_seen_at": "2026-09-15T14:54:12.827046+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "agency": "Art nekretnine",
       "geo": {
         "lat": 44.8138,
@@ -4998,7 +4998,7 @@
       "removed_from_sheet": true,
       "stale_marked_at": "2026-05-14T10:25:05.916709+00:00",
       "dead_reason": "live_status_check_2026-05-14",
-      "last_seen_at": "2026-09-15T20:14:56.133586+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567752+00:00",
       "compacted": true
     },
     "4zida_698c5ae2da369a66f40d45c3": {
@@ -5044,7 +5044,7 @@
       "date_posted_estimate_from_objectid": "2025-10-14",
       "first_seen_at": "2026-05-12T13:13:04.699833+00:00",
       "geo_source": "detail",
-      "last_seen_at": "2026-09-15T14:54:12.827046+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "photos_checked_at": "2026-06-11T10:31:17.415861+00:00",
       "photo_urls": [
         "https://resizer2.4zida.rs/MB9QFpnShOl1d9_YXpg6mR6eHHzBYRhiD7ibyL-WT7s/rs:fit:1920:1080:0/bG9jYWw6Ly8vNjhlZTMyNDA1ZDc1YjkxNDNlMDY1NjQ2LzI0NDM0YzkzMjdfd20.jpeg",
@@ -7150,7 +7150,7 @@
       "geo_lon": 20.549118,
       "geo_source": "detail",
       "first_seen_at": "2026-05-17T09:00:14Z",
-      "last_seen_at": "2026-09-15T20:14:56.133592+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567757+00:00",
       "rejected": true,
       "flags": [
         "rejected_radius_7.95km"
@@ -8000,7 +8000,7 @@
       "district": "Savski Venac (Senjak)",
       "subdistrict": null,
       "first_seen_at": "2026-05-18T16:45:42.780168+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133483+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567639+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -9671,7 +9671,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-05-25T05:44:14.876003+00:00",
-      "last_seen_at": "2026-09-15T14:54:12.827046+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -10228,7 +10228,8 @@
         "https://www.nekretnine.rs/oglasi/1405181/",
         "https://www.nekretnine.rs/oglasi/1424807/",
         "https://www.nekretnine.rs/oglasi/1454209/",
-        "https://www.nekretnine.rs/oglasi/1487303/"
+        "https://www.nekretnine.rs/oglasi/1487303/",
+        "https://www.nekretnine.rs/oglasi/1511101/"
       ],
       "score": 62,
       "score_data": {
@@ -10843,7 +10844,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-05-26T11:26:12.865667+00:00",
-      "last_seen_at": "2026-09-15T14:54:12.827046+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -10884,7 +10885,8 @@
         "https://www.nekretnine.rs/oglasi/1405435/",
         "https://www.nekretnine.rs/oglasi/1425059/",
         "https://www.nekretnine.rs/oglasi/1454419/",
-        "https://www.nekretnine.rs/oglasi/1487533/"
+        "https://www.nekretnine.rs/oglasi/1487533/",
+        "https://www.nekretnine.rs/oglasi/1511331/"
       ],
       "score": 65,
       "score_data": {
@@ -10926,7 +10928,7 @@
       "district": "Vračar (Centar)",
       "subdistrict": null,
       "first_seen_at": "2026-05-26T11:26:14.308517+00:00",
-      "last_seen_at": "2026-09-15T14:54:12.827046+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -11073,7 +11075,7 @@
       "district": "Savski venac (Dedinje)",
       "subdistrict": null,
       "first_seen_at": "2026-05-26T11:26:18.027687+00:00",
-      "last_seen_at": "2026-09-15T16:57:43.435256+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -12376,7 +12378,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-05-28T06:26:29.413543+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133572+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567737+00:00",
       "in_sheet": false,
       "alerted": false,
       "flags": [
@@ -12402,7 +12404,7 @@
       "district": "Savski Venac (Zeleni Venac)",
       "subdistrict": null,
       "first_seen_at": "2026-05-28T06:26:29.886139+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133581+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567747+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -12470,7 +12472,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-05-28T06:26:30.514938+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133596+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567762+00:00",
       "in_sheet": false,
       "alerted": false,
       "flags": [
@@ -19359,7 +19361,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-03T09:08:01.399553+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133402+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567524+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -21359,7 +21361,7 @@
       "district": "Savski venac (Dedinje)",
       "subdistrict": null,
       "first_seen_at": "2026-06-04T13:07:41.936948+00:00",
-      "last_seen_at": "2026-09-15T16:57:43.435256+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -22374,7 +22376,7 @@
       "district": "Novi Beograd (A Blok Blok 67a)",
       "subdistrict": null,
       "first_seen_at": "2026-06-05T13:08:11.422904+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133633+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567802+00:00",
       "in_sheet": false,
       "alerted": false,
       "flags": [
@@ -23263,7 +23265,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-06T10:21:03.933770+00:00",
-      "last_seen_at": "2026-09-15T14:54:12.827046+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -23352,7 +23354,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-06T10:21:05.306955+00:00",
-      "last_seen_at": "2026-09-15T14:54:12.827046+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -23913,7 +23915,7 @@
       "district": "Stari grad (Dorćol)",
       "subdistrict": null,
       "first_seen_at": "2026-06-06T15:08:06.506943+00:00",
-      "last_seen_at": "2026-09-15T16:57:43.435256+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -24542,7 +24544,7 @@
       "district": "Voždovac (Medaković 3)",
       "subdistrict": null,
       "first_seen_at": "2026-06-07T13:25:02.695021+00:00",
-      "last_seen_at": "2026-09-15T16:57:43.435256+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -25881,7 +25883,7 @@
       "district": "Novi Beograd (Blok 43)",
       "subdistrict": null,
       "first_seen_at": "2026-06-09T14:33:09.787301+00:00",
-      "last_seen_at": "2026-09-15T13:54:23.885222+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -31224,7 +31226,7 @@
       "district": "Zvezdara (Olimp)",
       "subdistrict": null,
       "first_seen_at": "2026-06-14T14:08:22.049729+00:00",
-      "last_seen_at": "2026-09-15T15:54:15.483656+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -31710,7 +31712,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-15T12:08:13.005172+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133692+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567870+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -31767,7 +31769,7 @@
       "district": "Vračar (Bulevar Kralja Aleksandra)",
       "subdistrict": null,
       "first_seen_at": "2026-06-15T12:08:13.652771+00:00",
-      "last_seen_at": "2026-09-15T13:54:23.885222+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -32020,7 +32022,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-15T13:08:16.857282+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133647+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567817+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -32052,7 +32054,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-15T13:08:17.768887+00:00",
-      "last_seen_at": "2026-09-15T13:54:23.885222+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -32144,7 +32146,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-15T13:08:18.861989+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133653+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567824+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -32246,7 +32248,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-15T13:08:20.390916+00:00",
-      "last_seen_at": "2026-09-15T13:54:23.885222+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -32316,7 +32318,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-15T13:08:20.838813+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133662+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567833+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -32379,7 +32381,7 @@
       "district": "Unknown",
       "subdistrict": null,
       "first_seen_at": "2026-06-15T13:08:21.391318+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133667+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567839+00:00",
       "in_sheet": false,
       "alerted": false,
       "flags": [
@@ -33293,7 +33295,7 @@
       "district": "Savski Venac (Senjak)",
       "subdistrict": null,
       "first_seen_at": "2026-06-16T11:08:20.512809+00:00",
-      "last_seen_at": "2026-09-15T14:54:12.827046+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -35227,7 +35229,7 @@
       "district": "Savski Venac (Centar)",
       "subdistrict": null,
       "first_seen_at": "2026-06-18T06:25:01.135195+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133468+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567618+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -36095,7 +36097,7 @@
       "district": "Zvezdara (Đeram pijaca)",
       "subdistrict": null,
       "first_seen_at": "2026-06-18T11:08:01.308394+00:00",
-      "last_seen_at": "2026-09-15T15:54:15.483656+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -37180,7 +37182,7 @@
       "district": "Palilula (Botanička bašta)",
       "subdistrict": null,
       "first_seen_at": "2026-06-19T10:08:29.791515+00:00",
-      "last_seen_at": "2026-09-15T15:54:15.483656+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -37315,7 +37317,7 @@
       "district": "Zvezdara (Đeram pijaca)",
       "subdistrict": null,
       "first_seen_at": "2026-06-19T10:08:30.765783+00:00",
-      "last_seen_at": "2026-09-15T15:54:15.483656+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -45292,7 +45294,7 @@
       "address": "Terazije",
       "district": "",
       "first_seen_at": "2026-06-25T09:17:48.376649+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133560+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567724+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -46998,7 +47000,7 @@
       "address": "Vojvode Stepe 197",
       "district": "Unknown",
       "first_seen_at": "2026-06-25T19:10:26.808457+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133442+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567567+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -48287,7 +48289,7 @@
       "address": "Zrenjaninski Put",
       "district": "Unknown",
       "first_seen_at": "2026-06-26T19:55:09.991978+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133490+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567645+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -56831,7 +56833,8 @@
         "https://www.nekretnine.rs/oglasi/1405205/",
         "https://www.nekretnine.rs/oglasi/1424811/",
         "https://www.nekretnine.rs/oglasi/1454199/",
-        "https://www.nekretnine.rs/oglasi/1487317/"
+        "https://www.nekretnine.rs/oglasi/1487317/",
+        "https://www.nekretnine.rs/oglasi/1511115/"
       ]
     },
     "nekretnine_1254719": {
@@ -58506,7 +58509,7 @@
       "district": "Voždovac (Medaković 3)",
       "subdistrict": null,
       "first_seen_at": "2026-07-09T14:07:52.281415+00:00",
-      "last_seen_at": "2026-09-15T15:54:15.483656+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -63025,7 +63028,7 @@
       "address": "Terazije",
       "district": "",
       "first_seen_at": "2026-07-15T14:31:12.488688+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133684+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567859+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -63324,7 +63327,7 @@
       "address": "Stanoja Glavaša",
       "district": "Unknown",
       "first_seen_at": "2026-07-15T20:24:24.718052+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133623+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567792+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -63574,7 +63577,7 @@
       "address": "Luke Vojvodić",
       "district": "Unknown",
       "first_seen_at": "2026-07-16T11:58:40.911649+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133539+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567701+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -79094,7 +79097,7 @@
       "address": "BULEVAR OSLOBOĐENJA",
       "district": "Unknown",
       "first_seen_at": "2026-08-15T14:12:57.352698+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133638+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567808+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -81018,7 +81021,7 @@
       "address": "Viline Vode",
       "district": "Unknown",
       "first_seen_at": "2026-08-18T08:52:28.375618+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133503+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567661+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -81291,7 +81294,7 @@
       "address": "Zrenjaninski Put",
       "district": "Unknown",
       "first_seen_at": "2026-08-19T06:30:17.293976+00:00",
-      "last_seen_at": "2026-09-13T11:48:05.227253+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567573+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -82034,7 +82037,7 @@
       "address": "Smederevski Put",
       "district": "Unknown",
       "first_seen_at": "2026-08-19T10:45:32.336473+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133533+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567694+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -84204,7 +84207,8 @@
       "alt_urls": [
         "https://www.nekretnine.rs/oglasi/1424369/",
         "https://www.nekretnine.rs/oglasi/1453771/",
-        "https://www.nekretnine.rs/oglasi/1486901/"
+        "https://www.nekretnine.rs/oglasi/1486901/",
+        "https://www.nekretnine.rs/oglasi/1510711/"
       ]
     },
     "nekretnine_1421711": {
@@ -84282,7 +84286,7 @@
       "district": "Stari grad (Dorćol)",
       "subdistrict": null,
       "first_seen_at": "2026-08-25T09:50:56.719706+00:00",
-      "last_seen_at": "2026-09-15T15:54:15.483656+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -86296,7 +86300,7 @@
       "address": "Bulevar Arsenija Čarnojevića 174",
       "district": "Novi Beograd (Blok 34 Studentski Grad)",
       "first_seen_at": "2026-08-28T12:29:43.958002+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133338+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567471+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -87620,7 +87624,7 @@
       "address": "Narodnog Fronta 4",
       "district": "Unknown",
       "first_seen_at": "2026-09-01T08:30:01.965141+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133437+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567562+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -92942,7 +92946,7 @@
       "address": "SENJAK",
       "district": "Savski Venac (Senjak)",
       "first_seen_at": "2026-09-09T10:29:40.387966+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133424+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567547+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -93704,32 +93708,8 @@
         "price_per_m2=11.2"
       ],
       "score": 41,
-      "score_data": {
-        "score": 41,
-        "residents_500": 3525,
-        "residents_1000": 19059,
-        "transit_300": 6,
-        "shops_300": 3,
-        "food_400": 9,
-        "offices_500": 7,
-        "edu_500": 2,
-        "competitors_200": 1,
-        "nearest_dodo_km": 3.11,
-        "breakdown": {
-          "catchment": 0.35,
-          "secondary": 0.48,
-          "transit": 1.0,
-          "retail": 0.07,
-          "food": 0.45,
-          "daytime": 0.38,
-          "comp_penalty": 0.12,
-          "cannib_penalty": 0.0
-        },
-        "pop_source": "hybrid",
-        "residents_500_kontur": 2882,
-        "residents_500_osm_raw": 3525
-      },
-      "scored_at": "2026-09-10T10:56:38.661371+00:00"
+      "scored_at": "2026-09-10T10:56:38.661371+00:00",
+      "compacted": true
     },
     "nekretnine_1495345": {
       "source": "nekretnine.rs",
@@ -94665,7 +94645,8 @@
       "flags": [
         "distance=9.6km",
         "price_per_m2=12.5"
-      ]
+      ],
+      "compacted": true
     },
     "nekretnine_1500403": {
       "source": "nekretnine.rs",
@@ -95664,7 +95645,7 @@
       "address": "Jurija Gagarina 218",
       "district": "Novi Beograd (Blok 63)",
       "first_seen_at": "2026-09-13T09:53:14.016902+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133411+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567534+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96045,7 +96026,7 @@
       "address": "Krunski Venac",
       "district": "Vračar (Krunski Venac)",
       "first_seen_at": "2026-09-14T09:53:23.663829+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133549+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567712+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96175,7 +96156,7 @@
       "district": "Zvezdara (Vukov Spomenik)",
       "subdistrict": null,
       "first_seen_at": "2026-09-14T10:53:25.324650+00:00",
-      "last_seen_at": "2026-09-15T15:54:15.483656+00:00",
+      "last_seen_at": "2026-09-16T08:12:03.391173+00:00",
       "in_sheet": true,
       "alerted": true,
       "flags": [
@@ -96694,7 +96675,7 @@
       "address": "Poslovni prostor, Mirijevo - Novo Mirijevo, Beograd",
       "district": "",
       "first_seen_at": "2026-09-15T09:53:12.859244+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133710+00:00",
+      "last_seen_at": "2026-09-16T08:00:30.074745+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96713,7 +96694,7 @@
       "address": "Poslovni prostor, Fontana - Studentski grad, Beograd",
       "district": "Fontana - Studentski grad",
       "first_seen_at": "2026-09-15T09:53:34.624059+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133715+00:00",
+      "last_seen_at": "2026-09-16T08:04:03.144035+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -96970,7 +96951,7 @@
       "address": "Banjica",
       "district": "Voždovac (Banjica)",
       "first_seen_at": "2026-09-15T16:57:30.265803+00:00",
-      "last_seen_at": "2026-09-15T20:14:56.133455+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.567589+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -97068,6 +97049,851 @@
         "residents_500_osm_raw": 21101
       },
       "scored_at": "2026-09-15T19:37:58.209256+00:00"
+    },
+    "nekretnine_1510583": {
+      "source": "nekretnine.rs",
+      "id": "1510583",
+      "url": "https://www.nekretnine.rs/oglasi/1510583/",
+      "area_m2": 100,
+      "price_eur": 2500,
+      "floor": "1. sprat",
+      "address": "",
+      "district": "Stari Grad (Dorćol)",
+      "subdistrict": null,
+      "first_seen_at": "2026-09-16T07:53:56.792109+00:00",
+      "last_seen_at": "2026-09-16T07:53:56.792119+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "flags": [
+        "floor=1. sprat"
+      ],
+      "description": "Izdaje se funkcionalan i kompletno opremljen poslovni prostor površine 100m, smešten na 1. spratu održavane zgrade starije gradnje u jednoj od najlepših i najmirnijih ulica na Starom gradu  Vojvode Dobrnjca.\nProstor je idealan za programerske firme, agencije, advokatske kancelarije, ordinacije ili slične delatnosti koje zahtevaju miran radni ambijent u centru grada.\nOsnovne karakteristike:\n\tPovršina: 100 m\n\tLokacija: Vojvode Dobrnjca, Stari grad\n\tSpratnost: 1. sprat (stara gradnja, visoki plafoni, salonski osećaj)\n\tStruktura: 5 funkcionalnih kancelarija\n\tKapacitet: Kompletno opremljeno sa 11 radnih stolova i pratećim stolicama\n\tDodatni prostor: Terasa okrenuta ka mirnom okruženju, kuhinja i toalet\nOpremljenost i komunalije:\n\tGrejanje: Centralno grejanje (CG)\n\tKlimatizacija: Klima uređaji u prostorijama\n\tInfrastruktura: Brz internet, kablovska, telefonska linija\nProstor je odmah useljiv, svetao i dvostrano orijentisan. Odlična povezanost sa svim delovima grada, blizina Botaničke bašte, Skadarlije i brojnih linija gradskog prevoza.\nAgencijska provizija iznosi 50% od dogovorene mesečne zakupnine jednokratno.\nBr. agenta 060/571-3838 .",
+      "geo_lat": 44.81737137,
+      "geo_lon": 20.47444534,
+      "geo_source": "detail",
+      "refreshed_at": "2026-09-15",
+      "published_at": "2026-09-15",
+      "photo_url": "https://pic.nekretnine.rs/image/18847369/xxl.jpg",
+      "photo_urls": [
+        "https://pic.nekretnine.rs/image/18847369/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18860487/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18860493/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18860499/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18860507/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18860511/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18860519/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18860523/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18860531/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18860537/xxl.jpg"
+      ],
+      "rejected": true,
+      "score": 82,
+      "score_data": {
+        "score": 82,
+        "residents_500": 18051,
+        "residents_1000": 58078,
+        "transit_300": 7,
+        "shops_300": 54,
+        "food_400": 42,
+        "offices_500": 20,
+        "edu_500": 6,
+        "competitors_200": 13,
+        "nearest_dodo_km": 1.44,
+        "breakdown": {
+          "catchment": 1.0,
+          "secondary": 1.0,
+          "transit": 1.0,
+          "retail": 1.0,
+          "food": 1.0,
+          "daytime": 1.0,
+          "comp_penalty": 1.0,
+          "cannib_penalty": 0.0
+        },
+        "pop_source": "hybrid",
+        "residents_500_kontur": 6188,
+        "residents_500_osm_raw": 18051
+      },
+      "scored_at": "2026-09-16T08:06:39.866912+00:00"
+    },
+    "nekretnine_1511331": {
+      "source": "nekretnine.rs",
+      "id": "1511331",
+      "url": "https://www.nekretnine.rs/oglasi/1511331/",
+      "area_m2": 126,
+      "price_eur": 3200,
+      "floor": null,
+      "address": "",
+      "district": "Profesorska kolonija - Hala Pionir",
+      "subdistrict": null,
+      "first_seen_at": "2026-09-16T07:54:18.068266+00:00",
+      "last_seen_at": "2026-09-16T07:54:18.068276+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "flags": [
+        "duplicate_of:4zida_6974c341b026e559c50fa990",
+        "uncertain_floor",
+        "uncertain_ceiling"
+      ],
+      "description": "U ponudi je prostran lokal na prometnoj ulici, idealan za različite delatnosti. Merena površina lokala je 170 m2, raspoređena na dve etaže.\n\nStruktura prostora:\nVeći open space sa izlogom prema ulici\nOdvojena prostorija pogodna za kancelariju\nDonja etaža: otvoren višenamenski prostor\n\nLokal je lako prilagodljiv različitim potrebama  pogodan je za prodavnicu, kafeteriju, kladionicu ili druge delatnosti koje zahtevaju vidljivu i prometnu lokaciju.\n\nPrednosti:\nAtraktivna i frekventna lokacija\nProstran i svetao prostor\nFleksibilna unutrašnja raspodela\n\nAgencijska provizija 50% vrednosti jedne mesečne zakupnine\nAgent: Lazar Krljić  br. licence  6906\n\"Art nekretnine\" d.o.o. Beograd\nReg. br.339\n069/425-02-88\n069/425-02-99\nLK02 .",
+      "geo_lat": 44.81741714,
+      "geo_lon": 20.48318672,
+      "geo_source": "detail",
+      "refreshed_at": "2026-09-15",
+      "published_at": "2026-09-15",
+      "photo_url": "https://pic.nekretnine.rs/image/18848383/xxl.jpg",
+      "photo_urls": [
+        "https://pic.nekretnine.rs/image/18848383/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18868487/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18868491/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18868495/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18868499/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18868503/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18868507/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18868511/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18868515/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18868519/xxl.jpg"
+      ],
+      "rejected": true,
+      "duplicate_of": "4zida_6974c341b026e559c50fa990"
+    },
+    "nekretnine_1511115": {
+      "source": "nekretnine.rs",
+      "id": "1511115",
+      "url": "https://www.nekretnine.rs/oglasi/1511115/",
+      "area_m2": 110,
+      "price_eur": 2530,
+      "floor": null,
+      "address": "",
+      "district": "Golf naselje - Košutnjak",
+      "subdistrict": null,
+      "first_seen_at": "2026-09-16T07:54:40.554896+00:00",
+      "last_seen_at": "2026-09-16T07:54:40.554905+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "flags": [
+        "duplicate_of:nekretnine_1254911",
+        "uncertain_floor",
+        "uncertain_ceiling"
+      ],
+      "description": "Izdaje se poslovni prostor na odličnoj lokaciji na Banovom brdu u poslovnoj zgradi. Prostor je pogodan za sve delatnosti kancelarijskog tipa. U zakupninu su uračunati svi troškovi. Postoji mogućnost zakupa dva garažna mesto po ceni od 80E mesečno. Zakupodavac pravno lice.\n\nAgencijska provizija 50% vrednosti jedne mesečne zakupnine \nAgent: Miloš Graora br. licence 4996\nArt nekretnine d.o.o. Beograd. \nReg. br. 339 \n069/425-02-88\n069/425-02-99\nMG06 .",
+      "geo_lat": 44.77389908,
+      "geo_lon": 20.41659927,
+      "geo_source": "detail",
+      "refreshed_at": "2026-09-15",
+      "published_at": "2026-09-15",
+      "photo_url": "https://pic.nekretnine.rs/image/18848099/xxl.jpg",
+      "photo_urls": [
+        "https://pic.nekretnine.rs/image/18848099/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18857709/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18857713/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18857715/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18857721/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18857725/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18857731/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18857735/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18857739/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18857745/xxl.jpg"
+      ],
+      "rejected": true,
+      "duplicate_of": "nekretnine_1254911"
+    },
+    "nekretnine_1511101": {
+      "source": "nekretnine.rs",
+      "id": "1511101",
+      "url": "https://www.nekretnine.rs/oglasi/1511101/",
+      "area_m2": 188,
+      "price_eur": 4000,
+      "floor": "prizemlje",
+      "address": "",
+      "district": "Fontana - Studentski grad",
+      "subdistrict": null,
+      "first_seen_at": "2026-09-16T07:55:02.246927+00:00",
+      "last_seen_at": "2026-09-16T07:55:02.246936+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "flags": [
+        "duplicate_of:4zida_69ecb4b03fc819ad4f018429",
+        "uncertain_ceiling"
+      ],
+      "description": "Ekskluzivno u Bloku 28 Poslovni prostor 240 m  ključ u ruke\n\nIzdaje se jedinstven poslovni prostor od merenih 240 m na Novom Beogradu, u mirnom Bloku 28, u prizemlju stambene zgrade. Prostor je svetao, potpuno je renoviran, namešten i opremljen po najvišem standardu  spreman za useljenje bez ikakvih dodatnih ulaganja. Prostor je dizajnerski namešten i tehnički opremljen  tri ulaza, orijentisan na dve strane, sa zelenim dvorištem od 3 ara, u mirnom bloku sa zoniranim ali uvek slobodnim parking mestima (3. zona).\n\nPo strukturi ovaj PP ima 7 nezavisnih kancelarija, zapravo sastoji se od ulaznog prostora sa recepcijom, salom za sastanke, opremljenom kuhinjom, dva odvojena mokra čvora, velikim open space prostorom idealnim za centralnu kancelariju, još 5 nezavisnih kancelarija  za poverljiv rad i odvojene sektore. Tehničke prostorije, ugradni plakari za arhivu kao dodatni organizacioni prostor.\n\nIma sopstveno centralno grejanje na toplotnu pumpu  nezavisno od gradske mreže, klima uređaje u svakoj prostoriji za individualno podešavanje temperature, protivpožarni i protivprovalni alarm  potpuna bezbednost. Veliki prozori sa antivandal staklom, video nadzor i kontrola pristupa  za sigurnost ljudi i imovine, optički internet.\n\nProstor je idealan za:\n\nProstor je idealan za:\n IT kompanije, inženjerske firme i startupove\n Kreativne studije (dizajn, arhitektura)\n Medicinske ordinacije, poliklinike, laboratorije i stomatološke klinike\n Agencije i konsultantske kancelarije\n Škole i edukativne centre\n\nZa više informacija kontaktirajte nas i pogledajte prostor.\n\nAgencijska provizija 50% vrednosti jedne mesečne zakupnine \nAgent: Jasna Šnajder, br. licence: 2844\n\"Art nekretnine\" d.o.o. Beograd\nReg. br. 339\n069/425-02-88\n069/425-02-99\nSD02 .",
+      "geo_lat": 44.82160187,
+      "geo_lon": 20.40049934,
+      "geo_source": "detail",
+      "refreshed_at": "2026-09-15",
+      "published_at": "2026-09-15",
+      "photo_url": "https://pic.nekretnine.rs/image/18848081/xxl.jpg",
+      "photo_urls": [
+        "https://pic.nekretnine.rs/image/18848081/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18867049/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18867057/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18867061/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18867067/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18867073/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18867079/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18867085/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18867091/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18867097/xxl.jpg"
+      ],
+      "rejected": true,
+      "duplicate_of": "4zida_69ecb4b03fc819ad4f018429"
+    },
+    "nekretnine_1510711": {
+      "source": "nekretnine.rs",
+      "id": "1510711",
+      "url": "https://www.nekretnine.rs/oglasi/1510711/",
+      "area_m2": 210,
+      "price_eur": 4500,
+      "floor": null,
+      "address": "",
+      "district": "Savski Venac (Dedinje)",
+      "subdistrict": null,
+      "first_seen_at": "2026-09-16T07:55:23.562904+00:00",
+      "last_seen_at": "2026-09-16T07:55:23.562913+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "flags": [
+        "duplicate_of:nekretnine_1421683",
+        "uncertain_floor",
+        "uncertain_ceiling"
+      ],
+      "description": "Ekskluzivan poslovni prostor, merene površine 267 m2, smešten na trećem spratu u luksuznoj zgradi novije gradnje, u najlepšem delu Dedinja.\nSastoji se od 4 zasebne kancelarije, velike open space prostorije, opremljene kuhinje, 3 kupatila ijednog dodatnog toaleta.\nU svim prostorijama ugrađen je multi-split sistem klimatizacije pa se temperatura može podešavati usvakoj prostoriji ponaosob.\nProstor se nalazi u ekskluzivnom objektu sa recepcijom, teretanom, bazenom i podzemnom garažom.\nPripada mu i prelepa krovna terasa površine 400 m2 do koje se dolazi privatnim liftom.\nU cenu zakupa uračunata su 2 garažna mesta.\nIzdaje se isključivo na duže, ozbiljnim zakupcima.\nUseljivo odmah.\n\nAgencijska provizija 50% vrednosti jedne mesečne zakupnine\nAgent: Dijana Radovanović br. licence 405\nArt nekretnine d.o.o. Beograd.\nReg. br. 339.\n069/425-02-88\n069/425-02-99\nDR\nID1612711 .",
+      "geo_lat": 44.77740097,
+      "geo_lon": 20.46039963,
+      "geo_source": "detail",
+      "refreshed_at": "2026-09-15",
+      "published_at": "2026-09-15",
+      "photo_url": "https://pic.nekretnine.rs/image/18847515/xxl.jpg",
+      "photo_urls": [
+        "https://pic.nekretnine.rs/image/18847515/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18862385/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18862391/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18862397/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18862403/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18862409/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18862415/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18862421/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18862429/xxl.jpg",
+        "https://pic.nekretnine.rs/image/18862435/xxl.jpg"
+      ],
+      "rejected": true,
+      "duplicate_of": "nekretnine_1421683"
+    },
+    "nekretnine_1511135": {
+      "source": "nekretnine.rs",
+      "id": "1511135",
+      "url": "https://www.nekretnine.rs/oglasi/1511135/",
+      "area_m2": 145,
+      "price_eur": 2000,
+      "floor": null,
+      "address": "Poslovni prostor, Hram Svetog Save - Neimar - Čubura, Beograd",
+      "district": "Vračar (Hram Svetog Save - Neimar - Čubura)",
+      "first_seen_at": "2026-09-16T07:55:44.715675+00:00",
+      "last_seen_at": "2026-09-16T07:55:44.715684+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "price_per_m2=13.8"
+      ],
+      "score": 82,
+      "score_data": {
+        "score": 82,
+        "residents_500": 23610,
+        "residents_1000": 70097,
+        "transit_300": 8,
+        "shops_300": 113,
+        "food_400": 93,
+        "offices_500": 101,
+        "edu_500": 6,
+        "competitors_200": 27,
+        "nearest_dodo_km": 1.87,
+        "breakdown": {
+          "catchment": 1.0,
+          "secondary": 1.0,
+          "transit": 1.0,
+          "retail": 1.0,
+          "food": 1.0,
+          "daytime": 1.0,
+          "comp_penalty": 1.0,
+          "cannib_penalty": 0.0
+        },
+        "pop_source": "hybrid",
+        "residents_500_kontur": 11846,
+        "residents_500_osm_raw": 23610
+      },
+      "scored_at": "2026-09-16T08:10:53.212594+00:00"
+    },
+    "nekretnine_1511105": {
+      "source": "nekretnine.rs",
+      "id": "1511105",
+      "url": "https://www.nekretnine.rs/oglasi/1511105/",
+      "area_m2": 113,
+      "price_eur": 1700,
+      "floor": "4. sprat",
+      "address": "Poslovni prostor, Klinički centar - Kneza Milosa, Beograd",
+      "district": "Klinički centar - Kneza Milosa",
+      "first_seen_at": "2026-09-16T07:56:07.078466+00:00",
+      "last_seen_at": "2026-09-16T07:56:07.078475+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "floor=4. sprat",
+        "price_per_m2=15.0"
+      ]
+    },
+    "nekretnine_1510789": {
+      "source": "nekretnine.rs",
+      "id": "1510789",
+      "url": "https://www.nekretnine.rs/oglasi/1510789/",
+      "area_m2": 119,
+      "price_eur": 1920,
+      "floor": null,
+      "address": "Poslovni prostor, Stari Aerodrom, Beograd",
+      "district": "Stari Aerodrom",
+      "first_seen_at": "2026-09-16T07:56:28.422817+00:00",
+      "last_seen_at": "2026-09-16T07:56:28.422826+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "office:\\d+\\s*kancelarij(?:a|e|sk",
+        "price_per_m2=16.1"
+      ]
+    },
+    "nekretnine_1511231": {
+      "source": "nekretnine.rs",
+      "id": "1511231",
+      "url": "https://www.nekretnine.rs/oglasi/1511231/",
+      "area_m2": 181,
+      "price_eur": 3600,
+      "floor": null,
+      "address": "Poslovni prostor, Centar - Skupština - Terazije, Beograd",
+      "district": "Centar - Skupština - Terazije",
+      "first_seen_at": "2026-09-16T07:56:49.692493+00:00",
+      "last_seen_at": "2026-09-16T07:56:49.692502+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "office:\\d+\\s*kancelarij(?:a|e|sk",
+        "price_per_m2=19.9"
+      ]
+    },
+    "nekretnine_1510619": {
+      "source": "nekretnine.rs",
+      "id": "1510619",
+      "url": "https://www.nekretnine.rs/oglasi/1510619/",
+      "area_m2": 100,
+      "price_eur": 1100,
+      "floor": null,
+      "address": "Poslovni prostor, Centar - Skupština - Terazije, Beograd",
+      "district": "Centar - Skupština - Terazije",
+      "first_seen_at": "2026-09-16T07:57:56.277263+00:00",
+      "last_seen_at": "2026-09-16T07:57:56.277276+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "price=1100"
+      ]
+    },
+    "nekretnine_1511155": {
+      "source": "nekretnine.rs",
+      "id": "1511155",
+      "url": "https://www.nekretnine.rs/oglasi/1511155/",
+      "area_m2": 187,
+      "price_eur": 2600,
+      "floor": null,
+      "address": "Poslovni prostor, Paviljoni - Pariske komune - Ikarus, Beograd",
+      "district": "Paviljoni - Pariske komune - Ikarus",
+      "first_seen_at": "2026-09-16T07:58:18.082069+00:00",
+      "last_seen_at": "2026-09-16T07:58:18.082078+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "office:\\d+\\s*kancelarij(?:a|e|sk",
+        "price_per_m2=13.9"
+      ]
+    },
+    "nekretnine_1510997": {
+      "source": "nekretnine.rs",
+      "id": "1510997",
+      "url": "https://www.nekretnine.rs/oglasi/1510997/",
+      "area_m2": 180,
+      "price_eur": 2200,
+      "floor": null,
+      "address": "Poslovni prostor, Centar - Skupština - Terazije, Beograd",
+      "district": "Centar - Skupština - Terazije",
+      "first_seen_at": "2026-09-16T07:58:39.182736+00:00",
+      "last_seen_at": "2026-09-16T07:58:39.182746+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "price_per_m2=12.2"
+      ]
+    },
+    "nekretnine_1510099": {
+      "source": "nekretnine.rs",
+      "id": "1510099",
+      "url": "https://www.nekretnine.rs/oglasi/1510099/",
+      "area_m2": 216,
+      "price_eur": 3600,
+      "floor": null,
+      "address": "Poslovni prostor, Centar - Skupština - Terazije, Beograd",
+      "district": "Centar - Skupština - Terazije",
+      "first_seen_at": "2026-09-16T07:59:01.357508+00:00",
+      "last_seen_at": "2026-09-16T07:59:01.357515+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "office:\\d+\\s*kancelarij(?:a|e|sk",
+        "price_per_m2=16.7"
+      ]
+    },
+    "nekretnine_1510983": {
+      "source": "nekretnine.rs",
+      "id": "1510983",
+      "url": "https://www.nekretnine.rs/oglasi/1510983/",
+      "area_m2": 173,
+      "price_eur": 2768,
+      "floor": null,
+      "address": "Poslovni prostor, Ušće - Gazela - Staro Sajmište, Beograd",
+      "district": "Ušće - Gazela - Staro Sajmište",
+      "first_seen_at": "2026-09-16T07:59:23.788765+00:00",
+      "last_seen_at": "2026-09-16T07:59:23.788774+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "office:\\d+\\s*kancelarij(?:a|e|sk",
+        "price_per_m2=16.0"
+      ]
+    },
+    "nekretnine_1510985": {
+      "source": "nekretnine.rs",
+      "id": "1510985",
+      "url": "https://www.nekretnine.rs/oglasi/1510985/",
+      "area_m2": 103,
+      "price_eur": 1648,
+      "floor": "prizemlje",
+      "address": "Poslovni prostor, Ušće - Gazela - Staro Sajmište, Beograd",
+      "district": "Ušće - Gazela - Staro Sajmište",
+      "first_seen_at": "2026-09-16T07:59:45.766733+00:00",
+      "last_seen_at": "2026-09-16T07:59:45.766742+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "office:\\d+\\s*kancelarij(?:a|e|sk",
+        "price_per_m2=16.0"
+      ]
+    },
+    "nekretnine_1511399": {
+      "source": "nekretnine.rs",
+      "id": "1511399",
+      "url": "https://www.nekretnine.rs/oglasi/1511399/",
+      "area_m2": 198,
+      "price_eur": 2700,
+      "floor": null,
+      "address": "Poslovni prostor, Sava Centar, Beograd",
+      "district": "Sava Centar",
+      "first_seen_at": "2026-09-16T08:00:06.934943+00:00",
+      "last_seen_at": "2026-09-16T08:00:06.934953+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "price_per_m2=13.6"
+      ],
+      "score": 61,
+      "score_data": {
+        "score": 61,
+        "residents_500": 8322,
+        "residents_1000": 22553,
+        "transit_300": 4,
+        "shops_300": 33,
+        "food_400": 39,
+        "offices_500": 18,
+        "edu_500": 2,
+        "competitors_200": 10,
+        "nearest_dodo_km": 2.01,
+        "breakdown": {
+          "catchment": 0.83,
+          "secondary": 0.56,
+          "transit": 0.67,
+          "retail": 0.82,
+          "food": 1.0,
+          "daytime": 0.65,
+          "comp_penalty": 1.0,
+          "cannib_penalty": 0.0
+        },
+        "pop_source": "hybrid",
+        "residents_500_kontur": 4255,
+        "residents_500_osm_raw": 8322
+      },
+      "scored_at": "2026-09-16T08:12:00.344386+00:00"
+    },
+    "nekretnine_1511379": {
+      "source": "nekretnine.rs",
+      "id": "1511379",
+      "url": "https://www.nekretnine.rs/oglasi/1511379/",
+      "area_m2": 107,
+      "price_eur": 1400,
+      "floor": null,
+      "address": "Poslovni prostor, Centar - Skupština - Terazije, Beograd",
+      "district": "Centar - Skupština - Terazije",
+      "first_seen_at": "2026-09-16T08:00:30.074693+00:00",
+      "last_seen_at": "2026-09-16T08:00:30.074703+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "price_per_m2=13.1"
+      ]
+    },
+    "nekretnine_1510291": {
+      "source": "nekretnine.rs",
+      "id": "1510291",
+      "url": "https://www.nekretnine.rs/oglasi/1510291/",
+      "area_m2": 100,
+      "price_eur": 700,
+      "address": "Poslovni prostor, Altina - Galenika, Beograd",
+      "district": "",
+      "first_seen_at": "2026-09-16T08:00:30.074733+00:00",
+      "last_seen_at": "2026-09-16T08:00:30.074735+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "price_far",
+        "price=700"
+      ]
+    },
+    "nekretnine_1510885": {
+      "source": "nekretnine.rs",
+      "id": "1510885",
+      "url": "https://www.nekretnine.rs/oglasi/1510885/",
+      "area_m2": 201,
+      "price_eur": 2400,
+      "floor": null,
+      "address": "Poslovni prostor, Centar - Skupština - Terazije, Beograd",
+      "district": "Centar - Skupština - Terazije",
+      "first_seen_at": "2026-09-16T08:00:51.351913+00:00",
+      "last_seen_at": "2026-09-16T08:00:51.351920+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "price_per_m2=11.9"
+      ]
+    },
+    "nekretnine_1511041": {
+      "source": "nekretnine.rs",
+      "id": "1511041",
+      "url": "https://www.nekretnine.rs/oglasi/1511041/",
+      "area_m2": 110,
+      "price_eur": 1900,
+      "floor": null,
+      "address": "Poslovni prostor, Centar - Skupština - Terazije, Beograd",
+      "district": "Centar - Skupština - Terazije",
+      "first_seen_at": "2026-09-16T08:01:54.020768+00:00",
+      "last_seen_at": "2026-09-16T08:01:54.020777+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "price_per_m2=17.3"
+      ],
+      "score": 82,
+      "score_data": {
+        "score": 82,
+        "residents_500": 15756,
+        "residents_1000": 76887,
+        "transit_300": 9,
+        "shops_300": 62,
+        "food_400": 67,
+        "offices_500": 62,
+        "edu_500": 11,
+        "competitors_200": 20,
+        "nearest_dodo_km": 0.93,
+        "breakdown": {
+          "catchment": 1.0,
+          "secondary": 1.0,
+          "transit": 1.0,
+          "retail": 1.0,
+          "food": 1.0,
+          "daytime": 1.0,
+          "comp_penalty": 1.0,
+          "cannib_penalty": 0.0
+        },
+        "pop_source": "hybrid",
+        "residents_500_kontur": 7495,
+        "residents_500_osm_raw": 15756
+      },
+      "scored_at": "2026-09-16T08:10:47.479364+00:00"
+    },
+    "nekretnine_1511545": {
+      "source": "nekretnine.rs",
+      "id": "1511545",
+      "url": "https://www.nekretnine.rs/oglasi/1511545/",
+      "area_m2": 200,
+      "price_eur": 2000,
+      "floor": null,
+      "address": "Poslovni prostor, Gornji Grad, Beograd",
+      "district": "Gornji Grad",
+      "first_seen_at": "2026-09-16T08:02:15.640459+00:00",
+      "last_seen_at": "2026-09-16T08:02:15.640467+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "price_per_m2=10.0"
+      ]
+    },
+    "nekretnine_1511457": {
+      "source": "nekretnine.rs",
+      "id": "1511457",
+      "url": "https://www.nekretnine.rs/oglasi/1511457/",
+      "area_m2": 121,
+      "price_eur": 1300,
+      "floor": null,
+      "address": "Poslovni prostor, Mali Mokri Lug - Zvezdara, Beograd",
+      "district": "Mali Mokri Lug - Zvezdara",
+      "first_seen_at": "2026-09-16T08:02:38.801403+00:00",
+      "last_seen_at": "2026-09-16T08:02:38.801411+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "distance=8.3km",
+        "price_per_m2=10.7"
+      ]
+    },
+    "nekretnine_1510651": {
+      "source": "nekretnine.rs",
+      "id": "1510651",
+      "url": "https://www.nekretnine.rs/oglasi/1510651/",
+      "area_m2": 127,
+      "price_eur": 1750,
+      "floor": null,
+      "address": "Poslovni prostor, Centar - Skupština - Terazije, Beograd",
+      "district": "Centar - Skupština - Terazije",
+      "first_seen_at": "2026-09-16T08:02:59.950977+00:00",
+      "last_seen_at": "2026-09-16T08:02:59.950985+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "office:\\d+\\s*kancelarij(?:a|e|sk",
+        "price_per_m2=13.8"
+      ]
+    },
+    "nekretnine_1511387": {
+      "source": "nekretnine.rs",
+      "id": "1511387",
+      "url": "https://www.nekretnine.rs/oglasi/1511387/",
+      "area_m2": 193,
+      "price_eur": 2400,
+      "floor": null,
+      "address": "Poslovni prostor, Kalenić - Slavija - Cvetni Trg, Beograd",
+      "district": "Vračar (Kalenić - Slavija - Cvetni Trg)",
+      "first_seen_at": "2026-09-16T08:04:03.144007+00:00",
+      "last_seen_at": "2026-09-16T08:04:03.144015+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "price_per_m2=12.4"
+      ]
+    },
+    "nekretnine_1511061": {
+      "source": "nekretnine.rs",
+      "id": "1511061",
+      "url": "https://www.nekretnine.rs/oglasi/1511061/",
+      "area_m2": 216,
+      "price_eur": 4020,
+      "floor": null,
+      "address": "Poslovni prostor, Mladost - Blok 63-64, Beograd",
+      "district": "Mladost - Blok 63-64",
+      "first_seen_at": "2026-09-16T08:04:24.368206+00:00",
+      "last_seen_at": "2026-09-16T08:04:24.368214+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "office:\\bposlovna\\s+zgrada\\b",
+        "price_per_m2=18.6"
+      ]
+    },
+    "nekretnine_1511063": {
+      "source": "nekretnine.rs",
+      "id": "1511063",
+      "url": "https://www.nekretnine.rs/oglasi/1511063/",
+      "area_m2": 162,
+      "price_eur": 3015,
+      "floor": null,
+      "address": "Poslovni prostor, Mladost - Blok 63-64, Beograd",
+      "district": "Mladost - Blok 63-64",
+      "first_seen_at": "2026-09-16T08:04:47.562174+00:00",
+      "last_seen_at": "2026-09-16T08:04:47.562183+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "office:\\bposlovna\\s+zgrada\\b",
+        "price_per_m2=18.6"
+      ]
+    },
+    "nekretnine_1510975": {
+      "source": "nekretnine.rs",
+      "id": "1510975",
+      "url": "https://www.nekretnine.rs/oglasi/1510975/",
+      "area_m2": 184,
+      "price_eur": 3600,
+      "floor": null,
+      "address": "Poslovni prostor, Savamala, Beograd",
+      "district": "Savamala",
+      "first_seen_at": "2026-09-16T08:05:08.670149+00:00",
+      "last_seen_at": "2026-09-16T08:05:08.670158+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "price_per_m2=19.6"
+      ],
+      "score": 75,
+      "score_data": {
+        "score": 75,
+        "residents_500": 10675,
+        "residents_1000": 49268,
+        "transit_300": 10,
+        "shops_300": 27,
+        "food_400": 74,
+        "offices_500": 36,
+        "edu_500": 9,
+        "competitors_200": 22,
+        "nearest_dodo_km": 0.38,
+        "breakdown": {
+          "catchment": 1.0,
+          "secondary": 1.0,
+          "transit": 1.0,
+          "retail": 0.68,
+          "food": 1.0,
+          "daytime": 1.0,
+          "comp_penalty": 1.0,
+          "cannib_penalty": 0.37
+        },
+        "pop_source": "hybrid",
+        "residents_500_kontur": 5033,
+        "residents_500_osm_raw": 10675
+      },
+      "scored_at": "2026-09-16T08:06:43.208146+00:00"
+    },
+    "nekretnine_1511175": {
+      "source": "nekretnine.rs",
+      "id": "1511175",
+      "url": "https://www.nekretnine.rs/oglasi/1511175/",
+      "area_m2": 109,
+      "price_eur": 2100,
+      "floor": null,
+      "address": "Poslovni prostor, Fontana - Studentski grad, Beograd",
+      "district": "Fontana - Studentski grad",
+      "first_seen_at": "2026-09-16T08:05:30.063900+00:00",
+      "last_seen_at": "2026-09-16T08:05:30.063910+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "price_per_m2=19.3"
+      ],
+      "score": 61,
+      "score_data": {
+        "score": 61,
+        "residents_500": 10031,
+        "residents_1000": 34247,
+        "transit_300": 3,
+        "shops_300": 10,
+        "food_400": 11,
+        "offices_500": 11,
+        "edu_500": 3,
+        "competitors_200": 1,
+        "nearest_dodo_km": 2.67,
+        "breakdown": {
+          "catchment": 1.0,
+          "secondary": 0.86,
+          "transit": 0.5,
+          "retail": 0.25,
+          "food": 0.55,
+          "daytime": 0.57,
+          "comp_penalty": 0.12,
+          "cannib_penalty": 0.0
+        },
+        "pop_source": "hybrid",
+        "residents_500_kontur": 4352,
+        "residents_500_osm_raw": 10031
+      },
+      "scored_at": "2026-09-16T08:07:23.845274+00:00"
+    },
+    "nekretnine_1510095": {
+      "source": "nekretnine.rs",
+      "id": "1510095",
+      "url": "https://www.nekretnine.rs/oglasi/1510095/",
+      "area_m2": 210,
+      "price_eur": 3200,
+      "floor": null,
+      "address": "Poslovni prostor, Centar - Skupština - Terazije, Beograd",
+      "district": "Centar - Skupština - Terazije",
+      "first_seen_at": "2026-09-16T08:05:51.174177+00:00",
+      "last_seen_at": "2026-09-16T08:05:51.174185+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "office:\\d+\\s*kancelarij(?:a|e|sk",
+        "price_per_m2=15.2"
+      ]
+    },
+    "nekretnine_1511227": {
+      "source": "nekretnine.rs",
+      "id": "1511227",
+      "url": "https://www.nekretnine.rs/oglasi/1511227/",
+      "area_m2": 181,
+      "price_eur": 3200,
+      "floor": null,
+      "address": "Poslovni prostor, Centar - Skupština - Terazije, Beograd",
+      "district": "Centar - Skupština - Terazije",
+      "first_seen_at": "2026-09-16T08:06:12.531258+00:00",
+      "last_seen_at": "2026-09-16T08:06:12.531267+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "office:\\d+\\s*kancelarij(?:a|e|sk",
+        "price_per_m2=17.7"
+      ]
+    },
+    "nekretnine_1511139": {
+      "source": "nekretnine.rs",
+      "id": "1511139",
+      "url": "https://www.nekretnine.rs/oglasi/1511139/",
+      "area_m2": 108,
+      "price_eur": 2010,
+      "floor": null,
+      "address": "Poslovni prostor, Mladost - Blok 63-64, Beograd",
+      "district": "Mladost - Blok 63-64",
+      "first_seen_at": "2026-09-16T08:06:33.730886+00:00",
+      "last_seen_at": "2026-09-16T08:06:33.730893+00:00",
+      "in_sheet": false,
+      "alerted": false,
+      "rejected": true,
+      "flags": [
+        "office:\\bposlovna\\s+zgrada\\b",
+        "price_per_m2=18.6"
+      ]
     }
   },
   "pending_candidates": [],
@@ -99683,7 +100509,7 @@
     }
   },
   "first_run": false,
-  "last_cycle_at": "2026-09-15T20:14:56.134396+00:00",
+  "last_cycle_at": "2026-09-16T08:12:00.344409+00:00",
   "sent_messages": {
     "legacy_0": {
       "sent_at": "2026-05-09T07:23:41.346227+00:00",
@@ -101344,13 +102170,13 @@
   },
   "feedback_aggregates": {
     "by_district": {
-      "Stari grad": {
-        "like": 2,
-        "dislike": 25
-      },
       "Stari grad (Dorćol)": {
         "like": 0,
         "dislike": 6
+      },
+      "Stari grad": {
+        "like": 2,
+        "dislike": 25
       },
       "Vračar": {
         "like": 3,
@@ -101368,21 +102194,21 @@
         "like": 0,
         "dislike": 1
       },
-      "Novi Beograd (Blok 65)": {
-        "like": 0,
-        "dislike": 6
-      },
       "Novi Beograd": {
         "like": 2,
         "dislike": 45
       },
-      "Voždovac (Autokomanda)": {
+      "Novi Beograd (Blok 65)": {
         "like": 0,
-        "dislike": 3
+        "dislike": 6
       },
       "Voždovac": {
         "like": 0,
         "dislike": 24
+      },
+      "Voždovac (Autokomanda)": {
+        "like": 0,
+        "dislike": 3
       },
       "Savski Venac (Senjak)": {
         "like": 0,
@@ -101400,13 +102226,13 @@
         "like": 0,
         "dislike": 1
       },
-      "Čukarica": {
-        "like": 1,
-        "dislike": 17
-      },
       "Čukarica (Banovo brdo)": {
         "like": 1,
         "dislike": 10
+      },
+      "Čukarica": {
+        "like": 1,
+        "dislike": 17
       },
       "Stari grad (Terazije)": {
         "like": 0,
@@ -101468,13 +102294,13 @@
         "like": 0,
         "dislike": 4
       },
-      "Palilula": {
-        "like": 0,
-        "dislike": 21
-      },
       "Palilula (Bulevar despota Stefana)": {
         "like": 0,
         "dislike": 1
+      },
+      "Palilula": {
+        "like": 0,
+        "dislike": 21
       },
       "Ušće - Gazela - Staro Sajmište": {
         "like": 0,
@@ -101576,13 +102402,13 @@
         "like": 0,
         "dislike": 3
       },
-      "Savski venac (Senjak)": {
-        "like": 0,
-        "dislike": 5
-      },
       "Savski venac": {
         "like": 0,
         "dislike": 11
+      },
+      "Savski venac (Senjak)": {
+        "like": 0,
+        "dislike": 5
       },
       "Novi Beograd (Sava Centar)": {
         "like": 0,
@@ -101620,13 +102446,13 @@
         "like": 0,
         "dislike": 4
       },
-      "Stari Grad": {
-        "like": 0,
-        "dislike": 30
-      },
       "Stari Grad (Dorćol)": {
         "like": 0,
         "dislike": 16
+      },
+      "Stari Grad": {
+        "like": 0,
+        "dislike": 30
       },
       "Palilula Centar - Tašmajdan - Pravni fakultet": {
         "like": 0,
@@ -101978,18 +102804,18 @@
       }
     },
     "source": "sheet_col_K",
-    "updated_at": "2026-09-15T20:16:08.536242+00:00"
+    "updated_at": "2026-09-16T08:14:42.380102+00:00"
   },
   "last_cycle_stats": {
-    "at": "2026-09-15T20:14:56.134398+00:00",
+    "at": "2026-09-16T08:12:00.344413+00:00",
     "sweep_raw": 928,
-    "new": 0,
+    "new": 5,
     "passes": 0,
-    "rejects": 0,
+    "rejects": 12,
     "sources_down": []
   },
   "canary": {
-    "date": "2026-09-15",
+    "date": "2026-09-16",
     "results": {
       "nekretnine_api": "ok",
       "cityexpert_api": "ok",
