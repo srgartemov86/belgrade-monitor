@@ -30,6 +30,7 @@ MIRRORS = [
     "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
 ]
 FETCH_RADIUS = 1100           # м: один запрос; ≥1000 чтобы полностью покрыть кольцо residents_1000
+TOTAL_BUDGET_SEC = 270        # общий потолок времени на скоринг одного лота (все зеркала и круги)
 FLOOR_EFFICIENCY = 0.8        # доля полезной площади этажа
 
 # Жители = Σ(footprint · этажность · FLOOR_EFFICIENCY / M2_на-человека-ПО-ТИПУ).
@@ -172,11 +173,18 @@ def fetch_osm(lat, lon, timeout=180):
          f");out tags geom;")
     # 2 круга по зеркалам с паузой: разовый затык одного зеркала (частая причина
     # score=None) не должен ронять скоринг — второй круг обычно добирает.
+    # ОБЩИЙ дедлайн на лот: без него 3 зеркала × 2 круга × 180 с = до 18 минут,
+    # и process-фаза упиралась в таймаут 1200 с (два упавших прогона 16.09.2026,
+    # когда висели все зеркала). Не уложились — score=None, добьёт бэкфилл финализа.
+    deadline = time.time() + TOTAL_BUDGET_SEC
     for round_n in range(2):
         for m in MIRRORS:
+            left = deadline - time.time()
+            if left < 15:
+                return None
             try:
                 r = requests.post(m, data={"data": q},
-                                  headers={"User-Agent": UA}, timeout=timeout)
+                                  headers={"User-Agent": UA}, timeout=min(timeout, left))
                 if r.status_code == 200:
                     return r.json().get("elements", [])
             except Exception:

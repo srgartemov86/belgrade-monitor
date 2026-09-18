@@ -922,6 +922,10 @@ def dedupe_passes_same_cycle(s, passes, duplicates):
         d = (s['listings'].get(k, {}).get('description') or '').lower()
         return re.sub(r'\s+', '', d)[:120]
 
+    def _no_geo(r):
+        return (r.get('geo_lat') is None
+                or str(r.get('geo_source') or '').startswith('nominatim'))
+
     kept = []
     for p_ in passes:
         rec = s['listings'].get(p_['listing_key'], {})
@@ -945,13 +949,24 @@ def dedupe_passes_same_cycle(s, passes, duplicates):
                      and (p_.get('district') or '').split('(')[0].strip().lower()
                      == (q.get('district') or '').split('(')[0].strip().lower()
                      and bool(p_.get('district')) and p_.get('district') != 'Unknown')
-            if geo_close or same_text or exact:
+            # Точные метраж и цена, а у одной из копий нет надёжных координат
+            # (нет гео или Nominatim по названию улицы): сверить по карте нечем,
+            # тексты у сайтов разные (4zida генерирует описание сам). Два разных
+            # помещения с одинаковыми м² и € в одном 2-часовом цикле — почти
+            # невозможно. Кейс 15.09.2026: Istočni Vračar 125 м²/2800 € ушёл дважды.
+            blind =(a1 == a2 and p1 == p2 and (_no_geo(rec) or _no_geo(qrec)))
+            if geo_close or same_text or exact or blind:
                 dup_of = q
                 break
         if dup_of is None:
             kept.append(p_)
             continue
-        if rec.get('address') and not s['listings'].get(dup_of['listing_key'], {}).get('address'):
+        # каноническим оставляем лот с надёжными координатами, затем с адресом
+        if _no_geo(s['listings'].get(dup_of['listing_key'], {})) and not _no_geo(rec):
+            kept[kept.index(dup_of)] = p_
+            p_, dup_of = dup_of, p_
+            rec = s['listings'].get(p_['listing_key'], {})
+        elif rec.get('address') and not s['listings'].get(dup_of['listing_key'], {}).get('address'):
             kept[kept.index(dup_of)] = p_
             p_, dup_of = dup_of, p_
             rec = s['listings'].get(p_['listing_key'], {})
