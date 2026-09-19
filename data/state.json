@@ -39278,7 +39278,7 @@
       "address": "Novi Sad, Centar - Odličan poslovni prostor ID#910",
       "district": "Unknown",
       "first_seen_at": "2026-06-20T17:08:26.007699+00:00",
-      "last_seen_at": "2026-09-19T09:57:26.803388+00:00",
+      "last_seen_at": "2026-09-19T10:53:10.047224+00:00",
       "in_sheet": false,
       "alerted": false,
       "rejected": true,
@@ -103736,6 +103736,10 @@
         "like": 0,
         "dislike": 35
       },
+      "Savski Venac (Senjak)": {
+        "like": 0,
+        "dislike": 11
+      },
       "Centar - Skupština - Terazije": {
         "like": 0,
         "dislike": 33
@@ -103964,13 +103968,13 @@
         "like": 0,
         "dislike": 4
       },
-      "Stari Grad (Dorćol)": {
-        "like": 0,
-        "dislike": 16
-      },
       "Stari Grad": {
         "like": 0,
         "dislike": 30
+      },
+      "Stari Grad (Dorćol)": {
+        "like": 0,
+        "dislike": 16
       },
       "Palilula Centar - Tašmajdan - Pravni fakultet": {
         "like": 0,
@@ -104284,11 +104288,11 @@
         "like": 0,
         "dislike": 1
       },
-      "Zemun (Centar)": {
+      "Zemun": {
         "like": 0,
         "dislike": 1
       },
-      "Zemun": {
+      "Zemun (Centar)": {
         "like": 0,
         "dislike": 1
       },
