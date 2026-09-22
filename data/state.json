@@ -104319,21 +104319,21 @@
   },
   "feedback_aggregates": {
     "by_district": {
-      "Stari grad": {
-        "like": 2,
-        "dislike": 25
-      },
       "Stari grad (Dorćol)": {
         "like": 0,
         "dislike": 6
       },
-      "Vračar": {
-        "like": 3,
-        "dislike": 93
+      "Stari grad": {
+        "like": 2,
+        "dislike": 25
       },
       "Vračar (Crveni Krst Vracar)": {
         "like": 0,
         "dislike": 2
+      },
+      "Vračar": {
+        "like": 3,
+        "dislike": 93
       },
       "Vračar (Centar)": {
         "like": 1,
@@ -104361,11 +104361,15 @@
       },
       "Savski Venac": {
         "like": 0,
-        "dislike": 35
+        "dislike": 3
       },
       "Savski Venac (Senjak)": {
         "like": 0,
         "dislike": 11
+      },
+      "Savski Venac": {
+        "like": 0,
+        "dislike": 35
       },
       "Centar - Skupština - Terazije": {
         "like": 0,
