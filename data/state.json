@@ -106080,13 +106080,13 @@
         "like": 0,
         "dislike": 6
       },
-      "Vračar": {
-        "like": 3,
-        "dislike": 93
-      },
       "Vračar (Crveni Krst Vracar)": {
         "like": 0,
         "dislike": 2
+      },
+      "Vračar": {
+        "like": 3,
+        "dislike": 93
       },
       "Vračar (Centar)": {
         "like": 1,
@@ -106103,10 +106103,6 @@
       "Novi Beograd": {
         "like": 2,
         "dislike": 45
-      },
-      "Voždovac": {
-        "like": 0,
-        "dislike": 24
       },
       "Voždovac (Autokomanda)": {
         "like": 0,
@@ -106628,11 +106624,11 @@
         "like": 0,
         "dislike": 2
       },
-      "Rakovica (Miljakovac)": {
+      "Rakovica": {
         "like": 0,
         "dislike": 1
       },
-      "Rakovica": {
+      "Rakovica (Miljakovac)": {
         "like": 0,
         "dislike": 1
       },
