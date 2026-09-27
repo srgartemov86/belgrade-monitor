@@ -995,12 +995,25 @@ def find_active_duplicate(s, rec, self_key):
         return None, None
     lat, lon = rec.get('geo_lat'), rec.get('geo_lon')
     addr = (rec.get('address') or '').strip().lower()
+
+    def _geo_ok(r):
+        return (r.get('geo_lat') is not None
+                and not str(r.get('geo_source') or '').startswith('nominatim'))
+
+    recent_cutoff = (datetime.now(timezone.utc) - timedelta(days=21)).isoformat()
     for k, v in s['listings'].items():
         if k == self_key or not v.get('in_sheet') or v.get('removed_from_sheet'):
             continue
         va, vp = v.get('area_m2'), v.get('price_eur')
         if not va or not vp or abs(va - a) > 3 or not _price_similar(p, vp):
             continue
+        # «Слепая» копия: точные метраж и цена, у новой записи нет надёжных координат
+        # (нет гео или Nominatim по названию улицы), а оригинал отправлен недавно.
+        # Сверить по карте нечем, район у копии Unknown, адрес пустой. Кейс 22.09.2026:
+        # 142 м²/3140 € ушёл вторым постом через 2 часа после первого.
+        if (va == a and vp == p and not _geo_ok(rec)
+                and str(v.get('sent_at') or v.get('first_seen_at') or '') >= recent_cutoff):
+            return k, v
         # Точное совпадение метража И цены при том же районе — кросс-пост одного
         # помещения. Гео тут не спасает: адресный геокодинг двух записей одного
         # адреса легко расходится на километры.
@@ -1010,10 +1023,10 @@ def find_active_duplicate(s, rec, self_key):
             return k, v
 
         vlat, vlon = v.get('geo_lat'), v.get('geo_lon')
-        if lat is not None and vlat is not None:
+        if _geo_ok(rec) and _geo_ok(v):
             if haversine_km(lat, lon, vlat, vlon) <= 0.2:
                 return k, v
-            continue  # оба с гео, но далеко — соседняя похожая площадь, не дубль
+            continue  # оба с надёжным гео, но далеко — соседняя похожая площадь, не дубль
         vaddr = (v.get('address') or '').strip().lower()
         if addr and vaddr and addr == vaddr:
             return k, v
@@ -1309,6 +1322,12 @@ def run_process():
             district_str = extract_district(cand, detail)
             if (not district_str or district_str == 'Unknown') and cand.get('macrozone'):
                 district_str = cand['macrozone']
+
+            # Земун по району, а не только по URL: у halooglasi и nekretnine слаг
+            # района в ссылке отсутствует, фильтр по URL их не видел. Кейс 22.09.2026:
+            # «Zemun (Zelena avenija)», Radoja Dakića ушёл карточкой в чат.
+            if passed and any(sl in (district_str or '').lower() for sl in ZEMUN_SLUGS):
+                passed, reason = False, 'zemun'
 
             rec = {
                 'source': src, 'id': cid, 'url': cand['url'],
