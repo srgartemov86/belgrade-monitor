@@ -71,6 +71,16 @@ jobs:
           TG_API_ID: ${{ secrets.TG_API_ID }}
           TG_API_HASH: ${{ secrets.TG_API_HASH }}
 
+      # Перекрёстный добор cron-слотов: GitHub пропускает большинство schedule-слотов,
+      # а Apps Script watchdog зависит от одного PAT (протух 09.10.2026).
+      - name: Dispatch siblings if stale
+        if: always()
+        run: |
+          python dispatch_sibling.py cluj-monitor
+          python dispatch_sibling.py cyprus-monitor
+        env:
+          WATCHDOG_PAT: ${{ secrets.WATCHDOG_PAT }}
+
       - name: Commit state back
         if: always()
         run: |
