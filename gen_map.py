@@ -10,6 +10,7 @@
 Маркер: цвет по свежести (зелёный <7д / оранжевый 7-30д / серый 30+д).
 Popup: район · цена · метраж · описание · кнопка-ссылка.
 """
+import math
 import json, datetime, csv, html as _html, time, sys, os, re, io
 from curl_cffi import requests
 
