@@ -41,6 +41,8 @@ HTML = """<!doctype html><html lang="ru"><head><meta charset="utf-8">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
+  .leaflet-tile-pane{filter:saturate(.3) contrast(.98) brightness(1.06)}  /* приглушённые плитки OSM вместо светлой CARTO */
+
   html,body{margin:0;height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
   #map{position:absolute;inset:0}
   .legend{position:absolute;right:12px;top:12px;z-index:1000;background:#fff;padding:10px 12px;
@@ -82,8 +84,8 @@ const TITLES={
   kontur:['🗺 Плотность · Kontur Population','Census, размазанный по площади застройки. НЕ видит этажность → частный сектор завышен.']
 };
 const map = L.map('map').setView([44.81, 20.46], 12);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-  {attribution:'© OpenStreetMap, © CARTO', maxZoom:19}).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {attribution:'© OpenStreetMap', maxZoom:19}).addTo(map);  // CARTO с 10.2026 требует API-ключ
 
 const STOPS = [[12000,'#800026'],[8000,'#bd0026'],[5000,'#e31a1c'],[3000,'#fc4e2a'],
                [1500,'#fd8d3c'],[600,'#feb24c'],[150,'#fed976'],[0,'#ffeda0']];

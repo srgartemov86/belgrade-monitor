@@ -4,6 +4,8 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
+  .leaflet-tile-pane{filter:saturate(.3) contrast(.98) brightness(1.06)}  /* приглушённые плитки OSM вместо светлой CARTO */
+
   html,body{margin:0;height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
   #map{position:absolute;inset:0}
   .legend{position:absolute;right:12px;top:12px;z-index:1000;background:#fff;padding:10px 12px;
@@ -33,8 +35,8 @@
 const DODO=[{name:'Dodo · Земун/Новый Белград',lat:44.8456204,lon:20.4012657},
             {name:'Dodo · Стари Град',lat:44.814985,lon:20.4564471}];
 const map=L.map('map').setView([44.81,20.46],12);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-  {attribution:'© OpenStreetMap, © CARTO',maxZoom:19}).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {attribution:'© OpenStreetMap', maxZoom:19}).addTo(map);  // CARTO с 10.2026 требует API-ключ
 const STOPS=[[80,'#800026'],[70,'#bd0026'],[60,'#e31a1c'],[50,'#fc4e2a'],
              [40,'#fd8d3c'],[30,'#feb24c'],[20,'#fed976'],[0,'#ffffcc']];
 function col(s){ for(const [t,c] of STOPS){ if(s>=t) return c; } return '#ffffcc'; }
