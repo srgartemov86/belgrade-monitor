@@ -4,6 +4,9 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
+.anton-label{background:none;border:none;box-shadow:none;font-weight:700;font-size:11px;color:#d93a2b;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.anton-label:before{display:none}
+
   .leaflet-tile-pane{filter:saturate(.3) contrast(.98) brightness(1.06)}  /* приглушённые плитки OSM вместо светлой CARTO */
 
   html,body{margin:0;height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
@@ -47,7 +50,14 @@ fetch('score_heatmap_bg.geojson').then(r=>r.json()).then(gj=>{
       l.bindPopup(`Скоринг <b>${p.score}/100</b><hr style="margin:4px 0;border:0;border-top:1px solid #eee">`+
         `👥 ~${Number(p.res500).toLocaleString('ru')} жит. в 500м<br>`+
         `🚏 ${p.transit} ост. · 🛍 ${p.shops} маг. · 🍽 ${p.food} общепит<br>`+
-        `🏢 ${p.offices} офис. · ⚔️ ${p.comp} конкур. в 200м`);}
+        `🏢 ${p.offices} офис. · ⚔️ ${p.comp} конкур. в 200м`);
+      // Пасхалка (Сергей, 20.10.2026): гексагон у аэропорта, скоринг 1/100, 28 жителей
+      if (p.score === 1 && p.res500 === 28 && p.offices === 1) {
+        l.setStyle({weight: 1.2, color: '#d93a2b'});
+        l.bindTooltip('не нажимать', {permanent: true, direction: 'center', className: 'anton-label'});
+        l.on('mouseover', () => l.setTooltipContent('Антон, надо уплотняться'));
+        l.on('mouseout', () => l.setTooltipContent('не нажимать'));
+      }}
   }).addTo(map);
 });
 const dodoIcon=L.divIcon({className:'',html:'<div class="dodo-marker"><img src="dodo-logo.png"></div>',
