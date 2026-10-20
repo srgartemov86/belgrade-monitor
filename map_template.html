@@ -158,7 +158,6 @@
   <header>
     <h1>Локалы Белграда<span class="hideBtn" onclick="toggleSide()" title="Скрыть панель">&#8249;</span></h1>
     <div class="sub"><b id="hdrCount">__COUNT__</b> лотов · обновлено __BUILT_AT__ · <a href="naselje_score.html">тепловая карта &#8250;</a></div>
-    <div class="chips" id="cityChips" style="margin:12px 0 0"></div>
     <span class="btn" id="clearAll" style="margin:10px 0 0;font-size:12.5px;padding:7px 14px;background:#1d1d1f;color:#fff;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.18)">&#10005;&nbsp; Сбросить выбор</span>
   </header>
   <div class="tabs"><div class="on" data-p="p1">Слои</div><div data-p="p2">Рейтинг</div></div>
@@ -192,6 +191,27 @@
 const FEATURES = __FEATURES_JSON__;
 const DODO = __DODO_JSON__;
 const QSR = __QSR_JSON__;
+const map = L.map('map', {zoomControl: false}).setView([44.808, 20.466], 12);
+L.control.zoom({position: 'topright'}).addTo(map);  // слева зум перекрывал попапы у панели
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19, attribution: '© OpenStreetMap'
+}).addTo(map);
+
+function esc(s) { return String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]); }
+function toggleSide() { document.body.classList.toggle('collapsed'); setTimeout(() => map.invalidateSize(), 50); }
+// Ссылки из попапов: встроенные браузеры (Telegram, iOS webview) глотают target=_blank —
+// если новое окно не открылось, переходим в том же
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('.leaflet-popup a[href]');
+  if (!a) return;
+  e.preventDefault(); e.stopPropagation();
+  const w = window.open(a.href, '_blank', 'noopener');
+  if (!w) location.href = a.href;
+}, true);
+document.querySelectorAll('.tabs div').forEach(t => t.addEventListener('click', () => {
+  document.querySelectorAll('.tabs div').forEach(x => x.classList.remove('on')); t.classList.add('on');
+  document.querySelectorAll('.pane').forEach(p => p.classList.toggle('on', p.id === t.dataset.p));
+}));
 
 // --- Dodo ---
 const dodoIcon = L.divIcon({className: '', html: '<div class="dodo-marker"><img src="dodo-logo.png" alt="Dodo"></div>', iconSize: [34, 34], iconAnchor: [17, 17], popupAnchor: [0, -16]});
