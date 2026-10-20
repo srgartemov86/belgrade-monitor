@@ -192,38 +192,6 @@
 const FEATURES = __FEATURES_JSON__;
 const DODO = __DODO_JSON__;
 const QSR = __QSR_JSON__;
-// Муниципалитеты для чипов: district в state бывает «Stari grad (Centar)», «Stari Grad»,
-// «Savski venac (Senjak)», а у nekretnine — микрозона без општины («Centar - Skupština - Terazije»)
-const MUNIS = ['Stari grad', 'Vračar', 'Savski venac', 'Novi Beograd', 'Zvezdara', 'Palilula', 'Voždovac', 'Čukarica', 'Rakovica', 'Zemun'];
-const OTHER = 'Другие';
-const map = L.map('map', {zoomControl: false}).setView([44.808, 20.466], 12);
-L.control.zoom({position: 'topright'}).addTo(map);  // слева зум перекрывал попапы у панели
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19, attribution: '© OpenStreetMap'
-}).addTo(map);
-
-function esc(s) { return String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]); }
-function toggleSide() { document.body.classList.toggle('collapsed'); setTimeout(() => map.invalidateSize(), 50); }
-// Ссылки из попапов: встроенные браузеры (Telegram, iOS webview) глотают target=_blank —
-// если новое окно не открылось, переходим в том же
-document.addEventListener('click', (e) => {
-  const a = e.target.closest('.leaflet-popup a[href]');
-  if (!a) return;
-  e.preventDefault(); e.stopPropagation();
-  const w = window.open(a.href, '_blank', 'noopener');
-  if (!w) location.href = a.href;
-}, true);
-document.querySelectorAll('.tabs div').forEach(t => t.addEventListener('click', () => {
-  document.querySelectorAll('.tabs div').forEach(x => x.classList.remove('on')); t.classList.add('on');
-  document.querySelectorAll('.pane').forEach(p => p.classList.toggle('on', p.id === t.dataset.p));
-}));
-const cityOf = (f) => {
-  const d = (f.district || '').split(' (')[0].trim().toLowerCase();
-  const m = MUNIS.find(x => d && (d === x.toLowerCase() || d.startsWith(x.toLowerCase())));
-  return m || OTHER;
-};
-const CITIES = MUNIS.filter(c => FEATURES.some(f => cityOf(f) === c));
-if (FEATURES.some(f => cityOf(f) === OTHER)) CITIES.push(OTHER);
 
 // --- Dodo ---
 const dodoIcon = L.divIcon({className: '', html: '<div class="dodo-marker"><img src="dodo-logo.png" alt="Dodo"></div>', iconSize: [34, 34], iconAnchor: [17, 17], popupAnchor: [0, -16]});
@@ -346,7 +314,8 @@ const scoreEmoji = (s) => (s == null ? '❔' : s >= 70 ? '🟢' : s >= 50 ? '�
 const scoreColor = (s) => (s == null ? '#86868b' : s >= 70 ? '#30a14e' : s >= 50 ? '#c98a00' : s >= 30 ? '#e85f00' : '#d93a2b');
 function scoreBlock(f) {
   const sc = f.score_data;
-  if (f.score == null || !sc) return '';
+  if (f.score == null) return '';
+  if (!sc) return `<div class="score-box"><div class="score-hd">${scoreEmoji(f.score)} Скоринг локации <b>${f.score}/100</b></div><div class="score-rows">детали пересчитаются следующим циклом</div></div>`;
   const dodo = sc.nearest_dodo_km != null ? ` · 🍕 Dodo ${sc.nearest_dodo_km} км` : '';
   const approx = (sc.geo_source && sc.geo_source !== 'detail' && sc.geo_source !== 'manual') ? `<div class="score-warn">⚠️ координаты приблизительные — скоринг ориентировочный</div>` : '';
   return `<div class="score-box">
@@ -414,6 +383,7 @@ function popupNode(f) {
   } else { slot.remove(); }
   const box = el.querySelector('.status-btns');
   if (!WEBHOOK) { box.style.display = 'none'; }
+  else if (!f.sheet_row) { box.innerHTML = '<span style="font-size:11px;color:var(--tx3)">строки в таблице нет, статус ставится только там</span>'; return el; }
   for (const sb of STATUS_BTNS) {
     const btn = document.createElement('button');
     btn.textContent = sb.label; btn.className = sb.cls + (f.status === sb.value ? ' active' : '');
@@ -425,8 +395,7 @@ function popupNode(f) {
   return el;
 }
 
-const activeCities = new Set(CITIES);
-function cityVisible(f) { return activeCities.has(cityOf(f)); }
+const cityVisible = () => true;  // фильтр по районам убран (Сергей, 20.10)
 
 function renderFeature(f) {
   if (f._marker && f._bucket) { lokLayers[f._bucket].removeLayer(f._marker); lokCounts[f._bucket] = (lokCounts[f._bucket] || 1) - 1; }
@@ -455,32 +424,6 @@ function renderFeature(f) {
 for (const f of FEATURES) renderFeature(f);
 updateCounts();
 
-// --- Муниципалитет: чипы ---
-const chips = document.getElementById('cityChips');
-function applyCity() {
-  for (const f of FEATURES) {
-    if (!f._marker) continue;
-    const layer = lokLayers[f._bucket];
-    if (cityVisible(f)) { if (!layer.hasLayer(f._marker)) layer.addLayer(f._marker); }
-    else if (layer.hasLayer(f._marker)) layer.removeLayer(f._marker);
-  }
-  buildTopLayer(); buildRanking();
-  const vis = FEATURES.filter(cityVisible);
-  if (vis.length && activeCities.size < CITIES.length) map.fitBounds(L.latLngBounds(vis.map(f => [f.lat, f.lon])), {padding: [40, 40], maxZoom: 15});
-}
-for (const c of ['Все', ...CITIES]) {
-  const el = document.createElement('span'); el.className = 'chip' + (c === 'Все' ? ' on' : ''); el.dataset.c = c;
-  const n = c === 'Все' ? FEATURES.length : FEATURES.filter(f => cityOf(f) === c).length;
-  el.textContent = `${c} ${n}`;
-  el.onclick = () => {
-    if (c === 'Все') { activeCities.clear(); CITIES.forEach(x => activeCities.add(x)); }
-    else { activeCities.clear(); activeCities.add(c); }
-    document.querySelectorAll('.chip').forEach(x => x.classList.toggle('on', x.dataset.c === c));
-    applyCity();
-    if (c === 'Все' && FEATURES.length) map.fitBounds(L.latLngBounds(FEATURES.map(f => [f.lat, f.lon])), {padding: [40, 40]});
-  };
-  chips.appendChild(el);
-}
 
 // --- Тепловая карта скоринга как подложка под лотами (geojson грузится по первому включению) ---
 map.createPane('heat'); map.getPane('heat').style.zIndex = 350;

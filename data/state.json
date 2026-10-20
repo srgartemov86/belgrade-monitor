@@ -94367,8 +94367,8 @@
         "uncertain_ceiling",
         "uncertain_distance"
       ],
-      "photo_url": "https://resizer2.4zida.rs/7T_7EVdQ1BudPCH0ITPycN3j2qiQ8PN_J6urSswkFOU/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFhODg1ZjgyZDRlNWViN2M0MGQ2MjlmLzY3YTEyOTQ4NDNfd20.jpeg",
-      "rejected": true,
+      "photo_url": "https://resizer2.4zida.rs/EfXszEWrv0ZKNePbFvBwm8TbZI1wr57_kBg01lWw3vg/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFhODg1ZjgyZDRlNWViN2M0MGQ2MjlmLzRlZDFmOGZiZWZfd20.jpeg",
+      "rejected": false,
       "alt_urls": [
         "https://www.4zida.rs/izdavanje-poslovnih-prostora/istocni-vracar-vracar-beograd/lokal/6aa885f82d4e5eb7c40d629f",
         "https://www.halooglasi.com/nekretnine/izdavanje-lokala/vracar-lokal-sredacka-125m2-id3348/5425647709106?kid=4",
@@ -94376,15 +94376,26 @@
         "https://www.nekretnine.rs/oglasi/1563845/",
         "https://www.nekretnine.rs/oglasi/1580049/"
       ],
-      "duplicate_of": "4zida_6aa885f82d4e5eb7c40d629f",
       "telegram_message_id": 810,
       "sent_at": "2026-09-15T06:53:52.480846+00:00",
       "geo_lat": 44.8016215,
       "geo_lon": 20.4809042,
       "geo_source": "detail",
-      "score": 77,
+      "score": null,
       "scored_at": "2026-09-15T06:56:39.769437+00:00",
-      "compacted": true
+      "photo_urls": [
+        "https://resizer2.4zida.rs/EfXszEWrv0ZKNePbFvBwm8TbZI1wr57_kBg01lWw3vg/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFhODg1ZjgyZDRlNWViN2M0MGQ2MjlmLzRlZDFmOGZiZWZfd20.jpeg",
+        "https://resizer2.4zida.rs/qYy7uxY-JAkVUoHu0fwJspFyUvRlfxjXmhduDP1mq-g/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFhODg1ZjgyZDRlNWViN2M0MGQ2MjlmLzRlZDFmOGZiZWZfd20.webp",
+        "https://resizer2.4zida.rs/KimAYYlf6xmjSwMMAssgan2lVoaGpuJSgF65sP0QUF0/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFhODg1ZjgyZDRlNWViN2M0MGQ2MjlmLzY3YTEyOTQ4NDNfd20.webp",
+        "https://resizer2.4zida.rs/7T_7EVdQ1BudPCH0ITPycN3j2qiQ8PN_J6urSswkFOU/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFhODg1ZjgyZDRlNWViN2M0MGQ2MjlmLzY3YTEyOTQ4NDNfd20.jpeg",
+        "https://resizer2.4zida.rs/VxPnL2EvNwhRX8uUH-18aDkmdXtjtbkw-m2Ir8syLrI/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFhODg1ZjgyZDRlNWViN2M0MGQ2MjlmLzU0YWIwNjMxNDNfd20.webp",
+        "https://resizer2.4zida.rs/QQxwCQXRDtCHsunsU7F0pgpzsY4IOvlzkXwa5bYWgZ0/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFhODg1ZjgyZDRlNWViN2M0MGQ2MjlmLzU0YWIwNjMxNDNfd20.jpeg",
+        "https://resizer2.4zida.rs/em1UukIDXlGqBXPrSAP-w6QCL0WR2ac-yrrZuA7-K34/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFhODg1ZjgyZDRlNWViN2M0MGQ2MjlmLzI4NmMzNDVhMGZfd20.webp",
+        "https://resizer2.4zida.rs/3R4z9IFddJg1KzX02mk9Yb_y7GiRe6_9Um0FrtMClP8/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFhODg1ZjgyZDRlNWViN2M0MGQ2MjlmLzI4NmMzNDVhMGZfd20.jpeg",
+        "https://resizer2.4zida.rs/ub2JxNPnEVBAXmKS4tc9-Q84Mp82euRwuHpAe4whagQ/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFhODg1ZjgyZDRlNWViN2M0MGQ2MjlmL2MwNjA1OTM3ZWNfd20.webp",
+        "https://resizer2.4zida.rs/WPm3e_8LxLd05QTZOzvz8Pi_u3QhHYNhRCTPks4XWpA/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFhODg1ZjgyZDRlNWViN2M0MGQ2MjlmL2MwNjA1OTM3ZWNfd20.jpeg"
+      ],
+      "description": "Lokal za izdavanje, Prazno, Istočni Vračar, 125 m2, na prizemlju, ima lift. Etažno, ima kupatilo."
     },
     "nekretnine_1508577": {
       "source": "nekretnine.rs",
@@ -94408,20 +94419,18 @@
       "refreshed_at": "2026-09-15",
       "published_at": "2026-09-15",
       "photo_url": "https://pic.nekretnine.rs/image/18828809/xxl.jpg",
-      "rejected": true,
+      "rejected": false,
       "alt_urls": [
         "https://www.nekretnine.rs/oglasi/1508577/",
         "https://www.nekretnine.rs/oglasi/1509667/",
         "https://www.nekretnine.rs/oglasi/1526645/"
       ],
-      "duplicate_of": "nekretnine_1508577",
       "telegram_message_id": 811,
       "sent_at": "2026-09-15T06:54:22.180912+00:00",
       "geo_source": "nominatim_rejected",
       "geo_lat_rejected": 44.6890762,
       "geo_lon_rejected": 20.5159203,
-      "score": null,
-      "compacted": true
+      "score": null
     },
     "nekretnine_1508583": {
       "source": "nekretnine.rs",
@@ -98169,19 +98178,30 @@
         "uncertain_distance"
       ],
       "photo_url": "https://resizer2.4zida.rs/pYa0fUHcfuwZzfmzdNpzk_mS-3at5KYK3MrTWZyzsYw/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFiMjhlMWFiODEzYzczZGVkMDMwOGIyL2IwNDNiOWQzMTNfd20.jpeg",
-      "rejected": true,
+      "rejected": false,
       "alt_urls": [
         "https://www.4zida.rs/izdavanje-poslovnih-prostora/centar-zvezdara-opstina-beograd/lokal/6ab28e1ab813c73ded0308b2"
       ],
-      "duplicate_of": "4zida_6ab28e1ab813c73ded0308b2",
       "telegram_message_id": 854,
       "sent_at": "2026-09-22T15:55:12.120120+00:00",
       "geo_lat": 44.7997558,
       "geo_lon": 20.5032678,
       "geo_source": "detail",
-      "score": 58,
+      "score": null,
       "scored_at": "2026-09-22T15:58:44.756476+00:00",
-      "compacted": true
+      "photo_urls": [
+        "https://resizer2.4zida.rs/pYa0fUHcfuwZzfmzdNpzk_mS-3at5KYK3MrTWZyzsYw/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFiMjhlMWFiODEzYzczZGVkMDMwOGIyL2IwNDNiOWQzMTNfd20.jpeg",
+        "https://resizer2.4zida.rs/6sP61f9hMKCwzZITe3dnB4Fq_27ZCVNThhvgkbjZ28g/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFiMjhlMWFiODEzYzczZGVkMDMwOGIyL2IwNDNiOWQzMTNfd20.webp",
+        "https://resizer2.4zida.rs/uTkyg2r1qgHOVd5FzLXjgWV-KN5wWg1netrCfbnbGwo/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFiMjhlMWFiODEzYzczZGVkMDMwOGIyL2ZhNWE1NTJmZTJfd20.webp",
+        "https://resizer2.4zida.rs/F6MPYPZmDux2JO2KeVXDmDQJ5LtcKbwuMj7pwV8JjMM/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFiMjhlMWFiODEzYzczZGVkMDMwOGIyL2ZhNWE1NTJmZTJfd20.jpeg",
+        "https://resizer2.4zida.rs/1xOkiiaGSxEbXhOJh1y9FV2m7odiXhtCho1A2ZgK4uQ/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFiMjhlMWFiODEzYzczZGVkMDMwOGIyL2VlNjUzMDRiMjNfd20.webp",
+        "https://resizer2.4zida.rs/QmWJGa3s9cTk_8APp_7fD3GwmjLPrs8XkNyWLbVwbi4/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFiMjhlMWFiODEzYzczZGVkMDMwOGIyL2VlNjUzMDRiMjNfd20.jpeg",
+        "https://resizer2.4zida.rs/ncnQ7NDdV3_ctqSSuP4KcGGUAwbwNYagfTVz2l4Pjq0/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFiMjhlMWFiODEzYzczZGVkMDMwOGIyLzRlNjAyMGZkOTRfd20.webp",
+        "https://resizer2.4zida.rs/P6SAKpSsrsv5FASgJs5F34Y78Blugo_yu4RVv61u1Ts/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFiMjhlMWFiODEzYzczZGVkMDMwOGIyLzRlNjAyMGZkOTRfd20.jpeg",
+        "https://resizer2.4zida.rs/nJsh02kTtVHC8oGdW-lgrrcvUL3ayXVY3GFLNvP3BDA/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFiMjhlMWFiODEzYzczZGVkMDMwOGIyLzc1OTM3YjI4YWJfd20.webp",
+        "https://resizer2.4zida.rs/SV1GxuTmXjuagviqp1HL1pybYtU65AGUwZu3coUVmmY/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFiMjhlMWFiODEzYzczZGVkMDMwOGIyLzc1OTM3YjI4YWJfd20.jpeg"
+      ],
+      "description": "Lokal za izdavanje, Prazno, Centar, 123 m2, na prizemlju. Centralno, ima toalet."
     },
     "nekretnine_1526467": {
       "source": "nekretnine.rs",
@@ -98205,18 +98225,16 @@
       "refreshed_at": "2026-09-22",
       "published_at": "2026-09-22",
       "photo_url": "https://pic.nekretnine.rs/image/19048875/xxl.jpg",
-      "rejected": true,
+      "rejected": false,
       "alt_urls": [
         "https://www.nekretnine.rs/oglasi/1526467/"
       ],
-      "duplicate_of": "nekretnine_1526467",
       "telegram_message_id": 855,
       "sent_at": "2026-09-22T15:55:58.712948+00:00",
       "geo_source": "nominatim_rejected",
       "geo_lat_rejected": 44.6890762,
       "geo_lon_rejected": 20.5159203,
-      "score": null,
-      "compacted": true
+      "score": null
     },
     "4zida_6ab28e34b813c73ded0308d4": {
       "source": "4zida.rs",
@@ -105213,20 +105231,31 @@
         "uncertain_distance"
       ],
       "photo_url": "https://resizer2.4zida.rs/W9KMSJtNYOwbx6YkQGLw7ohU7ee4I31EWP8H6tUJ7Qg/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjMzYzZjQ1OTFjNWNkNjAwMDE5YjBhL2FlMmRlZTE4ZTVfd20.jpeg",
-      "rejected": true,
+      "rejected": false,
       "alt_urls": [
         "https://www.4zida.rs/izdavanje-poslovnih-prostora/gundulicev-venac-stari-grad-opstina-beograd/lokal/6ac363f4591c5cd600019b0a",
         "https://www.halooglasi.com/nekretnine/izdavanje-lokala/unikatan-lokal-na-dorcolu---100m2-sa-galerijo/5425647777847?kid=1"
       ],
-      "duplicate_of": "4zida_6ac363f4591c5cd600019b0a",
       "telegram_message_id": 861,
       "sent_at": "2026-10-05T09:53:34.973081+00:00",
       "geo_lat": 44.82007,
       "geo_lon": 20.46939,
       "geo_source": "detail",
-      "score": 82,
+      "score": null,
       "scored_at": "2026-10-05T09:55:04.415757+00:00",
-      "compacted": true
+      "photo_urls": [
+        "https://resizer2.4zida.rs/W9KMSJtNYOwbx6YkQGLw7ohU7ee4I31EWP8H6tUJ7Qg/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjMzYzZjQ1OTFjNWNkNjAwMDE5YjBhL2FlMmRlZTE4ZTVfd20.jpeg",
+        "https://resizer2.4zida.rs/wNV-ku3G_IcRfyG405GFzvkO8Aaxk-ZAIc9LUq4ZOww/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjMzYzZjQ1OTFjNWNkNjAwMDE5YjBhL2FlMmRlZTE4ZTVfd20.webp",
+        "https://resizer2.4zida.rs/4vYSB2dZLVLLTZUO9hOpYMBuamTkZCVeiow3rsHGKdQ/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjMzYzZjQ1OTFjNWNkNjAwMDE5YjBhLzZlNjM1NjVkM2Zfd20.webp",
+        "https://resizer2.4zida.rs/mpbIEGGe5VTYRXvpzIOwNCUlYwT77tn10n1NNgSd8ac/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjMzYzZjQ1OTFjNWNkNjAwMDE5YjBhLzZlNjM1NjVkM2Zfd20.jpeg",
+        "https://resizer2.4zida.rs/s-t-QSTJR3e9PI_zQ9ZeJyOBLye4lsTXc7h6-yul_oY/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjMzYzZjQ1OTFjNWNkNjAwMDE5YjBhL2ExYTNhYjJmYzJfd20.webp",
+        "https://resizer2.4zida.rs/sToRwU_677zfgqaW_VfJk82v1fQePIDOKLlocpXqlLI/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjMzYzZjQ1OTFjNWNkNjAwMDE5YjBhL2ExYTNhYjJmYzJfd20.jpeg",
+        "https://resizer2.4zida.rs/tRkMEgsgW1sNaLi_YrMh7wDMlr9P7hi-Is-ZQL4-67I/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjMzYzZjQ1OTFjNWNkNjAwMDE5YjBhL2MyZDM5MzY5YzFfd20.webp",
+        "https://resizer2.4zida.rs/-1Xv5mLMWYWduD69LDuLnVpAlpvDhnFt2nP1hDRfwI0/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjMzYzZjQ1OTFjNWNkNjAwMDE5YjBhL2MyZDM5MzY5YzFfd20.jpeg",
+        "https://resizer2.4zida.rs/F7TpJl8twgFqCwFZ2OuO94eoGb2yeedqscydL0vc1VI/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjMzYzZjQ1OTFjNWNkNjAwMDE5YjBhL2U0NGY2ZmEwNjRfd20.webp",
+        "https://resizer2.4zida.rs/xW_9mLg0mJF0wIdt8lwaKiwznZpus51LmLF2Rd7W6OY/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjMzYzZjQ1OTFjNWNkNjAwMDE5YjBhL2U0NGY2ZmEwNjRfd20.jpeg"
+      ],
+      "description": "Lokal za izdavanje, Namešteno, Gundulićev Venac, 100 m2, na prizemlju, ima lift. Stanje - Novo, Centralno."
     },
     "nekretnine_1560361": {
       "source": "nekretnine.rs",
@@ -105443,17 +105472,15 @@
         "uncertain_ceiling",
         "uncertain_distance"
       ],
-      "rejected": true,
+      "rejected": false,
       "alt_urls": [
         "https://www.4zida.rs/izdavanje-poslovnih-prostora/dorcol-stari-grad-opstina-beograd/lokal/6ac3b15c9395e4bfc9077d95"
       ],
-      "duplicate_of": "4zida_6ac3b15c9395e4bfc9077d95",
       "telegram_message_id": 0,
       "sent_at": "2026-10-05T15:57:06.432143+00:00",
       "geo_lat": 44.82224,
       "geo_lon": 20.46212,
       "geo_source": "detail",
-      "compacted": true,
       "score": 77,
       "score_data": {
         "score": 77,
@@ -105481,7 +105508,21 @@
         "residents_500_osm_raw": 21389,
         "geo_source": "detail"
       },
-      "scored_at": "2026-10-09T19:34:22.076408+00:00"
+      "scored_at": "2026-10-09T19:34:22.076408+00:00",
+      "photo_urls": [
+        "https://resizer2.4zida.rs/42RCpK1oG7S8XY7uM-S1seHCIjCttSEX9lyxh3oDoZg/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjM2IxNWM5Mzk1ZTRiZmM5MDc3ZDk1LzIyYTQ5YmQzZjlfd20.jpeg",
+        "https://resizer2.4zida.rs/MASyuP6UkVNH6tkY1NRkHORnPVd64NoVs35yh2MAses/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjM2IxNWM5Mzk1ZTRiZmM5MDc3ZDk1LzIyYTQ5YmQzZjlfd20.webp",
+        "https://resizer2.4zida.rs/MI2ZOBINYcca21n2LmViazhSjQHdSYGOQceDsmVDEvI/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjM2IxNWM5Mzk1ZTRiZmM5MDc3ZDk1L2Q4NzM4NTJhN2Rfd20.webp",
+        "https://resizer2.4zida.rs/DPkzOVcI3xkRNF_wFfClkcEput3U1Si_TO9_bjyJ-mA/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjM2IxNWM5Mzk1ZTRiZmM5MDc3ZDk1L2Q4NzM4NTJhN2Rfd20.jpeg",
+        "https://resizer2.4zida.rs/9ZkTsjjxgSIR_gAx1SIDF7JTSMxhc93EzrhaPKlSjcs/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjM2IxNWM5Mzk1ZTRiZmM5MDc3ZDk1LzI1NGVmYzNlYmJfd20.webp",
+        "https://resizer2.4zida.rs/K6qJj-GxY-K7TORVwjJ9aqO3Y1j6Xp9zf_PJ72AdMZs/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjM2IxNWM5Mzk1ZTRiZmM5MDc3ZDk1LzI1NGVmYzNlYmJfd20.jpeg",
+        "https://resizer2.4zida.rs/tZRdcExSbD96BZcHAlbjXoTgO-0PzzemhksmQ_qDkEY/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjM2IxNWM5Mzk1ZTRiZmM5MDc3ZDk1LzdlOGI3MjU2YzVfd20.webp",
+        "https://resizer2.4zida.rs/5NeVcr8dLOSNRhRFdbqy2XZwN2GooDw_A-772kyGTJo/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjM2IxNWM5Mzk1ZTRiZmM5MDc3ZDk1LzdlOGI3MjU2YzVfd20.jpeg",
+        "https://resizer2.4zida.rs/zshUZMQIFdhQtADRF7dSwuGZNp4dVB0XZR8n_I7puO4/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjM2IxNWM5Mzk1ZTRiZmM5MDc3ZDk1L2FhYTkxODdjNWRfd20.webp",
+        "https://resizer2.4zida.rs/OTQ9OsUeJMzw8Fz3dkvsYqLAh6ODT2whT-br26q_f80/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjM2IxNWM5Mzk1ZTRiZmM5MDc3ZDk1L2FhYTkxODdjNWRfd20.jpeg"
+      ],
+      "photo_url": "https://resizer2.4zida.rs/42RCpK1oG7S8XY7uM-S1seHCIjCttSEX9lyxh3oDoZg/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFjM2IxNWM5Mzk1ZTRiZmM5MDc3ZDk1LzIyYTQ5YmQzZjlfd20.jpeg",
+      "description": "Lokal za izdavanje, Prazno, Dorćol, 147 m2, na prizemlju, ima lift. Stanje - Novo, Centralno. Ima parking mesto."
     },
     "halooglasi_5425644513013": {
       "source": "halooglasi.com",
@@ -111369,19 +111410,30 @@
         "uncertain_distance"
       ],
       "photo_url": "https://resizer2.4zida.rs/KEbu1eVMgv06uqikDQ_NzcBY3sWa3Ja6oeQLedgC0sE/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFkMjQwNjBkZTFmNDc4MjY2MDA4ODVmL2Q2NzZhMzEyOTdfd20.jpeg",
-      "rejected": true,
+      "rejected": false,
       "alt_urls": [
         "https://www.4zida.rs/izdavanje-poslovnih-prostora/dorcol-stari-grad-opstina-beograd/lokal/6ad24060de1f47826600885f"
       ],
-      "duplicate_of": "4zida_6ad24060de1f47826600885f",
       "telegram_message_id": 869,
       "sent_at": "2026-10-16T19:57:22.342640+00:00",
       "geo_lat": 44.82224,
       "geo_lon": 20.46212,
       "geo_source": "detail",
-      "score": 77,
+      "score": null,
       "scored_at": "2026-10-17T10:43:07.078142+00:00",
-      "compacted": true
+      "photo_urls": [
+        "https://resizer2.4zida.rs/KEbu1eVMgv06uqikDQ_NzcBY3sWa3Ja6oeQLedgC0sE/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFkMjQwNjBkZTFmNDc4MjY2MDA4ODVmL2Q2NzZhMzEyOTdfd20.jpeg",
+        "https://resizer2.4zida.rs/GG2FokhVQkzSJkgrd_Tf23k5llZ52B5w8flqaE_X4mY/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFkMjQwNjBkZTFmNDc4MjY2MDA4ODVmL2Q2NzZhMzEyOTdfd20.webp",
+        "https://resizer2.4zida.rs/ZFXwbpAG87DXwduDhrg4M6ovJKyBrCkPzjc6tE-BeTk/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFkMjQwNjBkZTFmNDc4MjY2MDA4ODVmLzZmZmJhYmU0YmNfd20.webp",
+        "https://resizer2.4zida.rs/g80cakQsaSzS1ohMWmAW3ccNd3bw82-V_3VG4BuwU_U/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFkMjQwNjBkZTFmNDc4MjY2MDA4ODVmLzZmZmJhYmU0YmNfd20.jpeg",
+        "https://resizer2.4zida.rs/9gveAiTcdeiWfoj_x5wPJh-LX97DahmdIFDTEeEISdU/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFkMjQwNjBkZTFmNDc4MjY2MDA4ODVmL2VmNWIyOGMzNThfd20.webp",
+        "https://resizer2.4zida.rs/xqD318Rn5H8m6vfuvFnCILzfPPgeMC8WdHI7yOjNe74/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFkMjQwNjBkZTFmNDc4MjY2MDA4ODVmL2VmNWIyOGMzNThfd20.jpeg",
+        "https://resizer2.4zida.rs/NBdF5bTBe79I3HyerMWCF6u7RJw9fgt496jJBvYSqgU/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFkMjQwNjBkZTFmNDc4MjY2MDA4ODVmLzNiNGU0MWI3NzVfd20.webp",
+        "https://resizer2.4zida.rs/YeAAwe77E_WbKLvmfJPXjvwH6vu_Iw4kXowP3ZbNW3s/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFkMjQwNjBkZTFmNDc4MjY2MDA4ODVmLzNiNGU0MWI3NzVfd20.jpeg",
+        "https://resizer2.4zida.rs/tzDR2MkXYhhjxhgZ4-oTI_9TSC8b6Hwd2l1GBMtDmNA/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFkMjQwNjBkZTFmNDc4MjY2MDA4ODVmLzE5ODlhNmFjMDdfd20.webp",
+        "https://resizer2.4zida.rs/T7HbRX9yEMmRlkYH2rL8rlcht97wucy5GeAGjcStCmo/rs:fit:1920:1080:0/bG9jYWw6Ly8vNmFkMjQwNjBkZTFmNDc4MjY2MDA4ODVmLzE5ODlhNmFjMDdfd20.jpeg"
+      ],
+      "description": "Lokal za izdavanje, Prazno, Dorćol, 160 m2, na prizemlju, ima lift. Centralno, ima toalet."
     },
     "nekretnine_1587991": {
       "source": "nekretnine.rs",
@@ -112372,7 +112424,7 @@
         "https://pic.nekretnine.rs/image/19908979/xxl.jpg",
         "https://pic.nekretnine.rs/image/19908981/xxl.jpg"
       ],
-      "rejected": true,
+      "rejected": false,
       "score": 64,
       "score_data": {
         "score": 64,
@@ -112404,7 +112456,6 @@
       "alt_urls": [
         "https://www.nekretnine.rs/oglasi/1594405/"
       ],
-      "duplicate_of": "nekretnine_1594405",
       "telegram_message_id": 872,
       "sent_at": "2026-10-19T12:55:36.755815+00:00"
     },

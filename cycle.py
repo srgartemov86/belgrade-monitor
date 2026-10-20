@@ -926,6 +926,13 @@ def dedupe_passes_same_cycle(s, passes, duplicates):
         return (r.get('geo_lat') is None
                 or str(r.get('geo_source') or '').startswith('nominatim'))
 
+    # Один и тот же лот может попасть в passes дважды (повтор из pending + свежий свип
+    # в одном цикле): без этого он становился «дублем самого себя» — rejected=True при
+    # in_sheet=True, компакция срезала скоринг/описание/фото, check_status его не проверял
+    # (QA 20.10.2026: 4 лота, duplicate_of == свой ключ).
+    _seen = set()
+    passes = [p for p in passes if not (p['listing_key'] in _seen or _seen.add(p['listing_key']))]
+
     kept = []
     for p_ in passes:
         rec = s['listings'].get(p_['listing_key'], {})
@@ -2166,6 +2173,8 @@ def cmd_finalize():
         for k, r in listings.items():
             if not (r.get('rejected') or r.get('removed_from_sheet')):
                 continue
+            if r.get('in_sheet') and not r.get('removed_from_sheet'):
+                continue  # активный лот в таблице не терминален, даже если флаг rejected залип
             if r.get('compacted'):
                 continue
             last = (r.get('last_seen_at') or r.get('last_seen')

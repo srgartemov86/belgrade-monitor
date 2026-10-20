@@ -591,6 +591,19 @@ def build_features(state, sheet):
             'manual_coord': manual_coord,
             'photos': photos[:10],
         })
+    # Разброс совпадающих координат (кросс-посты и лоты без гео → один центр района:
+    # маркеры стопкой, виден только верхний). Детерминированное кольцо ~40 м. QA 20.10: 6 стопок.
+    from collections import defaultdict as _dd
+    _groups = _dd(list)
+    for f in feats:
+        _groups[(round(f['lat'], 5), round(f['lon'], 5))].append(f)
+    for _same in _groups.values():
+        if len(_same) < 2:
+            continue
+        for _i, f in enumerate(_same):
+            _ang = 2 * math.pi * _i / len(_same)
+            f['lat'] += 0.00036 * math.cos(_ang)
+            f['lon'] += 0.00052 * math.sin(_ang)
     return feats
 
 
@@ -632,11 +645,13 @@ def backfill_scores(state, sheet, limit=8, delay=1.5):
     status_by_url = {u: _norm_status(d.get('status')) for u, d in sheet.items()}
     cands = []
     for k, v in state['listings'].items():
-        if not isinstance(v, dict) or v.get('score') is not None:
+        # score без score_data — компакция срезала детали у активного лота (QA 20.10):
+        # пересчитываем, иначе в попапе пустой блок скоринга
+        if not isinstance(v, dict) or (v.get('score') is not None and v.get('score_data')):
             continue
         if v.get('geo_lat') is None or v.get('geo_lon') is None:
             continue
-        if v.get('rejected') or v.get('removed_from_sheet'):
+        if v.get('removed_from_sheet') or (v.get('rejected') and not v.get('in_sheet')):
             continue
         st = status_by_url.get(v.get('url', ''), '')
         if st in STATUS_NOT_SUITABLE or st in STATUS_REMOVED:
