@@ -350,16 +350,23 @@ def regeo_nominatim(state, max_shift_threshold_m=200, district_radius_m=6000):
 def ensure_coords(state):
     """Догеокодит лоты in_sheet без координат, пишет обратно в state. Возвращает счёт догеокоженных."""
     listings = state['listings']
+    # Лоты, у которых финализ уже снял Nominatim-промах (geo_source=nominatim_rejected),
+    # повторно не геокодим: иначе каждый цикл возвращал их в ту же точку под Рипанем
+    # (20.10.2026: 5 маркеров «Unknown, Beograd» → 44.689,20.516 на карте).
     todo = [(k, v) for k, v in listings.items()
             if v.get('in_sheet') and not v.get('removed_from_sheet')
-            and not (v.get('geo_lat') and v.get('geo_lon'))]
+            and not (v.get('geo_lat') and v.get('geo_lon'))
+            and not str(v.get('geo_source') or '').startswith('nominatim_rejected')]
     added = 0
     for k, v in todo:
-        # Сборка query: title + district
+        # Сборка query: title + district. «Unknown» — не запрос, Nominatim отдаёт на него
+        # произвольную точку юга Белграда.
         title = (v.get('title') or '').split(',')[0].split('(')[0].strip()
         distr = (v.get('district') or '').split(',')[0].split('(')[0].strip()
+        if distr.lower() in ('unknown', ''):
+            distr = ''
         candidates = []
-        if title:
+        if title and title.lower() != 'unknown':
             candidates.append(f"{title}, Beograd")
         # Поддистрикт в скобках title-а или district-а
         m = re.search(r'\(([^)]+)\)', v.get('district') or '')
@@ -367,6 +374,8 @@ def ensure_coords(state):
             candidates.append(f"{m.group(1)}, Beograd")
         if distr:
             candidates.append(f"{distr}, Beograd")
+        if not candidates:
+            continue
         lat = lon = None
         for q in candidates:
             lat, lon = geocode(q)
