@@ -201,9 +201,27 @@ function esc(s) { return String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<'
 function toggleSide() { document.body.classList.toggle('collapsed'); setTimeout(() => map.invalidateSize(), 50); }
 // Ссылки из попапов: встроенные браузеры (Telegram, iOS webview) глотают target=_blank —
 // если новое окно не открылось, переходим в том же
+// «Поделиться» в попапе: ссылка lokali.html#lot=<id> открывает карту сразу на этом лоте
+// (Сергей, 26.10). На телефоне — системное меню «поделиться», иначе в буфер обмена.
+function shareLot(id) {
+  const url = location.origin + location.pathname + '#lot=' + encodeURIComponent(id);
+  if (navigator.share && /Mobi|Android|iPhone|iPad/.test(navigator.userAgent)) {
+    navigator.share({url}).catch(() => {});
+    return;
+  }
+  const fallback = () => window.prompt('Скопируйте ссылку:', url);
+  if (navigator.clipboard && navigator.clipboard.writeText)
+    navigator.clipboard.writeText(url).then(() => toast('Ссылка скопирована'), fallback);
+  else fallback();
+}
 document.addEventListener('click', (e) => {
   const a = e.target.closest('.leaflet-popup a[href]');
   if (!a) return;
+  if (a.classList.contains('share')) {
+    e.preventDefault(); e.stopPropagation();
+    shareLot(a.dataset.lot);
+    return;
+  }
   // крестик закрытия и прочие якоря (#close) — не ссылки: иначе открывалась новая вкладка
   // с картой и сброшенными фильтрами (Сергей, 20.10)
   if (a.classList.contains('leaflet-popup-close-button') || a.getAttribute('href').startsWith('#')) return;
@@ -377,6 +395,7 @@ function popupNode(f) {
         <a class="secondary" href="${esc(f.gmaps)}" target="_blank">Maps</a>
         ${f.yandex ? `<a class="secondary" href="${esc(f.yandex)}" target="_blank">Яндекс-панорама</a>` : ''}
         ${sheetLink}
+        <a class="secondary share" href="#share" data-lot="${esc(f.id)}" title="Скопировать ссылку, открывающую этот лот на карте">Поделиться</a>
       </div>
       <div class="footer">${f.date_posted ? `📅 размещено ${esc(f.date_posted)}` : ''}${f.date_updated ? ` · 🔄 обновлено ${esc(f.date_updated)}` : ''}${f.date_posted || f.date_updated ? ' · ' : ''}${esc(f.source)} · ${f.days_since} д. назад</div>`;
   // Фотогалерея: hotlink с CDN источников; битые → выкидываем на лету
@@ -510,7 +529,8 @@ setTimeout(() => {
   const mob = window.innerWidth <= 760;
   // #lot=<id> — переход на конкретный лот (ссылки со страницы тепловой карты и из Telegram)
   const lotId = (location.hash.match(/lot=([^&]+)/) || [])[1];
-  const target = lotId ? FEATURES.find(f => (f.url || '').includes(decodeURIComponent(lotId))) : null;
+  // id принимается и полный (ключ лота из кнопки «Поделиться»), и числовой (из карточки Telegram)
+  const target = lotId ? FEATURES.find(f => f.id === decodeURIComponent(lotId) || (f.url || '').includes(decodeURIComponent(lotId))) : null;
   if (target) {
     if (mob) document.body.classList.add('collapsed');
     map.setView([target.lat, target.lon], 16);
