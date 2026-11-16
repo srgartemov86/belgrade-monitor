@@ -952,7 +952,10 @@ def dedupe_passes_same_cycle(s, passes, duplicates):
                                          qrec['geo_lat'], qrec['geo_lon']) < 0.25
             same_text = (desc_prefix(p_['listing_key']) and
                          desc_prefix(p_['listing_key']) == desc_prefix(q['listing_key']))
-            exact = (p_.get('area') == q.get('area') and p_.get('price') == q.get('price')
+            # a1/a2/p1/p2 — числа из state. Раньше сравнивались поля карточек, а там
+            # у OLX строки ('95'), у Storia числа (95): равенство не срабатывало, и
+            # кросс-пост уходил двумя карточками (Клуж, 16.11.2026, Centru 95 м² 3500 €).
+            exact = (float(a1) == float(a2) and float(p1) == float(p2)
                      and (p_.get('district') or '').split('(')[0].strip().lower()
                      == (q.get('district') or '').split('(')[0].strip().lower()
                      and bool(p_.get('district')) and p_.get('district') != 'Unknown')
