@@ -2090,8 +2090,14 @@ def cmd_finalize():
         pass
 
     # gen_map deploys to surge.sh automatically; prints to stdout
-    mr = subprocess.run(['python3', str(SCRIPT_DIR / 'gen_map.py')],
-                        capture_output=True, text=True, timeout=240)
+    # gen_map внутри ходит в Overpass и Nominatim; при лежащих зеркалах не укладывался
+    # в 240 с, и исключение роняло finalize и весь прогон (Клуж 16.11.2026, Кипр 25.10).
+    try:
+        mr = subprocess.run(['python3', str(SCRIPT_DIR / 'gen_map.py')],
+                            capture_output=True, text=True, timeout=420)
+    except subprocess.TimeoutExpired:
+        out['map_timeout'] = True
+        mr = subprocess.CompletedProcess([], 1, '', 'gen_map timeout 420s')
     mout = (mr.stdout or '') + '\n' + (mr.stderr or '')
     out['map_ok'] = bool(re.search(r'wrote\s+/.*lokali\.html', mout))
     out['map_surge_ok'] = 'Success!' in mout
