@@ -1335,6 +1335,19 @@ def run_process():
             # «Zemun (Zelena avenija)», Radoja Dakića ушёл карточкой в чат.
             if passed and any(sl in (district_str or '').lower() for sl in ZEMUN_SLUGS):
                 passed, reason = False, 'zemun'
+            # nekretnine называет районы Земуна «Donji Grad» / «Gornji Grad» без слова Zemun
+            # (кейс 14.11.2026: «FLAGSHIP LOKAL U ZEMUNU» ушёл в чат). Ловим по названию
+            # района, по тексту объявления и по точке в 700 м от центра Земуна (шире нельзя:
+            # в 1 км уже Novi Beograd, Blok 8a).
+            if passed:
+                _d = (district_str or '').lower()
+                _txt = ((detail.get('title') or '') + ' ' + (cand.get('name') or '') + ' '
+                        + (detail.get('description') or '')[:400]).lower()
+                _z_name = _d.split('(')[0].strip() in ('donji grad', 'gornji grad')
+                _z_text = bool(re.search(r'\bu zemunu\b|\bzemun[,\s]+(?:centar|donji|gornji|kej)|lokal\w* zemun', _txt))
+                _z_geo = ('lat' in detail and haversine_km(detail['lat'], detail['lon'], 44.8433, 20.4114) <= 0.7)
+                if _z_name or _z_text or _z_geo:
+                    passed, reason = False, 'zemun'
 
             rec = {
                 'source': src, 'id': cid, 'url': cand['url'],
